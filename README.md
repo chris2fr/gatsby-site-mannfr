@@ -4,8 +4,8 @@ This is a new Gatsby website for Mann.fr. There probably will be a static bit, b
 
 The goals here are to :
 
-1. Set up a basic website
-2. Import content
+1. Set up a basic website Done
+2. Import content 
 3. Set up a home page
 4. Set up three languages
 5. Set up a contact form
