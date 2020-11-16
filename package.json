@@ -1,0 +1,22 @@
+{
+  "name": "gatsby-mann-fr",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Chris Mann <chris@mann.fr>",
+  "private": false,
+  "license": "Ask",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-source-filesystem": "^2.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
+  }
+}
