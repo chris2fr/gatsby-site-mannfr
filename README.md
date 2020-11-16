@@ -94,3 +94,38 @@ So I am starting with this:
 
 It bulids cleanly and it works.
 
+## Random Thought
+
+Can the below be in Rust ?
+
+```
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  // Ensures we are processing only markdown files
+  if (node.internal.type === "MarkdownRemark") {
+    // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
+    const relativeFilePath = createFilePath({
+      node,
+      getNode,
+      basePath: "data/faqs/",
+    })
+
+    // Creates new query'able field with name of 'slug'
+    createNodeField({
+      node,
+      name: "slug",
+      value: `/faqs${relativeFilePath}`,
+    })
+  }
+}
+```
+
+## Using gatsby-remark-images and gatsby-plugin-mdx
+
+npm install --save gatsby-remark-images gatsby-plugin-sharp
+npm install --save gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+
+
+plugin-mdx seems to be problematic, but I like the idea in the abstract sense.
