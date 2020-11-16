@@ -10,13 +10,6 @@ module.exports = {
     author: `Chris Mann <chris@mann.fr>`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "static",
-        path: `${__dirname}/static/`,
-      },
-    },
+   
   ],
 }
