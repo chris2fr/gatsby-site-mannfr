@@ -1,0 +1,40 @@
+.peekaboo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1031;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*/ visibility: hidden;/*/
+  opacity: 0;
+
+  transition: all 0.35s;
+
+  cursor: pointer;
+
+}
+
+.peekaboo a {
+    pointer-events: all;
+}
+
+.peekaboo.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.peekaboo-button {
+    position: fixed;
+    top:10px;
+    right:10px;
+    width:34px;
+    height:34px;
+    cursor:pointer;
+}
