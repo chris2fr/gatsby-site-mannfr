@@ -7,7 +7,7 @@
 
 .tag::before {
     content: "";
-    position: absolute;
+    position: sticky;
     top: 0;
     right: 0;
     bottom: 0;
@@ -28,7 +28,7 @@
 }
 
 .tag-content {
-    position: absolute;
+    position: sticky;
     right: 0;
     bottom: 0;
     left: 0;
