@@ -1,0 +1,9 @@
+.mann-carousel-item {
+  height: 100vh;
+  display: flex;
+}
+
+.mann-carousel-img {
+  min-height: 100vh;
+  object-fit: cover;
+}
