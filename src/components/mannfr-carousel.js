@@ -5,41 +5,13 @@ import Img from "gatsby-image";
 
 import "./mannfr-carousel.css";
 
-// import "../css/basics.css";
-// import "../pages/index.css";
 import "../css/tag.css";
 import "../css/utilities.css";
 // import "../css/header.css";
 // import "../css/burger.css";
 // import "../css/widget.css";
-
-const queryForTags = graphql`
-  query {
-    allMdx(
-      filter: { frontmatter: { type: { eq: "tag" } } }
-      sort: { order: ASC, fields: frontmatter___order }
-    ) {
-      nodes {
-        fields {
-          slug
-        }
-        frontmatter {
-          description
-          feature_image {
-            childImageSharp {
-              # Specify the image processing specifications right in the query.
-              # Makes it trivial to update as your page's design changes.
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-        body
-      }
-    }
-  }
-`;
+// import "../css/basics.css";
+// import "../pages/index.css";
 
 class MannfrCarousel extends React.Component {
   constructor(props) {
@@ -58,33 +30,84 @@ class MannfrCarousel extends React.Component {
     ];
     return (
       <>
-        <Carousel
-          breakPoints={breakPoints}
-          pagination={true}
-          className="mann-carousel"
-          enableMouseSwipe={true}
-          focusOnSelect={true}
-          renderArrow={({ type, onClick, disabled, ...rest }) => (
-            <button
-              className={
-                "rec rec-arrow rec rec-arrow-" +
-                (type == "NEXT" ? "right" : "left")
+        <StaticQuery
+          query={graphql`
+            {
+              allMdx(
+                filter: { frontmatter: { type: { eq: "tag" } } }
+                sort: { order: ASC, fields: frontmatter___order }
+              ) {
+                nodes {
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    description
+                    visibility
+                    feature_image {
+                      childImageSharp {
+                        # Specify the image processing specifications right in the query.
+                        # Makes it trivial to update as your page's design changes.
+                        fluid {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
+                  }
+                  body
+                }
               }
-              onClick={onClick}
-              disabled={disabled}
-              {...rest}
+            }
+          `}
+          render={(data) => (
+            <Carousel
+              breakPoints={breakPoints}
+              pagination={true}
+              className="mann-carousel"
+              enableMouseSwipe={true}
+              focusOnSelect={true}
+              renderArrow={({ type, onClick, disabled, ...rest }) => (
+                <button
+                  className={
+                    "rec rec-arrow rec rec-arrow-" +
+                    (type === "NEXT" ? "right" : "left")
+                  }
+                  onClick={onClick}
+                  disabled={disabled}
+                  {...rest}
+                >
+                  {type}
+                </button>
+              )}
             >
-              {type}
-            </button>
+              {data.allMdx.nodes.map((node) => (
+                <div className={"mann-carousel-item"}>
+                  <Link to={node.fields.slug} style={{ display: "block" }}>
+                    <div className={"tag"}>
+                      <Img
+                        className={"tag-img mann-carousel-img"}
+                        fluid={
+                          node.frontmatter.feature_image &&
+                          node.frontmatter.feature_image.childImageSharp.fluid
+                        }
+                        alt={node.frontmatter.title}
+                      />
+                      <div className={"tag-content"}>
+                        <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
+                        <div className={"tag-description"}>
+                          {node.frontmatter.description}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </Carousel>
           )}
-        >
-          <StaticQuery
-            query={queryForTags}
-            render={(data) => (
-              <>
-                <h1>{data.allMdx.nodes[0].frontmatter.title}</h1>
+        />
 
-                {/* <div className={"mann-carousel-item"}>
+        {/* <div className={"mann-carousel-item"}>
 <Link to={slug} style={{ display: "block" }}>
   <div className={"tag"}>
     <Img
@@ -99,10 +122,8 @@ class MannfrCarousel extends React.Component {
   </div>
 </Link>
 </div> */}
-              </>
-            )}
-          />
 
+        {/* 
           <div key="slide-digital" className={"mann-carousel-item"}>
             <Link to="/tag/digital/" style={{ display: "block" }}>
               <div className={"tag"}>
@@ -143,7 +164,6 @@ class MannfrCarousel extends React.Component {
                   </div>
                 </div>
               </div>
-              {/* <Link className={"u-permalink"} to="/tag/human/"></Link> */}
             </Link>
           </div>
           <div key="slide-orgs" className={"mann-carousel-item"}>
@@ -223,8 +243,9 @@ class MannfrCarousel extends React.Component {
                 </div>
               </div>
             </Link>
-          </div>
+          </div> 
         </Carousel>
+      */}
       </>
     );
   }

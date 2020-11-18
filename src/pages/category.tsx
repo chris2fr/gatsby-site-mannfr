@@ -25,6 +25,7 @@ export default function CategoryRoute({ data }) {
               slug
             }
             frontmatter {
+              title
               description
               feature_image {
                 childImageSharp {
