@@ -15,13 +15,13 @@ class PeekABoo extends React.Component  {
   }
 
   render() {
-    const { data } = this.props;
     return (
       <>
-      <div className={"burger peekaboo-button"} 
+      <div 
+        className={"burger peekaboo-button"} 
         role="button"
         onClick={this.handleClick}
-        ></div>
+        > </div>
         <div id="peekaboo" style={{"visibility":this.state.showComponent?"visible":"hidden"}}>
 <aside className={`peekaboo ${this.state.showComponent ?"open" : ""} off-canvas`} id='peekabooeaside' onClick={this.handleClick}>
 <button onClick={this.handleClick} className="peekaboo-button">

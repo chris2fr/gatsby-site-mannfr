@@ -11,7 +11,8 @@ export default ({ data, pageContext }) => {
     <>
       <h1>{title}</h1>
       {imgSrc &&
-      <img src={imgSrc}/>
+      <img src={imgSrc}
+      alt={title}/>
       }
       <div>
         {data.mdx ? (
