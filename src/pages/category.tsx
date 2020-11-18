@@ -6,10 +6,10 @@ import MannfrCarousel from "../components/mannfr-carousel"
 export default function CategoryRoute() {
   return (
     <>
-<MannfrCarousel></MannfrCarousel>
+<MannfrCarousel/>
 
 <Link to={"/"}>Mann.fr</Link>
-<h1>Categroy</h1>
+<h1>Categrory</h1>
 <p>Welcome to the category page.</p>
 
 
