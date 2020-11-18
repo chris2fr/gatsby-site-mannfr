@@ -14,10 +14,10 @@ import "../css/utilities.css";
 // import "../pages/index.css";
 
 class MannfrCarousel extends React.Component {
-  constructor(props) {
-    // super({ children, ...props });
-    super(props);
-  }
+  // constructor(props) {
+  //   // super({ children, ...props });
+  //   super(props);
+  // }
 
   render() {
     const breakPoints = [
