@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import { Link } from "gatsby";
-
+import { Link, StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import "./mannfr-carousel.css";
 
@@ -13,19 +13,39 @@ import "../css/utilities.css";
 // import "../css/burger.css";
 // import "../css/widget.css";
 
+const queryForTags = graphql`
+  query {
+    allMdx(
+      filter: { frontmatter: { type: { eq: "tag" } } }
+      sort: { order: ASC, fields: frontmatter___order }
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          description
+          feature_image {
+            childImageSharp {
+              # Specify the image processing specifications right in the query.
+              # Makes it trivial to update as your page's design changes.
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        body
+      }
+    }
+  }
+`;
+
 class MannfrCarousel extends React.Component {
   constructor(props) {
     // super({ children, ...props });
     super(props);
-    this.handleItemHover = this.handleItemHover.bind(this);
   }
-
-  onIndicatorClick = indicatorId => {
-    const { itemsToShow } = this.getDerivedPropsFromBreakPoint();
-    const gotoIndex = indicatorId * itemsToShow;
-    this.setState({ activePage: indicatorId });
-    this.goTo(gotoIndex);
-  };
 
   render() {
     const breakPoints = [
@@ -44,14 +64,51 @@ class MannfrCarousel extends React.Component {
           className="mann-carousel"
           enableMouseSwipe={true}
           focusOnSelect={true}
-          renderArrow={({type, onClick, disabled, ...rest}) => <button className={"rec rec-arrow rec rec-arrow-" + ((type =="NEXT")?"right":"left")} onClick={onClick} disabled={disabled} {...rest}>{type}</button>}
+          renderArrow={({ type, onClick, disabled, ...rest }) => (
+            <button
+              className={
+                "rec rec-arrow rec rec-arrow-" +
+                (type == "NEXT" ? "right" : "left")
+              }
+              onClick={onClick}
+              disabled={disabled}
+              {...rest}
+            >
+              {type}
+            </button>
+          )}
         >
+          <StaticQuery
+            query={queryForTags}
+            render={(data) => (
+              <>
+                <h1>{data.allMdx.nodes[0].frontmatter.title}</h1>
+
+                {/* <div className={"mann-carousel-item"}>
+<Link to={slug} style={{ display: "block" }}>
+  <div className={"tag"}>
+    <Img
+      className={"tag-img mann-carousel-img"}
+      fluid={data.mdx.frontmatter.feature_image.childImageSharp.fluid}
+      alt={title}
+    />
+    <div className={"tag-content"}>
+      <h2 className={"tag-name"}>{title}</h2>
+      <div className={"tag-description"}>{description}</div>
+    </div>
+  </div>
+</Link>
+</div> */}
+              </>
+            )}
+          />
+
           <div key="slide-digital" className={"mann-carousel-item"}>
             <Link to="/tag/digital/" style={{ display: "block" }}>
               <div className={"tag"}>
                 <img
                   className={"tag-img mann-carousel-img"}
-                  src="/images/peter-tablet.png"
+                  src={"/images/peter-tablet.png"}
                   alt="Digital"
                 />
                 <div className={"tag-content"}>
@@ -65,10 +122,14 @@ class MannfrCarousel extends React.Component {
               </div>
             </Link>
           </div>
-          <div key="slide-human" className={"mann-carousel-item"} onMouseEnter={this.handleItemHover}>
+          <div
+            key="slide-human"
+            className={"mann-carousel-item"}
+            onMouseEnter={this.handleItemHover}
+          >
             <Link className={"a-block"} to="/tag/human/">
               <div className={"tag"}>
-                <img
+                <Img
                   className={"tag-img mann-carousel-img"}
                   src="/images/dancing-king.jpg"
                   alt="Human"
@@ -88,7 +149,7 @@ class MannfrCarousel extends React.Component {
           <div key="slide-orgs" className={"mann-carousel-item"}>
             <Link className={"a-block"} to="/tag/orgs/">
               <div className={"tag"}>
-                <img
+                <Img
                   className={"tag-img mann-carousel-img"}
                   src="/images/bees-465x550.jpeg"
                   alt="Organization"
@@ -108,58 +169,59 @@ class MannfrCarousel extends React.Component {
           <div key="slide-human-aadhd" className={"mann-carousel-item "}>
             <Link className={"a-block"} to="/tag/human-aadhd/">
               <div className={"tag"}>
-              <img
-                className={"tag-img mann-carousel-img"}
-                src="/mann-fr_files/tnoc-7432.jpg"
-                alt="Human / Adult-ADHD"
-              />
-              <div className={"tag-content"}>
-                <h2 className={"tag-name"}>Human / Adult-ADHD</h2>
-                <div className={"tag-description"}>
-                  You have Adult ADHD and with to thrive fully as you
-                  compensating for this difference that can be handicap. MANN.FR
-                  can address the specifics and move beyond this part of you.
+                <Img
+                  className={"tag-img mann-carousel-img"}
+                  src="/mann-fr_files/tnoc-7432.jpg"
+                  alt="Human / Adult-ADHD"
+                />
+                <div className={"tag-content"}>
+                  <h2 className={"tag-name"}>Human / Adult-ADHD</h2>
+                  <div className={"tag-description"}>
+                    You have Adult ADHD and with to thrive fully as you
+                    compensating for this difference that can be handicap.
+                    MANN.FR can address the specifics and move beyond this part
+                    of you.
+                  </div>
                 </div>
               </div>
-            </div>
             </Link>
           </div>
           <div key="slide-photo" className={"mann-carousel-item"}>
             <Link className={"a-block"} to="/tag/photo/">
-            <div className={"tag"}>
-              <img
-                className={"tag-img mann-carousel-img"}
-                src="/mann-fr_files/Chris_Mann_Photo-65-e1567510883586-1.jpg"
-                alt="Photo"
-              />
-              <div className={"tag-content"}>
-                <h2 className={"tag-name"}>Photo</h2>
-                <div className={"tag-description"}>
-                  You are a photographer or a consumer of photography. MANN.FR
-                  federates photographers, sets up common photographic events
-                  and shares resources.
+              <div className={"tag"}>
+                <Img
+                  className={"tag-img mann-carousel-img"}
+                  src="/mann-fr_files/Chris_Mann_Photo-65-e1567510883586-1.jpg"
+                  alt="Photo"
+                />
+                <div className={"tag-content"}>
+                  <h2 className={"tag-name"}>Photo</h2>
+                  <div className={"tag-description"}>
+                    You are a photographer or a consumer of photography. MANN.FR
+                    federates photographers, sets up common photographic events
+                    and shares resources.
+                  </div>
                 </div>
               </div>
-              </div>
-              </Link>
+            </Link>
           </div>
           <div key="slide-mann-fr" className={"mann-carousel-item"}>
             <Link className={"a-block"} to="/tag/mann-fr/">
-            <div className={"tag"}>
-              <img
-                className={"tag-img mann-carousel-img"}
-                src="/mann-fr_files/boule-1.png"
-                alt=" MANN.FR"
-              />
-              <div className={"tag-content"}>
-                <h2 className={"tag-name"}> MANN.FR</h2>
-                <div className={"tag-description"}>
-                  MANN.FR is a business, my business as Chris Mann. You may
-                  learn more about this business and associated products and
-                  services useful to you.
+              <div className={"tag"}>
+                <Img
+                  className={"tag-img mann-carousel-img"}
+                  src="/mann-fr_files/boule-1.png"
+                  alt=" MANN.FR"
+                />
+                <div className={"tag-content"}>
+                  <h2 className={"tag-name"}> MANN.FR</h2>
+                  <div className={"tag-description"}>
+                    MANN.FR is a business, my business as Chris Mann. You may
+                    learn more about this business and associated products and
+                    services useful to you.
+                  </div>
                 </div>
               </div>
-            </div>
             </Link>
           </div>
         </Carousel>

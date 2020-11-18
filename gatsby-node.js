@@ -21,8 +21,9 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.onCreateNode = ({ node, getNode, actions}) => {
   if (node.internal.type === "Mdx") {
-    const relativeFilePath = createFilePath({ node, getNode, basePath: "content/publisched/post/"});
-    actions.createNodeField({ node, name: "slug", value: `/post${relativeFilePath}`})
+    const relativeFilePath = createFilePath({ node, getNode, basePath: "content/"});
+    actions.createNodeField({ node, name: "slug", value: `${node.frontmatter.type}${relativeFilePath}`});
+    //actions.createNodeField({ node, name: "slug", value: `${relativeFilePath}`});
   }
 }
 
@@ -32,24 +33,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
    {
     posts: allMdx {
       nodes {
-       fields {
-         slug
-       }
+        fields {
+          slug
+        }
       }
     }
-  }
-  `);
-
-  const mdxQueryResultOther = await graphql(`
-   {
-    posts: allFile(filter: {sourceInstanceName: {eq: "posts"}}) {
+    tags: allMdx(filter: {frontmatter: {type: {eq: "tag"}}}) {
       nodes {
-        childMdx {
-          frontmatter {
-            slug
-            tags
-            visibility
-          }
+        fields {
+          slug
         }
       }
     }
@@ -69,6 +61,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve(`./src/templates/default-mdx-layout.js`),
       context: {
         slug: node.slug,
+      },
+    }) 
+  })
+
+  mdxQueryResult.data.tags.nodes.forEach(({ fields: node }) => {
+    actions.createPage({
+      path: "carousel/" + node.slug,
+      component: require.resolve(`./src/templates/tag.js`),
+      context: {
+        slug: "carousel/" + node.slug,
       },
     }) 
   })
