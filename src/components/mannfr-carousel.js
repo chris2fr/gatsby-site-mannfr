@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import { Link, StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
+import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-theme-i18n";
+
 import Img from "gatsby-image";
 
 import "./mannfr-carousel.css";
@@ -83,8 +85,8 @@ class MannfrCarousel extends React.Component {
             >
               {data.allMdx.nodes.map((node) => (
                 <div className={"mann-carousel-item"}>
-                  <Link to={node.fields.slug} style={{ display: "block" }}>
-                    <div className={"tag"}>
+                  <Link to={node.fields.slug} style={{ display: "block" }} draggable={false}>
+                    <div className={"tag"} draggable={false}>
                       <Img
                         className={"tag-img mann-carousel-img"}
                         fluid={
@@ -92,6 +94,7 @@ class MannfrCarousel extends React.Component {
                           node.frontmatter.feature_image.childImageSharp.fluid
                         }
                         alt={node.frontmatter.title}
+                        draggable={false}
                       />
                       <div className={"tag-content"}>
                         <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
