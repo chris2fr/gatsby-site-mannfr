@@ -19,8 +19,6 @@ export default ({ data, pageContext }) => {
       ? data.mdx.frontmatter.feature_image.publicURL
       : null;
 
-  console.log(data.mdx);
-
   return (
     <>
       <div className={"mann-carousel-item"}>
@@ -41,5 +39,3 @@ export default ({ data, pageContext }) => {
     </>
   );
 };
-
-

@@ -5,11 +5,39 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     siteUrl: `https://alpha.mann.fr`,
-    title: `gatsby-theme-mann-fr`,
+    title: `Mann.fr Digital Wellbeing`,
     description: "MANN.FR Website",
     author: `Chris Mann <chris@mann.fr>`,
+    logo:"/images/boule.png",
+    name: 'mann.fr',
+    description: "Mann.fr is about making things work with Digital and with Humans in Organizations.",
+    hero: {
+      heading: 'Digital Augmentation of Life can be Holistic',
+      maxWidth: 652
+    },
+    social: [
+      {
+        name: 'twitter',
+        url: `https://twitter.com/chris2fr`,
+      },
+    ],
   },
   plugins: [
+    // {
+    //   resolve: '@narative/gatsby-theme-novela',
+    //   options: {
+    //     contentPosts: 'content/narative-content/posts',
+    //     contentAuthors: 'content/narative-content/authors',
+    //     rootPath: '/',
+    //     basePath: '/narative/',
+    //     pageLength: 6,
+    //     mailchimp: false,
+    //     sources: {
+    //       local: true,
+    //       contentful: false,
+    //     },
+    //   },
+    // },
     `gatsby-image`,
     "gatsby-transformer-sharp",
     `gatsby-plugin-sharp`,
@@ -30,14 +58,22 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/content/published/post/`,
+        path: `${__dirname}/content`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `tags`,
+    //     path: `${__dirname}/content/tags/`,
+    //   },
+    // },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-theme-i18n`,
       options: {
-        name: `tags`,
-        path: `${__dirname}/content/tags/`,
+        defaultLang: `un`,
+        locales: `un en fr`, // process.env.LOCALES || `en fr`,
+        configPath: require.resolve(`./i18n/config.json`),
       },
     },
     {

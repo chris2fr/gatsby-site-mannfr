@@ -2,8 +2,12 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions}) => {
   if (node.internal.type === "Mdx") {
-    const relativeFilePath = createFilePath({ node, getNode, basePath: "content/"});
-    actions.createNodeField({ node, name: "slug", value: `${node.frontmatter.type}${relativeFilePath}`});
+    const relativeFilePath = createFilePath({ node, getNode, basePath: ""});
+    // relativeFilePath = (node.frontmatter.type)?`${relativeFilePath}/${node.frontmatter.type}`:relativeFilePath;
+    // relativeFilePath = (node.frontmatter.visibility)?`${relativeFilePath}/${node.frontmatter.visibility}`:relativeFilePath;
+    // relativeFilePath = (node.frontmatter.tags && node.frontmatter.tags.length > 0 && node.frontmatter.type && node.frontmatter.type != "tag")?`${relativeFilePath}/${node.frontmatter.tags[0]}`:relativeFilePath;
+
+    actions.createNodeField({ node, name: "slug", value: `${relativeFilePath}`});
     //actions.createNodeField({ node, name: "slug", value: `${relativeFilePath}`});
   }
 }

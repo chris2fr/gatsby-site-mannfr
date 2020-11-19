@@ -129,3 +129,7 @@ npm install --save gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
 
 
 plugin-mdx seems to be problematic, but I like the idea in the abstract sense.
+
+## Internationalization
+
+https://www.gatsbyjs.com/plugins/gatsby-theme-i18n/
