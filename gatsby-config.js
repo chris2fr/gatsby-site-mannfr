@@ -39,6 +39,7 @@ module.exports = {
     //   },
     // },
     `gatsby-image`,
+    "react-helmet",
     "gatsby-transformer-sharp",
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
@@ -57,8 +58,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `tags`,
+        path: `${__dirname}/content/tags`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `posts`,
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/published`,
       },
     },
     // {

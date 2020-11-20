@@ -2,11 +2,11 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-//import Img from "gatsby-image"
+// import Img from "gatsby-image";
 
-import Header from "../components/header";
+import Layout from "../components/layout";
+// import Header from "../components/header";
 import PostHeader from "../components/post-header";
-import PostHeaderImage from "../components/post-header-image";
 
 import "../css/single.css";
 import "../css/utilities.css";
@@ -18,7 +18,7 @@ import "../css/kg.css";
 // import "../css/burger.css";
 // import "../css/widget.css";
 
-import "./default-mdx-layout.css"
+import "./post.css"
 
 import { useLocalization, MdxLink, LocalizedLink as Link } from "gatsby-theme-i18n";
 //import { isPropertySignature } from "typescript";
@@ -38,7 +38,7 @@ export default ({ data, pageContext }) => {
     data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
       ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
       : null;
-  let tags = [];
+  let tagsForRender = [];
   if (
     data.mdx &&
     data.mdx.frontmatter &&
@@ -46,47 +46,41 @@ export default ({ data, pageContext }) => {
     data.mdx.frontmatter.tags.length > 0
   ) {
     data.mdx.frontmatter.tags.forEach((tag) =>
-      tags.push({ name: tag, url: "/tags/" + tag, slug: tag, name: tag })
+    tagsForRender.push({ name: tag, url: "/tags/" + tag, slug: tag, name: tag })
     );
   }
   return (
-    <div class="site">
-            <Header/>
-            <div className={"site-content"}>
-      <div class="content-area">
-        <main class="site-main">
+    <Layout>
         <article class="post tag-mann-fr tag-human single-post">
         <div class="post-media">
 
-        <div class="u-placeholder initialized" style={{"z-index":"0"}}>
-          <div style={{"position":"absolute","object-fit":"cover","width":"100vw","height":"100%",overflow:"hidden"}}>
-        <PostHeaderImage
-          imageFluid={imageFluid}
-          alt={title}
-        />
-        </div>
-        {/* className={"post-image lazyload jarallax-img u-object-fit"} */}
+        
+
+
           <PostHeader
-            tags={tags}
+            tags={tagsForRender}
             single={true}
-            imageFluid={imageFluid}
+            fluid={imageFluid}
             title={title}
             timeToRead={data.mdx.timeToRead}
             created_at={data.mdx.frontmatter.created_at}
-          />
-            </div>
+            to={data.mdx.fields.slug}
+            style={{ position: "absolute", width: "100vw", height: "100%" }}
+          /> 
         {/* post-image lazyload jarallax-img u-object-fit */}
 {/* <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;"><img class="post-image jarallax-img u-object-fit lazyautosizes lazyloaded" data-srcset="/content/images/size/w300/2020/11/svetlana_pensante.jpg 300w, /content/images/size/w750/2020/11/svetlana_pensante.jpg 750w, /content/images/size/w960/2020/11/svetlana_pensante.jpg 960w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-sizes="auto" alt="Sounding Board" sizes="1321px" srcset="/content/images/size/w300/2020/11/svetlana_pensante.jpg 300w, /content/images/size/w750/2020/11/svetlana_pensante.jpg 750w, /content/images/size/w960/2020/11/svetlana_pensante.jpg 960w" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: fixed; top: 0px; left: 0px; width: 1321px; height: 897.3px; overflow: hidden; pointer-events: none; margin-top: 24.85px; transform: translate3d(0px, -14.85px, 0px);"></div></div>
     </div> */}
                 <div class="post-content kg-canvas u-text-format">
                 {data.mdx ? (
-              <React.Fragment>
+                  <>
+                  <React.Fragment>
                 <MDXProvider components={components}>
                   <MDXRenderer components={components}>
                     {data.mdx.body}
                   </MDXRenderer>
                 </MDXProvider>
               </React.Fragment>
+                  </>
             ) : (
               <div>This page hasn't been translated yet</div>
             )}
@@ -118,10 +112,7 @@ export default ({ data, pageContext }) => {
       </div>
     </div>
     </div> */}
-    </main>
-    </div>
-    </div>
-    </div>
+    </Layout>
   );
 };
 
@@ -138,11 +129,14 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            fluid {
+            fluid(quality:80, maxWidth:2000) {
               ...GatsbyImageSharpFluid
             }
           }
         }
+      }
+      fields {
+        slug
       }
       body
       timeToRead

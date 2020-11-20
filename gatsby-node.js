@@ -1,3 +1,15 @@
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MdxFrontmatter implements Node {
+      description: String
+      tags: [String]
+      order: String
+    }
+  `
+  createTypes(typeDefs)
+}
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions}) => {
@@ -16,7 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const mdxQueryResult = await graphql(`
    {
-    posts: allMdx {
+    posts: allMdx(filter: {frontmatter: {type: {ne: "tag"}}}) {
       nodes {
         fields {
           slug
@@ -43,12 +55,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   posts.forEach(({ fields: node }) => {
     actions.createPage({
       path: node.slug,
-      component: require.resolve(`./src/templates/default-mdx-layout.js`),
+      component: require.resolve(`./src/templates/post.js`),
       context: {
         slug: node.slug,
       },
     }) 
   })
 
+  mdxQueryResult.data.tags.nodes.forEach(({ fields: node }) => {
+    actions.createPage({
+      path: node.slug,
+      component: require.resolve(`./src/templates/tag.js`),
+      context: {
+        slug: node.slug,
+      },
+    }) 
+  })
 }
 
