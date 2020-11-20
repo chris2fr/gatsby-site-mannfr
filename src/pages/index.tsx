@@ -6,13 +6,18 @@ import PeekABoo from "../components/peekaboo";
 import MannfrCarousel from "../components/mannfr-carousel";
 import Header from "../components/header";
 
-import "../css/basics.css";
-import "./index.css";
-import "../css/tag.css";
+
+// import "../css/single.css";
 // import "../css/utilities.css";
+import "../css/basics.css";
+// import "../css/layout.css";
+import "../css/tag.css";
+import "../css/kg.css";
 import "../css/header.css";
 import "../css/burger.css";
 import "../css/widget.css";
+
+import "./index.css";
 
 export default function IndexRoute() {
   const { locale, config, defaultLang } = useLocalization();
@@ -26,7 +31,7 @@ export default function IndexRoute() {
       <p>Welcome to the Mann.fr Website. You can visit here:</p>
       <ul>
         <li>
-          <Link to={"category"}>Digital</Link>
+          <Link to={"category"}  language={locale}>Digital</Link>
         </li>
         <li>Human</li>
         <li>Organizatios</li>
@@ -47,12 +52,12 @@ export default function IndexRoute() {
         <nav className={"main-menu widget"}>
           <ul className={"nav-list u-plain-list"}>
             <li className={"menu-item menu-item-home menu-item-current"}>
-              <Link to="/" className="menu-item-link u-underline">
+              <Link to="/" className="menu-item-link u-underline"  language={locale}>
                 Home
               </Link>
             </li>
             <li className={"menu-item menu-item-home menu-item-current"}>
-              <Link to="/contact/" className="menu-item-link u-underline">
+              <Link to="/contact/" className="menu-item-link u-underline" language={locale}>
                 Contact
               </Link>
             </li>
