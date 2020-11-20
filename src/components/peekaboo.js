@@ -24,7 +24,7 @@ class PeekABoo extends React.Component  {
         > </div>
         <div id="peekaboo" style={{"visibility":this.state.showComponent?"visible":"hidden"}}>
 <aside className={`peekaboo ${this.state.showComponent ?"open" : ""} off-canvas`} id='peekabooeaside' onClick={this.handleClick}>
-<button onClick={this.handleClick} className="peekaboo-button">
+<button onClick={this.handleClick} className="burger peekaboo-button">
   X
 </button>
         {this.children}
