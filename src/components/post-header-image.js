@@ -32,6 +32,11 @@ class PostHeaderImage extends React.Component {
       />
         </>
       )
+    } else {
+      return (
+        <>
+        </>
+      )
     }
   }
 

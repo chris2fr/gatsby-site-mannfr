@@ -14,16 +14,21 @@ import "../css/basics.css";
 import "../css/layout.css";
 import "../css/tag.css";
 import "../css/kg.css";
+// import "../css/header.css";
+// import "../css/burger.css";
+// import "../css/widget.css";
 
 import "./default-mdx-layout.css"
 
-import { MdxLink, LocalizedLink as Link } from "gatsby-theme-i18n";
-import { isPropertySignature } from "typescript";
+import { useLocalization, MdxLink, LocalizedLink as Link } from "gatsby-theme-i18n";
+//import { isPropertySignature } from "typescript";
+
 const components = {
   a: MdxLink,
 };
 
 export default ({ data, pageContext }) => {
+  const { locale, config, defaultLang } = useLocalization();
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let imgSrc =
     data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
@@ -58,7 +63,6 @@ export default ({ data, pageContext }) => {
         <PostHeaderImage
           imageFluid={imageFluid}
           alt={title}
-          
         />
         </div>
         {/* className={"post-image lazyload jarallax-img u-object-fit"} */}
