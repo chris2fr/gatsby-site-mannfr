@@ -15,6 +15,7 @@
 
 .mann-carousel div .rec.rec-slider-container {
   margin: 0;
+  height: 100vh;
 }
 
 .mann-carousel div .rec.rec-arrow {
