@@ -1,24 +1,50 @@
 import React from "react";
-// import {Img} from "gatsby-image"
-import SiteConfig from "../../config/site-config"
-import {LocalizedLink as Link} from "gatsby-theme-i18n"
+import Img from "gatsby-image";
+import { LocalizedLink as Link } from "gatsby-theme-i18n";
+import { StaticQuery, graphql } from "gatsby";
 
-class Logo extends React.Component  {
-
-  render() {
-
-    if (SiteConfig.logo) {
-      return(
-        <Link to="/"><img className={"logo-image"} src={SiteConfig.logo} alt={SiteConfig.title}/></Link>
-      )
-    } else {
-      return(
-        <Link to="/"><span className={"logo-text"}>{SiteConfig.title}</span></Link>
-      )
-    }
-
-  }
-
+export default function Logo() {
+  return (
+    <>
+    <StaticQuery
+      query={graphql`
+        query LogoQuery {
+          file(
+            sourceInstanceName: { eq: "images" }
+            relativePath: { eq: "logo.png" }
+          ) {
+            childImageSharp {
+              fixed (height: 75) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+          site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+      `}
+      render={data => (
+        <><Link to="/" className={"logo"}>
+        {data.file && 
+            
+              <Img
+                fixed={data.file.childImageSharp.fixed}
+                alt={data.site.siteMetadata.title}
+              />
+            ||
+            <span className={"logo-text"}>
+              {data.site.siteMetadata.title}
+            </span>
+          
+          }
+          </Link>
+        </>
+          )
+      }
+    />
+    </>
+  )
 }
-
-export default Logo;
