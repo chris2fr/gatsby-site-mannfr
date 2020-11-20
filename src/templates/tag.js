@@ -6,10 +6,11 @@ import {
   MdxLink,
   LocalizedLink as Link,
 } from "gatsby-theme-i18n";
+import Img from "gatsby-image";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXProvider } from "@mdx-js/react";
 
 import Layout from "../components/layout";
-// import Header from "../components/header";
-import PostHeader from "../components/post-header";
 
 import "../css/single.css";
 import "../css/utilities.css";
@@ -22,11 +23,11 @@ import "../css/kg.css";
 // import "../css/widget.css";
 import "../css/term.css";
 
-import "./tag.css"
+// import "./tag.css";
 // import "./post.css";
 import "../css/post.css";
 import "../css/grid.css";
-import "../css/feed.css"
+import "../css/feed.css";
 //import { isPropertySignature } from "typescript";
 
 const components = {
@@ -38,7 +39,7 @@ function tagsForRender(tags) {
   if (!tags) return [];
   tags.forEach((tag) =>
     ret.push({ name: tag, url: "/tags/" + tag, slug: tag })
-  )
+  );
   return ret;
 }
 
@@ -79,51 +80,55 @@ export default ({ data, pageContext }) => {
         </div>
       </section>
 
+      <React.Fragment>
+                <MDXProvider components={components}>
+                  <MDXRenderer components={components}>
+                    {data.mdx.body}
+                  </MDXRenderer>
+                </MDXProvider>
+              </React.Fragment>
+
       <div className={"post-feed"}>
         {data.allMdx.nodes.map((node) => (
           <>
             <article className={`post tag`}>
-                
-                <div className={"post-media"}>
-                <div className={"u-placeholder same-height rectangle"}>
-                <Link
-                      className={"post-title-link"}
-                      to={node.fields.slug}
-                    >
-                  <PostHeader
-                    tags={tagsForRender(node.frontmatter.tags)}
-                    single={false}
-                    fluid={
-                      node.frontmatter.feature_image &&
-                      node.frontmatter.feature_image.childImageSharp.fluid
-                    }
-                    title={node.frontmatter.title}
-                    timeToRead={node.timeToRead}
-                    created_at={node.frontmatter.created_at}
-                    to={node.fields.slug}
-                    className="post-image-link"
-                    style={{width:"auto","minWidth":"100%","minHeight":"100%"}}
-                  />
+              <div ClassNewName={"post-outer"} className={"post-media"}>
+              <div ClassNewName={"post-left"} className={"u-placeholder same-height rectangle"} style={{"overflow":"hidden"}}>
+                  <Link className={"post-image-link"} to={node.fields.slug}>
+                      {node.frontmatter.feature_image && (
+                        <Img
+                          fluid={
+                            node.frontmatter.feature_image &&
+                            node.frontmatter.feature_image.childImageSharp.fluid
+                          }
+                          alt={node.frontmatter.title}
+                          className={"post-image-link"}
+                          overflow={"hidden"}
+                        />
+                      )}
                   </Link>
                 </div>
-                        </div>
-                 
-                
+              </div>
+
               <div className={"post-wrapper"}>
                 <header className={"post-header"}>
                   <div className={"post-meta"}>
                     <span className={"post-meta-item post-meta-date"}>
-                      <time datetime="{node.frontmatter.created_at}">{node.frontmatter.created_at}</time>
+                      <time datetime="{node.frontmatter.created_at}">
+                        {node.frontmatter.created_at}
+                      </time>
                     </span>
                     <span className={"post-meta-item post-meta-length"}>
                       {node.timeToRead} min read
                     </span>
+                    {/* <span className={"post-meta-item"}>
+                    <PostHeaderTags
+                        tags={tagsForRender(node.frontmatter.tags)}
+                      />
+                      </span> */}
                   </div>
                   <h2 className={"post-title"}>
-                    <Link
-                      className={"post-title-link"}
-                      to={node.fields.slug}
-                    >
+                    <Link className={"post-title-link"} to={node.fields.slug}>
                       {node.frontmatter.title}
                     </Link>
                   </h2>
@@ -158,7 +163,7 @@ export default ({ data, pageContext }) => {
                     ></i>
                   </Link>
                 </footer>
-              </div> 
+              </div>
             </article>
           </>
         ))}

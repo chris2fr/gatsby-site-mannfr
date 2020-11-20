@@ -8,7 +8,7 @@ module.exports = {
     title: `Mann.fr Digital Wellbeing`,
     description: "MANN.FR Website",
     author: `Chris Mann <chris@mann.fr>`,
-    logo:"/images/boule.png",
+    logoRelativePathInSrcImages: "logo.png",
     name: 'mann.fr',
     description: "Mann.fr is about making things work with Digital and with Humans in Organizations.",
     hero: {
@@ -38,6 +38,14 @@ module.exports = {
     //     },
     //   },
     // },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Raleway']
+        }
+      }
+    },
     `gatsby-image`,
     "react-helmet",
     "gatsby-transformer-sharp",
