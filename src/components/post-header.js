@@ -53,7 +53,7 @@ class PostHeader extends React.Component {
               fluid={this.props.fluid}
               alt={this.props.alt}
               objectFit="cover"
-              style={{ position: "absolute", width: "100vw", height: "100%" }}
+              style={{ position: "absolute", minWidth: "100vw", height: "100%" }}
               className={this.props.className}
               style={this.props.style}
             />

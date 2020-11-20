@@ -1,8 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import { MDXProvider } from "@mdx-js/react";
-import Img from "gatsby-image";
 import Helmet from "react-helmet";
 import {
   useLocalization,
@@ -25,8 +22,8 @@ import "../css/kg.css";
 // import "../css/widget.css";
 import "../css/term.css";
 
-// import "./tag.css
-import "./post.css";
+import "./tag.css"
+// import "./post.css";
 import "../css/post.css";
 import "../css/grid.css";
 import "../css/feed.css"
@@ -40,8 +37,8 @@ function tagsForRender(tags) {
   var ret = [];
   if (!tags) return [];
   tags.forEach((tag) =>
-    ret.push(ret.push({ name: tag, url: "/tags/" + tag, slug: tag }))
-  );
+    ret.push({ name: tag, url: "/tags/" + tag, slug: tag })
+  )
   return ret;
 }
 
@@ -89,6 +86,10 @@ export default ({ data, pageContext }) => {
                 
                 <div className={"post-media"}>
                 <div className={"u-placeholder same-height rectangle"}>
+                <Link
+                      className={"post-title-link"}
+                      to={node.fields.slug}
+                    >
                   <PostHeader
                     tags={tagsForRender(node.frontmatter.tags)}
                     single={false}
@@ -101,8 +102,9 @@ export default ({ data, pageContext }) => {
                     created_at={node.frontmatter.created_at}
                     to={node.fields.slug}
                     className="post-image-link"
-                    style={{}}
+                    style={{width:"auto","minWidth":"100%","minHeight":"100%"}}
                   />
+                  </Link>
                 </div>
                         </div>
                  
@@ -111,27 +113,23 @@ export default ({ data, pageContext }) => {
                 <header className={"post-header"}>
                   <div className={"post-meta"}>
                     <span className={"post-meta-item post-meta-date"}>
-                      <time datetime="2020-07-30">4 months ago</time>
+                      <time datetime="{node.frontmatter.created_at}">{node.frontmatter.created_at}</time>
                     </span>
                     <span className={"post-meta-item post-meta-length"}>
-                      1 min read
+                      {node.timeToRead} min read
                     </span>
                   </div>
                   <h2 className={"post-title"}>
-                    <a
+                    <Link
                       className={"post-title-link"}
-                      href="/acp-amazon-echo-americanchurchinparis/"
+                      to={node.fields.slug}
                     >
-                      Self-Contained Amazon Echo Show Mini-Video-Conference
-                      Device
-                    </a>
+                      {node.frontmatter.title}
+                    </Link>
                   </h2>
-                </header>{" "}
+                </header>
                 <div className={"post-excerpt"}>
-                  Self-Contained Amazon Echo Show Video Conference Device This
-                  device can allow a distant participant or perhaps two into a
-                  physical meeting. It is a Echo Show 8 set atop a record
-                  turntable and
+                  {node.frontmatter.description || node.excerpt}
                 </div>
                 <footer className={"post-footer"}>
                   <div className={"post-author"}>
@@ -150,15 +148,15 @@ export default ({ data, pageContext }) => {
                       />
                     </a>
                   </div>
-                  <a
+                  <Link
                     className={"read-more button-arrow-right"}
-                    href="/acp-amazon-echo-americanchurchinparis/"
+                    to={node.fields.slug}
                   >
                     Read More
                     <i
                       className={"button-arrow-icon icon icon-arrow-right"}
                     ></i>
-                  </a>
+                  </Link>
                 </footer>
               </div> 
             </article>
@@ -215,6 +213,7 @@ export const query = graphql`
         }
         body
         slug
+        excerpt(pruneLength: 400)
         timeToRead
       }
     }
