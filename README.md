@@ -343,3 +343,36 @@ error Building static HTML failed for path "/fr/draft/post/breizhat-com/"
 
   - promise_array.js:79 MappingPromiseArray.init
     [mann.fr]/[bluebird]/js/release/promise_array.js:79:10
+
+
+  "dependencies": {
+    "
+    "gatsby-image": "^2.5.0",
+    "gatsby-plugin-mdx": "^1.4.0",
+    "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-sharp": "^2.8.0",
+    "gatsby-remark-images": "^3.5.1",
+    "gatsby-source-filesystem": "^2.5.0",
+    "gatsby-theme-i18n": "^1.0.4",
+    "gatsby-transformer-sharp": "^2.6.0",
+    "typescript": "^4.0.5",
+    "react-elastic-carousel": "^0.9.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "maybeDependencies": {
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.3.1",
+    "react-helmet": "^6.1.0",
+    "react-slick": "^0.27.13",
+    "styled-components": "^5.2.1",
+    "create-react-context": "^0.3.0",
+    "gatsby": "^2.27.0",
+    "gatsby-link": "^2.6.0",
+    "gatsby-react-router-scroll": "^3.2.0",
+    "react-only-when": "^1.0.2",
+    "@reach/router": "^1.3.4",
+    "@mdx-js/mdx": "^1.6.21",
+    "@mdx-js/react": "^1.6.21"
+  },
+  "maybeDevDependencies"
