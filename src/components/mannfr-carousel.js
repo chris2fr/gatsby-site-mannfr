@@ -27,7 +27,7 @@ class MannfrCarousel extends React.Component {
       { width: 650, itemsToShow: 2 },
       { width: 1150, itemsToShow: 3 },
       { width: 1500, itemsToShow: 4 },
-      { width: 1850, itemsToShow: 5 },
+      { width: 1950, itemsToShow: 5 },
       { width: 2200, itemsToShow: 6 },
     ];
     return (
@@ -51,7 +51,7 @@ class MannfrCarousel extends React.Component {
                       childImageSharp {
                         # Specify the image processing specifications right in the query.
                         # Makes it trivial to update as your page's design changes.
-                        fluid {
+                        fluid(quality:80, maxWidth:2000) {
                           ...GatsbyImageSharpFluid
                         }
                       }

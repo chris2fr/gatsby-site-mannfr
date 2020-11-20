@@ -376,3 +376,35 @@ error Building static HTML failed for path "/fr/draft/post/breizhat-com/"
     "@mdx-js/react": "^1.6.21"
   },
   "maybeDevDependencies"
+
+## Replacements in Markdown Links
+
+  [Shared Resources](https://www.mann.fr/en/realizations/drawing-board/resdigita/)  => ../resdigita
+
+  /en/configmagic-com => ../configmagic-com
+
+
+info bootstrap finished - 16.545s
+success onPreExtractQueries - 0.001s
+error There was an error in your GraphQL query:
+
+Expected type MdxFieldsEnum, found frontmatter___order. Did you mean the enum value frontmatter___type, frontmatter___id, frontmatter___title, frontmatter___tags, or frontmatter___slug?
+error There was an error in your GraphQL query:
+
+Expected type MdxFieldsEnum, found frontmatter___order. Did you mean the enum value frontmatter___type, frontmatter___id, frontmatter___title, frontmatter___tags, or frontmatter___slug?
+error There was an error in your GraphQL query:
+
+Cannot query field "description" on type "MdxFrontmatter".
+
+If you don't expect "description" to exist on the type "MdxFrontmatter" it is most likely a typo.
+However, if you expect "description" to exist there are a couple of solutions to common problems:
+
+- If you added a new data source and/or changed something inside gatsby-node.js/gatsby-config.js, please try a restart of your development server
+- The field might be accessible in another subfield, please try your query in GraphiQL and use the GraphiQL explorer to see which fields you can query and what shape they have
+- You want to optionally use your field "description" and right now it is not used anywhere. Therefore Gatsby can't infer the type and add it to the GraphQL schema. A quick fix is to add at least one entry with that field ("dummy content")
+
+It is recommended to explicitly type your GraphQL schema if you want to use optional fields. This way you don't have to add the mentioned "dummy content". Visit our docs to learn how you can define the schema for "MdxFrontmatter":
+https://www.gatsbyjs.org/docs/schema-customization/#creating-type-definitions
+failed extract queries from components - 0.569s
+success write out requires - 0.026s
+success run static queries - 0.095s - 2/2 21.13/s

@@ -1,12 +1,13 @@
 import React from "react";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
+import Img from "gatsby-image";
 
-import PostHeaderImage from "../components/post-header-image";
 import PostHeaderTags from "../components/post-header-tags";
 
 import "../css/single.css";
 import "../css/utilities.css";
 import "../css/post.css";
+import tag from "../templates/tag";
 // import "../css/header.css";
 // import "../css/burger.css";
 // import "../css/widget.css";
@@ -20,37 +21,60 @@ class PostHeader extends React.Component {
   }
 
   renderTitle() {
-    if (this.props.single) {
+    if (this.props.single || !this.props.to) {
       return <h1 className={"post-title"}>{this.props.title}</h1>;
     } else {
       return (
-        <div className="post-title">
-          <Link className={"post-title-link"}>{this.props.title}</Link>
-        </div>
+        <>
+          <div className="post-title">
+            <Link to={this.props.to} className={"post-title-link"}>
+              {this.props.title}
+            </Link>
+          </div>
+        </>
       );
     }
   }
 
   render() {
+    // let tagsForRender = []
+    // this.props.tags.forEach(tag =>
+    //   tagsForRender.push({
+    //     slug: "/" + tag,
+    //     name: tag,
+    //     url: "/" + tag
+    //   })
+    // )
     return (
       <>
-        <header class="post-header">
-          <PostHeaderTags tags={this.props.tags} />
-          {this.renderTitle()}
-          <div class="post-meta">
-            <span class="post-meta-item post-meta-date">
-              {this.props.created_at}
-            </span>
-            <span class="post-meta-item post-meta-length">
-              {this.props.timeToRead} min reading
-            </span>
-          </div>
-          {this.props.featured && (
-            <span class="post-meta-featured">
-              <i class="icon icon-star"></i>
-            </span>
+        <div class="u-placeholder initialized" style={{ "z-index": "0" }}>
+          {this.props.fluid && (
+            <Img
+              fluid={this.props.fluid}
+              alt={this.props.alt}
+              objectFit="cover"
+              style={{ position: "absolute", width: "100vw", height: "100%" }}
+              className={this.props.className}
+              style={this.props.style}
+            />
           )}
-          {/*   <div class="post-tags">
+          <header class="post-header">
+            <PostHeaderTags tags={this.props.tags} />
+            {this.renderTitle()}
+            <div class="post-meta">
+              <span class="post-meta-item post-meta-date">
+                {this.props.created_at}
+              </span>
+              <span class="post-meta-item post-meta-length">
+                {this.props.timeToRead} min reading
+              </span>
+            </div>
+            {this.props.featured && (
+              <span class="post-meta-featured">
+                <i class="icon icon-star"></i>
+              </span>
+            )}
+            {/*   <div class="post-tags">
                     <a class="post-tag post-tag-mann-fr" href="/tag/mann-fr/" title=" MANN.FR"> MANN.FR</a>
                     <a class="post-tag post-tag-human" href="/tag/human/" title=" Human"> Human</a>
             </div>
@@ -63,16 +87,17 @@ class PostHeader extends React.Component {
         </span>
         <span class="post-meta-item post-meta-length">1 min read</span>
     </div> */}
-          {/* <PostHeaderImage
+            {/* <PostHeaderImage
           imageFluid={this.props.imageFluid}
           alt={this.props.title}
         /> */}
-          {/* className={"post-image lazyload jarallax-img u-object-fit"} */}
-        </header>
+            {/* className={"post-image lazyload jarallax-img u-object-fit"} */}
+          </header>
 
-        {/* <div className="post-header"> */}
+          {/* <div className="post-header"> */}
 
-        {/* </div> */}
+          {/* </div> */}
+        </div>
       </>
     );
   }

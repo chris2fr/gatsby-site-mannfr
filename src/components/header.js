@@ -1,6 +1,4 @@
 import React from "react";
-// import {Img} from "gatsby-image"
-import SiteConfig from "../../config/site-config"
 import {LocalizedLink as Link} from "gatsby-theme-i18n"
 
 import Logo from "./logo"
