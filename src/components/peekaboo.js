@@ -1,5 +1,6 @@
 import React from "react";
 import "./peekaboo.css"
+import "../css/burger.css"
 
 class PeekABoo extends React.Component  {
   
@@ -18,19 +19,23 @@ class PeekABoo extends React.Component  {
     return (
       <>
       <div 
-        className={"burger peekaboo-button"} 
+        className={"burger"}
+        classNotName={"peekaboo-button"} 
         role="button"
         onClick={this.handleClick}
-        > </div>
+        style={{position:"relative",flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","background-color":"var(--white-color)",cursor:"pointer"}}
+        >
         <div id="peekaboo" style={{"visibility":this.state.showComponent?"visible":"hidden"}}>
 <aside className={`peekaboo ${this.state.showComponent ?"open" : ""} off-canvas`} id='peekabooeaside' onClick={this.handleClick}>
-<button onClick={this.handleClick} className="burger peekaboo-button">
-  X
-</button>
+<div 
+        role="button"
+        onClick={this.handleClick}
+        style={{position:"absolute",right:20,top:20,flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","background-color":"var(--white-color)",cursor:"pointer"}}
+        >[ X ]</div>
         {this.children}
       </aside>
 </div>
-
+</div>
 
 
         </>
