@@ -74,6 +74,8 @@ class PostHeader extends React.Component {
                 <i class="icon icon-star"></i>
               </span>
             )}
+            </header>
+            </div>
             {/*   <div class="post-tags">
                     <a class="post-tag post-tag-mann-fr" href="/tag/mann-fr/" title=" MANN.FR"> MANN.FR</a>
                     <a class="post-tag post-tag-human" href="/tag/human/" title=" Human"> Human</a>
@@ -92,12 +94,10 @@ class PostHeader extends React.Component {
           alt={this.props.title}
         /> */}
             {/* className={"post-image lazyload jarallax-img u-object-fit"} */}
-          </header>
 
           {/* <div className="post-header"> */}
 
           {/* </div> */}
-        </div>
       </>
     );
   }
