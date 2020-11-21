@@ -4,16 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import PostHeader from "../components/post-header";
 
-import "../css/single.css";
-import "../css/utilities.css";
-import "../css/basics.css";
-import "../css/layout.css";
-import "../css/tag.css";
-import "../css/kg.css";
-// import "../css/header.css";
-// import "../css/burger.css";
-// import "../css/widget.css";
-
 import "./contact.css"
 
 export default class MyForm extends React.Component {
@@ -37,7 +27,7 @@ export default class MyForm extends React.Component {
     const { status } = this.state;
     return (
       <Layout>
-        <article class="post tag-mann-fr tag-human single-post" style={{width:"100vw"}}>
+        <article className="post tag-mann-fr tag-human single-post" style={{width:"100vw"}}>
         <PostHeader
           fluid={this.props.data.file.childImageSharp.fluid}
           alt={"Contact"}
@@ -48,7 +38,7 @@ export default class MyForm extends React.Component {
           style={{ position: "absolute", width: "100vw", height: "100%" }}
 
         />
-         <div class="post-content kg-canvas u-text-format">
+         <div className="post-content kg-canvas u-text-format">
         <h1>Contact</h1>
         <form
           onSubmit={this.submitForm}
@@ -95,7 +85,8 @@ export default class MyForm extends React.Component {
           <label>Email:</label>
           <input type="email" name="email" placeholder="email@example.com"/><br/>
           <label>Message:</label>
-          <textarea name="message" value={this.state.message} onChange={this.handleChange} style={{placeholder:"Message...",width:"100%",minHeight:"150px"}} />
+          <textarea name="message" value={this.state.message} onChange={this.handleChange} 
+          style={{placeholder:"Message...",width:"100%",minHeight:"150px"}} />
           <br/>
           {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
           {status === "ERROR" && <p>Ooops! There was an error.</p>}
@@ -117,6 +108,7 @@ export default class MyForm extends React.Component {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         form.reset();
+        this.state.message = "";
         this.setState({ status: "SUCCESS" });
       } else {
         this.setState({ status: "ERROR" });

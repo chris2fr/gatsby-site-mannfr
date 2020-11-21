@@ -87,16 +87,14 @@ export default ({ data, pageContext }) => {
       </React.Fragment>
 
       <div className={"post-feed"}>
-        {data.allMdx.nodes.map((node) => (
-          <>
-            <article className={`post tag`}>
-              <div ClassNewName={"post-outer"} className={"post-media"}>
+        {data.allMdx.nodes.map((node, index) => (
+            <article className={`post tag`} key={`tag-post-${index}`}>
+              <div className={"post-media"}>
                 <div
-                  ClassNewName={"post-left"}
                   className={"u-placeholder same-height rectangle"}
                   style={{ overflow: "hidden" }}
                 >
-                  <Link className={"post-image-link"} to={node.fields.slug}>
+                  <Link className={"post-image-link"} to={`/${node.slug}`}>
                     {node.frontmatter.feature_image && (
                       <Img
                         fluid={
@@ -116,7 +114,7 @@ export default ({ data, pageContext }) => {
                 <header className={"post-header"}>
                   <div className={"post-meta"}>
                     <span className={"post-meta-item post-meta-date"}>
-                      <time datetime="{node.frontmatter.created_at}">
+                      <time dateTime="{node.frontmatter.created_at}">
                         {node.frontmatter.created_at}
                       </time>
                     </span>
@@ -130,7 +128,7 @@ export default ({ data, pageContext }) => {
                       </span> */}
                   </div>
                   <h2 className={"post-title"}>
-                    <Link className={"post-title-link"} to={node.fields.slug}>
+                    <Link className={"post-title-link"} to={`/${node.slug}`}>
                       {node.frontmatter.title}
                     </Link>
                   </h2>
@@ -140,7 +138,7 @@ export default ({ data, pageContext }) => {
                 </div>
                 <footer className={"post-footer"}>
                   <div className={"post-author"}>
-                    <a className={"post-author-link"} href={"/author/chris/"}>
+                    <a className={"post-author-link"} href={"/author/chris"}>
                       <img
                         className={"post-author-image lazyautosizes lazyloaded"}
                         data-src={
@@ -157,7 +155,7 @@ export default ({ data, pageContext }) => {
                   </div>
                   <Link
                     className={"read-more button-arrow-right"}
-                    to={node.fields.slug}
+                    to={`/${node.slug}`}
                   >
                     Read More
                     <i
@@ -167,7 +165,6 @@ export default ({ data, pageContext }) => {
                 </footer>
               </div>
             </article>
-          </>
         ))}
       </div>
     </Layout>

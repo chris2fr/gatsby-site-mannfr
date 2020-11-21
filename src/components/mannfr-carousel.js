@@ -40,6 +40,7 @@ class MannfrCarousel extends React.Component {
                 sort: { order: ASC, fields: frontmatter___order }
               ) {
                 nodes {
+                  slug
                   fields {
                     slug
                   }
@@ -83,9 +84,9 @@ class MannfrCarousel extends React.Component {
                 </button>
               )}
             >
-              {data.allMdx.nodes.map((node) => (
-                <div className={"mann-carousel-item"}>
-                  <Link to={node.fields.slug} style={{ display: "block" }} draggable={false}>
+              {data.allMdx.nodes.map((node, index) => (
+                <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
+                  <Link to={`/${node.slug}`} style={{ display: "block" }} draggable={false}>
                     <div className={"tag"} draggable={false}>
                       <Img
                         className={"tag-img mann-carousel-img"}
@@ -95,6 +96,7 @@ class MannfrCarousel extends React.Component {
                         }
                         alt={node.frontmatter.title}
                         draggable={false}
+                        key={`tag-cover-image-${index}`}
                       />
                       <div className={"tag-content"}>
                         <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
