@@ -5,10 +5,10 @@ This is a new Gatsby website for Mann.fr. There probably will be a static bit, b
 The goals here are to :
 
 1. Set up a basic website Done
-2. Import content 
-3. Set up a home page
-4. Set up three languages
-5. Set up a contact form
+2. Import content Done
+3. Set up a home page Done
+4. Set up three languages Done
+5. Set up a contact form Done
 6. Set up a search mechanism
 
 So let's get started. We already have the folder and the readme. 

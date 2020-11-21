@@ -63,11 +63,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   mdxQueryResult.data.tags.nodes.forEach(({ fields: node }) => {
+    let tag = node.slug.substr(node.slug.lastIndexOf('/',node.slug.length-2)+1)
+    tag = tag.replace('/','');
     actions.createPage({
       path: node.slug,
       component: require.resolve(`./src/templates/tag.js`),
       context: {
         slug: node.slug,
+        tag: tag
       },
     }) 
   })

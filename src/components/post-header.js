@@ -47,6 +47,7 @@ class PostHeader extends React.Component {
     // )
     return (
       <>
+              <div class="post-media">
         <div class="u-placeholder initialized" style={{ "z-index": "0" }}>
           {this.props.fluid && (
             <Img
@@ -55,19 +56,22 @@ class PostHeader extends React.Component {
               objectFit="cover"
               style={{ position: "absolute", minWidth: "100vw", height: "100%" }}
               className={this.props.className}
-              style={this.props.style}
+              notStyle={this.props.style}
             />
           )}
           <header class="post-header">
             <PostHeaderTags tags={this.props.tags} />
             {this.renderTitle()}
-            <div class="post-meta">
+            <div class="post-meta"> 
+            {this.props.created_at &&
               <span class="post-meta-item post-meta-date">
                 {this.props.created_at}
               </span>
+            }{this.props.timeToRead &&
               <span class="post-meta-item post-meta-length">
                 {this.props.timeToRead} min reading
               </span>
+            }
             </div>
             {this.props.featured && (
               <span class="post-meta-featured">
@@ -75,6 +79,7 @@ class PostHeader extends React.Component {
               </span>
             )}
             </header>
+            </div>
             </div>
             {/*   <div class="post-tags">
                     <a class="post-tag post-tag-mann-fr" href="/tag/mann-fr/" title=" MANN.FR"> MANN.FR</a>
