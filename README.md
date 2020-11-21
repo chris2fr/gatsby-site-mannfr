@@ -1,6 +1,6 @@
 # MANN.fr
 
-This is a new Gatsby website for Mann.fr. 
+This is a new Gatsby website for Mann.fr.
 
 ## Version 0.0.1
 
