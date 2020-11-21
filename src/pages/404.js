@@ -5,24 +5,8 @@ import Layout from "../components/layout";
 import PostHeader from "../components/post-header";
 
 export default class FourOhFour extends React.Component {
-  constructor(props) {
-    super(props);
-    this.props = props;
-    this.submitForm = this.submitForm.bind(this);
-    this.state = {
-      status: "",
-      message: "",
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange = (event) => {
-    //console.log(event);
-    this.setState({message: event.target.value})
-  }
 
   render() {
-    const { status } = this.state;
     return (
       <Layout>
         <article className="post tag-mann-fr tag-human single-post" style={{width:"100vw"}}>

@@ -1,10 +1,16 @@
 {
-  "name": "gatsby-mann-fr",
+  "name": "gatsby-site-mannfr",
   "version": "0.0.1",
   "main": "index.js",
-  "author": "Chris Mann <chris@mann.fr>",
-  "private": false,
-  "license": "Ask",
+  "author": {
+    "name": "Chris Mann",
+    "email": "chris@mann.fr"
+  },
+  "homepage": "https://github.com/chris2fr/gatsby-site-mannfr",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chris2fr/gatsby-site-mannfr.git"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
