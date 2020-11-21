@@ -9,7 +9,7 @@ The goals here are to :
 3. Set up a home page Done
 4. Set up three languages Done
 5. Set up a contact form Done
-6. Set up a search mechanism
+6. Set up a search mechanism Done
 
 So let's get started. We already have the folder and the readme. 
 

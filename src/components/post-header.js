@@ -47,62 +47,67 @@ class PostHeader extends React.Component {
     // )
     return (
       <>
-              <div class="post-media">
-        <div class="u-placeholder initialized" style={{ "z-index": "0" }}>
-          {this.props.fluid && (
-            <Img
-              fluid={this.props.fluid}
-              alt={this.props.alt}
-              objectFit="cover"
-              style={{ position: "absolute", minWidth: "100vw", height: "100%" }}
-              className={this.props.className}
-              notStyle={this.props.style}
-            />
-          )}
-          <header class="post-header">
-            <PostHeaderTags tags={this.props.tags} />
-            {this.renderTitle()}
-            <div class="post-meta"> 
-            {this.props.created_at &&
-              <span class="post-meta-item post-meta-date">
-                {this.props.created_at}
-              </span>
-            }{this.props.timeToRead &&
-              <span class="post-meta-item post-meta-length">
-                {this.props.timeToRead} min reading
-              </span>
-            }
-            </div>
-            {this.props.featured && (
-              <span class="post-meta-featured">
-                <i class="icon icon-star"></i>
-              </span>
+        <div className="post-media">
+          <div className="u-placeholder initialized" style={{ zIndex: "0" }}>
+            {this.props.fluid && (
+              <Img
+                fluid={this.props.fluid}
+                alt={this.props.alt}
+                objectFit="cover"
+                style={{
+                  position: "absolute",
+                  minWidth: "100vw",
+                  height: "100%",
+                }}
+                className={this.props.className}
+                notStyle={this.props.style}
+              />
             )}
+            <header className="post-header">
+              <PostHeaderTags tags={this.props.tags} />
+              {this.renderTitle()}
+              <div className="post-meta">
+                {this.props.created_at && (
+                  <span className="post-meta-item post-meta-date">
+                    {this.props.created_at}
+                  </span>
+                )}
+                {this.props.timeToRead && (
+                  <span className="post-meta-item post-meta-length">
+                    {this.props.timeToRead} min reading
+                  </span>
+                )}
+              </div>
+              {this.props.featured && (
+                <span className="post-meta-featured">
+                  <i className="icon icon-star"></i>
+                </span>
+              )}
             </header>
+          </div>
+        </div>
+        {/*   <div className="post-tags">
+                    <a className="post-tag post-tag-mann-fr" href="/tag/mann-fr/" title=" MANN.FR"> MANN.FR</a>
+                    <a className="post-tag post-tag-human" href="/tag/human/" title=" Human"> Human</a>
             </div>
-            </div>
-            {/*   <div class="post-tags">
-                    <a class="post-tag post-tag-mann-fr" href="/tag/mann-fr/" title=" MANN.FR"> MANN.FR</a>
-                    <a class="post-tag post-tag-human" href="/tag/human/" title=" Human"> Human</a>
-            </div>
-        <h1 class="post-title">Sounding Board</h1>
-            <div class="post-meta">
-        <span class="post-meta-item post-meta-date">
+        <h1 className="post-title">Sounding Board</h1>
+            <div className="post-meta">
+        <span className="post-meta-item post-meta-date">
             <time datetime="2020-04-25">
                     Apr 25, 2020
             </time>
         </span>
-        <span class="post-meta-item post-meta-length">1 min read</span>
+        <span className="post-meta-item post-meta-length">1 min read</span>
     </div> */}
-            {/* <PostHeaderImage
+        {/* <PostHeaderImage
           imageFluid={this.props.imageFluid}
           alt={this.props.title}
         /> */}
-            {/* className={"post-image lazyload jarallax-img u-object-fit"} */}
+        {/* className={"post-image lazyload jarallax-img u-object-fit"} */}
 
-          {/* <div className="post-header"> */}
+        {/* <div className="post-header"> */}
 
-          {/* </div> */}
+        {/* </div> */}
       </>
     );
   }
