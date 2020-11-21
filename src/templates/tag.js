@@ -81,31 +81,33 @@ export default ({ data, pageContext }) => {
       </section>
 
       <React.Fragment>
-                <MDXProvider components={components}>
-                  <MDXRenderer components={components}>
-                    {data.mdx.body}
-                  </MDXRenderer>
-                </MDXProvider>
-              </React.Fragment>
+        <MDXProvider components={components}>
+          <MDXRenderer components={components}>{data.mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </React.Fragment>
 
       <div className={"post-feed"}>
         {data.allMdx.nodes.map((node) => (
           <>
             <article className={`post tag`}>
               <div ClassNewName={"post-outer"} className={"post-media"}>
-              <div ClassNewName={"post-left"} className={"u-placeholder same-height rectangle"} style={{"overflow":"hidden"}}>
+                <div
+                  ClassNewName={"post-left"}
+                  className={"u-placeholder same-height rectangle"}
+                  style={{ overflow: "hidden" }}
+                >
                   <Link className={"post-image-link"} to={node.fields.slug}>
-                      {node.frontmatter.feature_image && (
-                        <Img
-                          fluid={
-                            node.frontmatter.feature_image &&
-                            node.frontmatter.feature_image.childImageSharp.fluid
-                          }
-                          alt={node.frontmatter.title}
-                          className={"post-image-link"}
-                          overflow={"hidden"}
-                        />
-                      )}
+                    {node.frontmatter.feature_image && (
+                      <Img
+                        fluid={
+                          node.frontmatter.feature_image &&
+                          node.frontmatter.feature_image.childImageSharp.fluid
+                        }
+                        alt={node.frontmatter.title}
+                        className={"post-image-link"}
+                        overflow={"hidden"}
+                      />
+                    )}
                   </Link>
                 </div>
               </div>
@@ -173,7 +175,7 @@ export default ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $tag: String) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         slug
@@ -194,7 +196,10 @@ export const query = graphql`
       body
       timeToRead
     }
-    allMdx(filter: { frontmatter: { tags: { in: "digital" } } }) {
+    allMdx(
+      filter: { frontmatter: { tags: { eq: $tag }, type: {ne: "tag"} } }
+      sort: { fields: frontmatter___created_at, order: DESC }
+    ) {
       nodes {
         fields {
           slug
@@ -208,8 +213,6 @@ export const query = graphql`
           feature_image {
             publicURL
             childImageSharp {
-              # Specify the image processing specifications right in the query.
-              # Makes it trivial to update as your page's design changes.
               fluid {
                 ...GatsbyImageSharpFluid
               }
