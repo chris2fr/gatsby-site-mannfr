@@ -94,9 +94,8 @@ export default class MyForm extends React.Component {
           </p>
           <label>Email:</label>
           <input type="email" name="email" placeholder="email@example.com"/><br/>
-          <label>Message:
-          <textarea value={this.state.message} onChange={this.handleChange} style={{placeholder:"Message...",width:"100%",minHeight:"150px"}} />
-          </label>
+          <label>Message:</label>
+          <textarea name="message" value={this.state.message} onChange={this.handleChange} style={{placeholder:"Message...",width:"100%",minHeight:"150px"}} />
           <br/>
           {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
           {status === "ERROR" && <p>Ooops! There was an error.</p>}
