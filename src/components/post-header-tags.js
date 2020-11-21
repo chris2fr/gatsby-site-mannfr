@@ -20,8 +20,8 @@ class PostHeaderTags extends React.Component {
     if (this.tags) {
       return (
         <div className={"post-tags"}>
-          {this.tags.map((tag) =>(
-          <Link className={'post-tag post-tag-${tag.slug}'} to={tag.url} title={tag.name}>{tag.name}</Link>)
+          {this.tags.map((tag, index) =>(
+          <Link className={`post-tag post-tag-${tag.slug}`} key={`tag-${index}`} to={tag.url} title={tag.name}>{tag.name}</Link>)
           )}
         </div>
       )

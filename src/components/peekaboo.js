@@ -4,10 +4,10 @@ import "../css/burger.css"
 
 class PeekABoo extends React.Component  {
   
-  constructor({ children, ...props }) {
-    super({ children, ...props });
+  constructor(props) {
+    super(props);
     this.state = { showComponent: false };
-    this.children = children;
+    this.children = props.children;
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -20,17 +20,16 @@ class PeekABoo extends React.Component  {
       <>
       <div 
         className={"burger"}
-        classNotName={"peekaboo-button"} 
         role="button"
         onClick={this.handleClick}
-        style={{position:"relative",flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","background-color":"var(--white-color)",cursor:"pointer"}}
+        style={{position:"relative",flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","backgroundColor":"var(--white-color)",cursor:"pointer"}}
         >
         <div id="peekaboo" style={{"visibility":this.state.showComponent?"visible":"hidden"}}>
 <aside className={`peekaboo ${this.state.showComponent ?"open" : ""} off-canvas`} id='peekabooeaside' onClick={this.handleClick}>
 <div 
         role="button"
         onClick={this.handleClick}
-        style={{position:"absolute",right:20,top:20,flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","background-color":"var(--white-color)",cursor:"pointer"}}
+        style={{position:"absolute",right:20,top:20,flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","backgroundColor":"var(--white-color)",cursor:"pointer"}}
         >[ X ]</div>
         {this.children}
       </aside>
