@@ -23,7 +23,6 @@
   position: absolute;
   background-color: white;
   color: black; */
-
   background-color: var(--white-color);
   border: 0;
   box-shadow: var(--shadow-base);
@@ -43,7 +42,6 @@
   transition: color .5s var(--animation-base),opacity .5s var(--animation-base);
   width: 80px;
   z-index: 100;
-
 }
 
 .mann-carousel div .rec.rec-arrow:hover {

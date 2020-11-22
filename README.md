@@ -31,9 +31,9 @@ My own content is in a git repository specific to me but not really backed up an
 
 ## Next Version
 
-1. Put meaningful content in the peekaboo/burger menu
-2. Rework the presentation of the search results
-3. Put in the three flags to change languages per page
+1. Put meaningful content in the peekaboo/burger menu Done
+2. Rework the presentation of the search results 
+3. Put in the three flags to change languages per page Done
 4. Hesitate to show a page if not in the language
 5. Better manage site content
 6. Consider Netlify CMS
@@ -41,17 +41,4 @@ My own content is in a git repository specific to me but not really backed up an
 8. Other content types from Ghost
 9. Editing and proofreading
 10. Consider HTML boilerplate
-11. Fix links in markdown files
-
-### Notes
-
-```
-info bootstrap finished - 20.677s
-success run page queries - 0.545s - 3/3 5.51/s
-success write out requires - 0.069s
-warning "export 'locale' was not found in 'gatsby-theme-i18n'
-warning "export 'locale' was not found in 'gatsby-theme-i18n'
-warning "export 'locale' was not found in 'gatsby-theme-i18n'
-success Building production JavaScript and CSS bundles - 7.426s
-success Building static HTML for pages - 3.678s - 334/334 90.81/s
-```
+11. Fix links in markdown files Done?

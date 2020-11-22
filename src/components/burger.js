@@ -1,5 +1,5 @@
 import React from "react";
-import {locale, LocalizedLink as Link} from "gatsby-theme-i18n"
+import {LocalizedLink as Link} from "gatsby-theme-i18n"
 import PeekABoo from "./peekaboo"
 
 import "../css/screen.css"
@@ -15,17 +15,17 @@ class Burger extends React.Component  {
       <nav className={"main-menu widget"}>
         <ul className={"nav-list u-plain-list"}>
           <li className={"menu-item menu-item-home menu-item-current"}>
-            <Link to="/" className="menu-item-link u-underline"  language={locale}>
+            <Link to="/" className="menu-item-link u-underline">
               Home
             </Link>
           </li>
           <li className={"menu-item menu-item-home menu-item-current"}>
-            <Link to="/contact" className="menu-item-link u-underline" language={locale}>
+            <Link to="/contact" className="menu-item-link u-underline">
               Contact
             </Link>
           </li>
           <li className={"menu-item menu-item-home menu-item-current"}>
-            <Link to="/search" className="menu-item-link u-underline" language={locale}>
+            <Link to="/search" className="menu-item-link u-underline">
               Search
             </Link>
           </li>
