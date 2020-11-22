@@ -42,3 +42,16 @@ My own content is in a git repository specific to me but not really backed up an
 9. Editing and proofreading
 10. Consider HTML boilerplate
 11. Fix links in markdown files
+
+### Notes
+
+```
+info bootstrap finished - 20.677s
+success run page queries - 0.545s - 3/3 5.51/s
+success write out requires - 0.069s
+warning "export 'locale' was not found in 'gatsby-theme-i18n'
+warning "export 'locale' was not found in 'gatsby-theme-i18n'
+warning "export 'locale' was not found in 'gatsby-theme-i18n'
+success Building production JavaScript and CSS bundles - 7.426s
+success Building static HTML for pages - 3.678s - 334/334 90.81/s
+```
