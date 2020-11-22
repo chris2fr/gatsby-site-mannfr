@@ -5,7 +5,8 @@ import Logo from "./logo";
 import Burger from "./burger";
 import LangSwitch from "./langswitch"
 
-import "../css/header.css"
+import "../css/screen.css"
+// import "../css/header.css"
 
 const Header = ({pageContext}) => {
 return (

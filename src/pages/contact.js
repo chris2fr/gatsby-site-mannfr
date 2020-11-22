@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import PostHeader from "../components/post-header";
 
+import "../css/screen.css"
 import "./contact.css"
 
 export default class MyForm extends React.Component {

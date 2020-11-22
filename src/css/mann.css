@@ -1,0 +1,12 @@
+.tag::before,
+.tag-content{
+  position: sticky;
+}
+
+.u-permalink {
+  position: unset;
+  top: unset;
+  right: unset;
+  bottom: unset;
+  left: unset;
+}

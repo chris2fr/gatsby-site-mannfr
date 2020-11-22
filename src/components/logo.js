@@ -3,6 +3,8 @@ import Img from "gatsby-image";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import { StaticQuery, graphql } from "gatsby";
 
+import "../css/screen.css"
+
 export default function Logo() {
   return (
     <>

@@ -3,6 +3,8 @@ import Layout from "./layout";
 import PostHeader from "./post-header";
 // import { StaticQuery, graphql } from "gatsby";
 
+import "../css/screen.css"
+
 const LayoutWithHeaderImage = ({
   children,
   pageContext,

@@ -2,7 +2,8 @@ import React from "react";
 import {locale, LocalizedLink as Link} from "gatsby-theme-i18n"
 import PeekABoo from "./peekaboo"
 
-import "../css/burger.css"
+import "../css/screen.css"
+// import "../css/burger.css"
 
 class Burger extends React.Component  {
 
@@ -30,7 +31,7 @@ class Burger extends React.Component  {
           </li>
         </ul>
       </nav>
-      <div className={"widget widget-recent"}>
+      {/* <div className={"widget widget-recent"}>
         <h4 className={"widget-title"}>Recent Posts</h4>
         <div className={"recent-posts"}>
           <article className={"recent"}>
@@ -93,8 +94,8 @@ class Burger extends React.Component  {
               </h5>
             </header>
           </article>
-        </div>
-      </div>
+        </div> 
+      </div>*/}
     </PeekABoo>
     )
 

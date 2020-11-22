@@ -1,14 +1,16 @@
 import React from "react";
 import {LocalizedLink as Link  } from "gatsby-theme-i18n";
 
-import "../css/single.css";
-import "../css/utilities.css";
-import "../css/post.css";
-// import "../css/header.css";
-// import "../css/burger.css";
-// import "../css/widget.css";
-// import "../css/basics.css";
-// import "../pages/index.css";
+import "../css/screen.css"
+
+// import "../css/single.css";
+// import "../css/utilities.css";
+// import "../css/post.css";
+// // import "../css/header.css";
+// // import "../css/burger.css";
+// // import "../css/widget.css";
+// // import "../css/basics.css";
+// // import "../pages/index.css";
 
 class PostHeaderTags extends React.Component {
   constructor(props) {

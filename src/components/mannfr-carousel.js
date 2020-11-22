@@ -5,15 +5,17 @@ import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-the
 
 import Img from "gatsby-image";
 
+import "../css/screen.css"
+
 import "./mannfr-carousel.css";
 
-import "../css/tag.css";
-import "../css/utilities.css";
-// import "../css/header.css";
-// import "../css/burger.css";
-// import "../css/widget.css";
-// import "../css/basics.css";
-// import "../pages/index.css";
+// import "../css/tag.css";
+// import "../css/utilities.css";
+// // import "../css/header.css";
+// // import "../css/burger.css";
+// // import "../css/widget.css";
+// // import "../css/basics.css";
+// // import "../pages/index.css";
 
 class MannfrCarousel extends React.Component {
   // constructor(props) {

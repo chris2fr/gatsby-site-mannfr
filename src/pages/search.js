@@ -6,6 +6,8 @@ import { LocalizedLink as Link } from "gatsby-theme-i18n";
 
 import LayoutWithHeaderImage from "../components/layout-with-header-image";
 
+import "../css/screen.css"
+
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-local-search/#displaying-the-search-results
 const SearchPage = ({ pageContext, data }) => {
   const [tempQueryString, setTempQueryString] = useState("");
