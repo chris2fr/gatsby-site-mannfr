@@ -1,24 +1,24 @@
 import React from "react";
 import Layout from "./layout";
 import PostHeader from "./post-header";
-import { StaticQuery, graphql } from "gatsby";
+// import { StaticQuery, graphql } from "gatsby";
 
 const LayoutWithHeaderImage = ({
   children,
+  pageContext,
   alt,
   data,
   title,
   fluid,
   tags,
   pathname,
-  pageContext,
   ...props
 }) => {
   if (!tags) {
     tags = [];
   }
   return (
-        <Layout>
+        <Layout pageContext={pageContext}>
           <article
             className="post tag-mann-fr tag-human single-post"
             style={{ width: "100vw" }}
@@ -29,7 +29,6 @@ const LayoutWithHeaderImage = ({
               }
               alt={alt}
               title={title}
-              to={pageContext.originalPathname}
               pageContext={pageContext}
               tags={tags}
               single={true}

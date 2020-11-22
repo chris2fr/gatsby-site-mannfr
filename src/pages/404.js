@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { LocalizedLink as Link } from "gatsby-theme-i18n";
 
 import Layout from "../components/layout";
 import PostHeader from "../components/post-header";
@@ -25,6 +26,7 @@ export default class FourOhFour extends React.Component {
           <div className="post-content kg-canvas u-text-format">
             <h1>Lost in Hyperspace</h1>
             <p>So sorry, but no content here now.</p>
+            <p><Link to="/">Return Home</Link></p>
           </div>
         </article>
       </Layout>
