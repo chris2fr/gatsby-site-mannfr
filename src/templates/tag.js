@@ -12,22 +12,24 @@ import { MDXProvider } from "@mdx-js/react";
 
 import Layout from "../components/layout";
 
-import "../css/single.css";
-import "../css/utilities.css";
-import "../css/basics.css";
-import "../css/layout.css";
-import "../css/tag.css";
-import "../css/kg.css";
-// import "../css/header.css";
-// import "../css/burger.css";
-// import "../css/widget.css";
-import "../css/term.css";
+import "../css/screen.css"
 
-// import "./tag.css";
-// import "./post.css";
-import "../css/post.css";
-import "../css/grid.css";
-import "../css/feed.css";
+// import "../css/single.css";
+// import "../css/utilities.css";
+// import "../css/basics.css";
+// import "../css/layout.css";
+// import "../css/tag.css";
+// import "../css/kg.css";
+// // import "../css/header.css";
+// // import "../css/burger.css";
+// // import "../css/widget.css";
+// import "../css/term.css";
+
+// // import "./tag.css";
+// // import "./post.css";
+// import "../css/post.css";
+// import "../css/grid.css";
+// import "../css/feed.css";
 //import { isPropertySignature } from "typescript";
 
 const components = {

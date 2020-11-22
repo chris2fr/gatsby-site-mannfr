@@ -1,6 +1,8 @@
 import React from "react";
 import "./peekaboo.css"
-import "../css/burger.css"
+
+import "../css/screen.css"
+// import "../css/burger.css"
 
 class PeekABoo extends React.Component  {
   
@@ -25,7 +27,7 @@ class PeekABoo extends React.Component  {
         style={{position:"relative",flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","backgroundColor":"var(--white-color)",cursor:"pointer"}}
         >
         <div id="peekaboo" style={{"visibility":this.state.showComponent?"visible":"hidden"}}>
-<aside className={`peekaboo ${this.state.showComponent ?"open" : ""} off-canvas`} id='peekabooeaside' onClick={this.handleClick}>
+<aside className={`peekaboo ${this.state.showComponent ?"open" : ""} was-off-canvas`} id='peekabooeaside' onClick={this.handleClick}>
 <div 
         role="button"
         onClick={this.handleClick}

@@ -5,6 +5,8 @@ import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import Layout from "../components/layout";
 import PostHeader from "../components/post-header";
 
+import "../css/screen.css"
+
 export default class FourOhFour extends React.Component {
   render() {
     return (

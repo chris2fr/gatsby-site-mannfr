@@ -4,15 +4,17 @@ import Img from "gatsby-image";
 
 import PostHeaderTags from "../components/post-header-tags";
 
-import "../css/single.css";
-import "../css/utilities.css";
-import "../css/post.css";
-import tag from "../templates/tag";
-// import "../css/header.css";
-// import "../css/burger.css";
-// import "../css/widget.css";
-// import "../css/basics.css";
-// import "../pages/index.css";
+import "../css/screen.css"
+
+// import "../css/single.css";
+// import "../css/utilities.css";
+// import "../css/post.css";
+// import tag from "../templates/tag";
+// // import "../css/header.css";
+// // import "../css/burger.css";
+// // import "../css/widget.css";
+// // import "../css/basics.css";
+// // import "../pages/index.css";
 
 class PostHeader extends React.Component {
   constructor(props) {

@@ -8,12 +8,13 @@ import Layout from "../components/layout";
 // import Header from "../components/header";
 import PostHeader from "../components/post-header";
 
-import "../css/single.css";
-import "../css/utilities.css";
-import "../css/basics.css";
-import "../css/layout.css";
-import "../css/tag.css";
-import "../css/kg.css";
+import "../css/screen.css"
+// import "../css/single.css";
+// import "../css/utilities.css";
+// import "../css/basics.css";
+// import "../css/layout.css";
+// import "../css/tag.css";
+// import "../css/kg.css";
 // import "../css/header.css";
 // import "../css/burger.css";
 // import "../css/widget.css";

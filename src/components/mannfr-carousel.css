@@ -122,6 +122,11 @@
   /* background-color: white; */
 }
 
+.tag::before,
+.tag-content{
+  position: sticky;
+}
+
 /* .mann-carousel div .rec.rec-dot .rec.rec-dot_active {
   position: absolute;
   bottom: 0;

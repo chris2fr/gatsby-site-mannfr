@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import "./langswitch.css";
 import {
   LocalizedLink as Link,
   LocalesList,
   useLocalization,
 } from "gatsby-theme-i18n";
+
+// import "../css/screen.css"
+import "./langswitch.css";
 
 // https://russmaxdesign.github.io/language-switcher/
 
