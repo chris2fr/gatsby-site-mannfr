@@ -8,7 +8,8 @@ class Burger extends React.Component  {
 
   render() {
     return (
-      <PeekABoo>
+      <PeekABoo 
+      pageContext={this.props.pageContext}>
       <div className={"canvas-close"}></div>
       <nav className={"main-menu widget"}>
         <ul className={"nav-list u-plain-list"}>
