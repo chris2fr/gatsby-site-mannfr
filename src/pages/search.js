@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { useFlexSearch } from "react-use-flexsearch";
 import {
-  LocalizedLink as Link,
+  LocalizedLink as Link
 } from "gatsby-theme-i18n";
 
 import LayoutWithHeaderImage from "../components/layout-with-header-image";
 
-const SearchPage = ({location, data}) => {
+const SearchPage = ({pageContext, data}) => {
 
   const [tempQueryString, setTempQueryString] = useState("");
   const [queryString, setQueryString] = useState("");
@@ -20,12 +20,9 @@ const SearchPage = ({location, data}) => {
             data.localSearchPages.store
           );
 
-      console.log(queryString)
-    
       const handleSubmit = (evt) => {
         evt.preventDefault();
         setQueryString(tempQueryString);
-        console.log(results)
       }
 
 
@@ -33,7 +30,7 @@ const SearchPage = ({location, data}) => {
       <LayoutWithHeaderImage
         title={"Search"}
         alt={"Search"}
-        to={location.pathname}
+        pageContext={pageContext}
         tags={[]}
         fluid={
           data.file && data.file.childImageSharp.fluid

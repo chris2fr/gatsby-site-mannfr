@@ -20,11 +20,13 @@ import "../css/normalize.css"
 import "./layout.css"
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageContext }) => {
   return (
     <>
       <div className="site">
-        <Header />
+        <Header
+          pageContext={pageContext}
+        />
         <div className={"site-content"}>
           <div className="content-area">
             <main className="site-main container">

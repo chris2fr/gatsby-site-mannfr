@@ -23,6 +23,7 @@ module.exports = {
     ],
   },
   plugins: [
+    // `gatsby-plugin-sass`,
         // You can have multiple instances of this plugin to create indexes with
     // different names or engines. For example, multi-lingual sites could create
     // an index for each language.

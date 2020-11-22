@@ -2,24 +2,24 @@
   {
     "code": "en",
     "hrefLang": "en-US",
-    "name": "English",
-    "localName": "English",
+    "name": "English (EN)",
+    "localName": "English (EN)",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
   {
     "code": "fr",
     "hrefLang": "fr-FR",
-    "name": "French",
-    "localName": "Français",
+    "name": "French (FR)",
+    "localName": "Français (FR)",
     "langDir": "ltr",
     "dateFormat": "DD.MM.YYYY"
   },
   {
     "code": "un",
     "hrefLang": "un-UN",
-    "name": "UN Lang",
-    "localName": "UN Lang",
+    "name": "UN Lang (UN)",
+    "localName": "UN Lang (UN)",
     "langDir": "ltr",
     "dateFormat": "YYYY-MM-DD"
   },

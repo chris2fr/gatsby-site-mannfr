@@ -43,7 +43,7 @@ function tagsForRender(tags) {
   return ret;
 }
 
-export default ({ data, pageContext }) => {
+export default ({ data, location, pageContext }) => {
   const { locale, config, defaultLang } = useLocalization();
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let description =
@@ -69,7 +69,7 @@ export default ({ data, pageContext }) => {
   //   );
   // }
   return (
-    <Layout>
+    <Layout pageContext={pageContext}>
       <Helmet>
         <body className={"tag-template tag-digital"} />
       </Helmet>

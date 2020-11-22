@@ -26,13 +26,14 @@ export default class MyForm extends React.Component {
   render() {
     const { status } = this.state;
     return (
-      <Layout>
+      <Layout pageContext={this.props.pageContext}>
         <article className="post tag-mann-fr tag-human single-post" style={{width:"100vw"}}>
         <PostHeader
           fluid={this.props.data.file.childImageSharp.fluid}
           alt={"Contact"}
           title={"Contact"}
           to={"/contact"}
+          originalPath={"/contact"}
           tags={[{ url: "/contact", slug: "/contact", name: "Contact" }]}
           single={true}
           style={{ position: "absolute", width: "100vw", height: "100%" }}

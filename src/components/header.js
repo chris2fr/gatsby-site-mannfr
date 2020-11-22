@@ -1,22 +1,27 @@
 import React from "react";
-import { LocalizedLink as Link } from "gatsby-theme-i18n";
+// import { LocalizedLink as Link } from "gatsby-theme-i18n";
 
 import Logo from "./logo";
 import Burger from "./burger";
+import LangSwitch from "./langswitch"
 
 import "../css/header.css"
 
-class Header extends React.Component {
-  render() {
-    return (
+const Header = ({pageContext}) => {
+return (
       <header className={"site-header"}>
         <div className={"navbar"}>
           <Logo />
-          <Burger />
+          <LangSwitch
+          pageContext={pageContext}
+          />
+          <Burger
+          pageContext={pageContext}
+          />
         </div>
       </header>
-    );
+    )
   }
-}
+
 
 export default Header;

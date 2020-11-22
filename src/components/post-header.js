@@ -27,7 +27,7 @@ class PostHeader extends React.Component {
       return (
         <>
           <div className="post-title">
-            <Link to={this.props.to} className={"post-title-link"}>
+            <Link to={this.props.pageContext.originalPath} className={"post-title-link"}>
               {this.props.title}
             </Link>
           </div>
@@ -60,7 +60,6 @@ class PostHeader extends React.Component {
                   height: "100%",
                 }}
                 className={this.props.className}
-                notStyle={this.props.style}
               />
             )}
             <header className="post-header">

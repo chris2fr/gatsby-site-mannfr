@@ -10,7 +10,8 @@ const LayoutWithHeaderImage = ({
   title,
   fluid,
   tags,
-  to,
+  pathname,
+  pageContext,
   ...props
 }) => {
   if (!tags) {
@@ -28,7 +29,8 @@ const LayoutWithHeaderImage = ({
               }
               alt={alt}
               title={title}
-              to={to}
+              to={pageContext.originalPathname}
+              pageContext={pageContext}
               tags={tags}
               single={true}
               style={{ position: "absolute", width: "100vw", height: "100%" }}

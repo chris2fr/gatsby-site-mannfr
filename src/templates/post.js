@@ -50,13 +50,14 @@ export default ({ data, pageContext }) => {
     );
   }
   return (
-    <Layout>
+    <Layout pageContext={pageContext}>
         <article class="post tag-mann-fr tag-human single-post">
           <PostHeader
             tags={tagsForRender}
             single={true}
             fluid={imageFluid}
             title={title}
+            originalPath={pageContext.originalPath}
             timeToRead={data.mdx.timeToRead}
             created_at={data.mdx.frontmatter.created_at}
             to={data.mdx.fields.slug}

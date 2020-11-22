@@ -17,12 +17,12 @@ import "../css/widget.css";
 
 import "./index.css";
 
-export default function IndexRoute() {
+export default function IndexRoute({pageContext}) {
   // const { locale, config, defaultLang } = useLocalization();
 
   return (
     <>
-      <Header />
+      <Header pageContext={pageContext} />
       <MannfrCarousel />
     </>
   );
