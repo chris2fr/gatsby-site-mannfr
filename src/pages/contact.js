@@ -19,7 +19,6 @@ export default class MyForm extends React.Component {
   }
 
   handleChange = (event) => {
-    //console.log(event);
     this.setState({message: event.target.value})
   }
 

@@ -11,13 +11,6 @@ import {
 
 const LangSwitchToo = ({ location, pageContext, ...props }) => {
   const { locale, config, defaultLang } = useLocalization();
-  // const [currentLocale, setCurrentLocale] = useState(locale);
-  // const onChangeLocale = (evt) => {
-  //   evt.preventDefault();
-  //   setCurrentLocale(evt.target.value)
-  // }
-
-  console.log(location, pageContext, props)
 
   return (
     <div

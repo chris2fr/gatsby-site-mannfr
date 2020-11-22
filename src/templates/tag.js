@@ -58,16 +58,7 @@ export default ({ data, location, pageContext }) => {
       ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
       : null;
   let tags = [];
-  // if (
-  //   data.mdx &&
-  //   data.mdx.frontmatter &&
-  //   data.mdx.frontmatter.tags &&
-  //   data.mdx.frontmatter.tags.length > 0
-  // ) {
-  //   data.mdx.frontmatter.tags.forEach((tag) =>
-  //     tags.push({ name: tag, url: "/tags/" + tag, slug: tag })
-  //   );
-  // }
+
   return (
     <Layout pageContext={pageContext}>
       <Helmet>

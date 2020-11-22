@@ -1,19 +1,16 @@
-import React from "react"
-import LayoutWithHeaderImage from "../components/layout-with-header-image"
+import React from "react";
+import Layout from "../components/layout";
 
-// import LayoutWithHeaderImage from "../components/layout-with-header-image";
-// export const DataContext = React.createContext();
-// https://stackoverflow.com/questions/62057441/passing-location-and-pagecontext-from-page-to-child-components-in-gatsby
-
-const DefaultPage = ({pageContext}) => {
+const DefaultPage = ({ pageContext }) => {
+  console.log(pageContext);
   return (
-  <LayoutWithHeaderImage
-      pageContext={pageContext}
-      >
-  <h1>Default Page</h1>
-  <p>This is a Default page</p>
-  </LayoutWithHeaderImage>
-  )
-}
+    <>
+      <Layout pageContext={pageContext}>
+        <h1>Default Page</h1>
+        <p>This is a Default page</p>
+      </Layout>
+    </>
+  );
+};
 
-export default DefaultPage
+export default DefaultPage;

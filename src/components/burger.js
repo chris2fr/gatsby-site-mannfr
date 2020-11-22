@@ -19,8 +19,13 @@ class Burger extends React.Component  {
             </Link>
           </li>
           <li className={"menu-item menu-item-home menu-item-current"}>
-            <Link to="/contact/" className="menu-item-link u-underline" language={locale}>
+            <Link to="/contact" className="menu-item-link u-underline" language={locale}>
               Contact
+            </Link>
+          </li>
+          <li className={"menu-item menu-item-home menu-item-current"}>
+            <Link to="/search" className="menu-item-link u-underline" language={locale}>
+              Search
             </Link>
           </li>
         </ul>
@@ -46,7 +51,7 @@ class Burger extends React.Component  {
                   Editorial
                 </a>
               </h5>
-            </header>{" "}
+            </header>
           </article>
           <article className={"recent"}>
             <header className={"post-header"}>
@@ -66,7 +71,7 @@ class Burger extends React.Component  {
                   Self-Contained Amazon Echo Show Mini-Video-Conference Device
                 </a>
               </h5>
-            </header>{" "}
+            </header>
           </article>
           <article className={"recent"}>
             <header className={"post-header"}>
