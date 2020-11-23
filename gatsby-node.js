@@ -46,15 +46,15 @@ exports.onPreInit = ({ store }, { localeDir }) => {
   )
 }
 
-exports.onCreateWebpackConfig = ({ actions, plugins }) => {
-  actions.setWebpackConfig({
-    plugins: [
-      plugins.define({
-        GATSBY_THEME_I18N_LINGUI: JSON.stringify(absoluteLocalesDirectory),
-      }),
-    ],
-  })
-}
+// exports.onCreateWebpackConfig = ({ actions, plugins }) => {
+//   actions.setWebpackConfig({
+//     plugins: [
+//       plugins.define({
+//         GATSBY_THEME_I18N_LINGUI: JSON.stringify(absoluteLocalesDirectory),
+//       }),
+//     ],
+//   })
+// }
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
