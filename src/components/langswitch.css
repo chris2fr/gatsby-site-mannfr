@@ -83,7 +83,7 @@
   background-image: url("../../static/images/langswitch/languages/en.svg");
 }
 
-.language__container--un .language__label {
+.language__container--en-FR .language__label {
   background-image: url("../../static/images/langswitch/languages/un.svg");
 }
 

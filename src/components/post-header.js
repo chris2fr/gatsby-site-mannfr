@@ -1,6 +1,8 @@
 import React from "react";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import Img from "gatsby-image";
+import { Trans } from '@lingui/macro'
+
 
 import PostHeaderTags from "../components/post-header-tags";
 
@@ -29,7 +31,7 @@ class PostHeader extends React.Component {
       return (
         <>
           <div className="post-title">
-            <Link to={this.props.pageContext.originalPath} className={"post-title-link"}>
+            <Link to={this.props.context.uriPath} className={"post-title-link"}>
               {this.props.title}
             </Link>
           </div>
@@ -42,7 +44,7 @@ class PostHeader extends React.Component {
     // let tagsForRender = []
     // this.props.tags.forEach(tag =>
     //   tagsForRender.push({
-    //     slug: "/" + tag,
+    //     uriPath: "/" + tag,
     //     name: tag,
     //     url: "/" + tag
     //   })

@@ -24,14 +24,6 @@
     "dateFormat": "YYYY-MM-DD"
   },
   {
-    "code": "x",
-    "hrefLang": "x",
-    "name": "Unpublished (X)",
-    "localName": "Unpublished (X)",
-    "langDir": "ltr",
-    "dateFormat": "YYYY-MM-DD"
-  },
-  {
     "code": "xe",
     "hrefLang": "xe-US",
     "name": "Unpublished (XE)",

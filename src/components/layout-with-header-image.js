@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "./layout";
 import PostHeader from "./post-header";
 // import { StaticQuery, graphql } from "gatsby";
+import { Trans } from '@lingui/macro'
+
 
 import "../css/screen.css"
 

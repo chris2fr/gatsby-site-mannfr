@@ -2,6 +2,8 @@ import React from "react";
 import Img from "gatsby-image";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import { StaticQuery, graphql } from "gatsby";
+import { Trans } from '@lingui/macro'
+
 
 import "../css/screen.css"
 
