@@ -1,0 +1,14 @@
+{
+  "locales": ["en", "fr", "en-FR"],
+  "sourceLocale": "en-FR",
+  "catalogs": [
+    {
+      "path": "./i18n/lingui/locales/{locale}/messages",
+      "include": "src"
+    }
+  ],
+  "format": "po",
+    "extractBabelOptions": {
+    "presets": ["babel-preset-gatsby"]
+    }
+ }
