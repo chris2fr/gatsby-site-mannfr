@@ -1,6 +1,8 @@
 import React from "react";
 // import { Link } from "gatsby";
 // import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-theme-i18n";
+import { Trans } from '@lingui/macro'
+
 
 import MannfrCarousel from "../components/mannfr-carousel";
 import Header from "../components/header";

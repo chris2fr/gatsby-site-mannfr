@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   LocalizedLink as Link,
-  LocalesList,
   useLocalization,
-} from "gatsby-theme-i18n";
+} from "gatsby-theme-i18n"
+import { Trans, t } from '@lingui/macro'
+import { i18n } from '@lingui/core'
 
 // import "../css/screen.css"
 import "./langswitch.css";
@@ -11,17 +12,17 @@ import "./langswitch.css";
 // https://russmaxdesign.github.io/language-switcher/
 
 const LangSwitch = ({ pageContext }) => {
-  const { locale, config, defaultLang } = useLocalization();
+  const { locale } = useLocalization();
 
   return (
     <div
       className="language"
       aria-labelledby="language-swith1"
     >
-      <p class="hidden" id="language-switcher2">
+      <p className="hidden" id="language-switcher2">
         Choose a language for this website
       </p>
-      {["en", "fr", "un"].map((lang, index) => (
+      {["en", "fr", "en-FR"].map((lang, index) => (
         <div
           key={`${lang}`}
           className={`language__container--${(index==0)?"left":(index<2)?"middle":"right"} language__container--${lang}`}
@@ -35,8 +36,8 @@ const LangSwitch = ({ pageContext }) => {
             language={lang}
           >
           <span className={`language__label ${(lang==locale)?"language__control--current":""}`} for="language1-1">
-              {lang}
-              <span className="hidden"> Language {lang}</span>
+          {i18n._(t`${lang}`)}
+              <span className="hidden"> Language {i18n._(t`${lang}`)}{lang}</span>
             </span>
           </Link>
         </div>

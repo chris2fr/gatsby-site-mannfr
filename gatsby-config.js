@@ -23,8 +23,28 @@ module.exports = {
     ],
   },
   plugins: [
+    `@lingui/react`,
+    `@lingui/macro`,
+    // {
+    //   resolve: `gatsby-theme-i18n-lingui`,
+    //   options: {
+    //     localeDir: `./i18n/lingui`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-intl`,
+    //   options: {
+    //     path: `${__dirname}/i18n`,
+    //     languages: [
+    //       "en","fr","un"
+    //     ],
+    //     defaultLanguage: "un",
+    //     // This prevents gatsby-plugin-intl from auto-redirecting to default language versions
+    //     redirect: false,
+    //   },
+    // },
     // `gatsby-plugin-sass`,
-        // You can have multiple instances of this plugin to create indexes with
+    // You can have multiple instances of this plugin to create indexes with
     // different names or engines. For example, multi-lingual sites could create
     // an index for each language.
     {
@@ -159,8 +179,8 @@ module.exports = {
     {
       resolve: `gatsby-theme-i18n`,
       options: {
-        defaultLang: `un`,
-        locales: `un en fr`, // process.env.LOCALES || `en fr`,
+        defaultLang: `en-FR`,
+        locales: `en fr en-FR`, // process.env.LOCALES || `en fr`,
         configPath: require.resolve(`./i18n/config.json`),
       },
     },

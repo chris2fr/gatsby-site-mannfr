@@ -3,25 +3,18 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 // import Img from "gatsby-image";
+import { Trans } from '@lingui/macro'
+
 
 import Layout from "../components/layout";
 // import Header from "../components/header";
 import PostHeader from "../components/post-header";
 
 import "../css/screen.css"
-// import "../css/single.css";
-// import "../css/utilities.css";
-// import "../css/basics.css";
-// import "../css/layout.css";
-// import "../css/tag.css";
-// import "../css/kg.css";
-// import "../css/header.css";
-// import "../css/burger.css";
-// import "../css/widget.css";
 
 import "./post.css"
 
-import { useLocalization, MdxLink, LocalizedLink as Link } from "gatsby-theme-i18n";
+import { MdxLink, LocalizedLink as Link } from "gatsby-theme-i18n";
 //import { isPropertySignature } from "typescript";
 
 const components = {
@@ -29,12 +22,8 @@ const components = {
 };
 
 export default ({ data, pageContext }) => {
-  const { locale, config, defaultLang } = useLocalization();
+  // const { locale, config, defaultLang } = useLocalization();
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
-  let imgSrc =
-    data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
-      ? data.mdx.frontmatter.feature_image.publicURL
-      : null;
   let imageFluid =
     data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
       ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
@@ -47,21 +36,21 @@ export default ({ data, pageContext }) => {
     data.mdx.frontmatter.tags.length > 0
   ) {
     data.mdx.frontmatter.tags.forEach((tag) =>
-    tagsForRender.push({ name: tag, url: "/tags/" + tag, slug: tag, name: tag })
+    tagsForRender.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: tag })
     );
   }
   return (
     <Layout pageContext={pageContext}>
+      {/* originalPath {pageContext.originalPath} locale {pageContext.locale} uriPath {pageContext.uriPath}  */}
         <article class="post tag-mann-fr tag-human single-post">
           <PostHeader
             tags={tagsForRender}
             single={true}
             fluid={imageFluid}
             title={title}
-            originalPath={pageContext.originalPath}
-            timeToRead={data.mdx.timeToRead}
-            created_at={data.mdx.frontmatter.created_at}
-            to={data.mdx.fields.slug}
+            pageContext={pageContext}
+            timeToRead={data.mdx && data.mdx.timeToRead}
+            created_at={data.mdx && data.mdx.frontmatter.created_at}
             style={{ position: "absolute", width: "100vw", height: "100%" }}
           /> 
         {/* post-image lazyload jarallax-img u-object-fit */}
@@ -70,7 +59,7 @@ export default ({ data, pageContext }) => {
                 <div class="post-content kg-canvas u-text-format">
                 {data.mdx ? (
                   <>
-                  <React.Fragment>
+              <React.Fragment>
                 <MDXProvider components={components}>
                   <MDXRenderer components={components}>
                     {data.mdx.body}
@@ -79,7 +68,7 @@ export default ({ data, pageContext }) => {
               </React.Fragment>
                   </>
             ) : (
-              <div>This page hasn't been translated yet</div>
+              <div><Trans>This page hasn't been translated yet</Trans></div>
             )}
                     {/* <p>I was able to help friends prepare their CAPES and AGREGATION oral presentations with success, I was able to help a Director of a multi-national non-profit present in English at an international conference in Japan with success. My talent is listening to your presentation and feed back to you what I hear such that you better your way of expressing yourself.</p><p>This works very well for English identity seeking. When French speakers express themselves in English, they sometimes forget that language is also a tool for conveying identity. For them, English speaking is a handicap. I help francophones apprehend their handicap in this sense.</p><p>This works well also for cross-cultural collaborations. In seeking to work with teams from other countries, it is important to understand how others may apprehend you requests or work fulfillment.</p> */}
                 </div>
@@ -113,8 +102,8 @@ export default ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query LocalePost($uriPath: String!, $locale: String!) {
+    mdx(fields: { realLocale: { eq: $locale }, uriPath: { eq: $uriPath} }) {
       frontmatter {
         slug
         title
@@ -132,7 +121,7 @@ export const query = graphql`
         }
       }
       fields {
-        slug
+        uriPath
       }
       body
       timeToRead

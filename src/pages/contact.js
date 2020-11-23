@@ -1,5 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { Trans } from '@lingui/macro'
+
 
 import Layout from "../components/layout";
 import PostHeader from "../components/post-header";
@@ -34,7 +36,7 @@ export default class MyForm extends React.Component {
           title={"Contact"}
           to={"/contact"}
           originalPath={"/contact"}
-          tags={[{ url: "/contact", slug: "/contact", name: "Contact" }]}
+          tags={[{ uriPath: "/contact", uriSlug: "contact", name: "Contact" }]}
           single={true}
           style={{ position: "absolute", width: "100vw", height: "100%" }}
 

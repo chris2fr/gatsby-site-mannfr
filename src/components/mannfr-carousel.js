@@ -2,6 +2,8 @@ import React from "react";
 import Carousel from "react-elastic-carousel";
 import { StaticQuery, graphql } from "gatsby";
 import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-theme-i18n";
+import { Trans } from '@lingui/macro'
+
 
 import Img from "gatsby-image";
 
@@ -42,9 +44,8 @@ class MannfrCarousel extends React.Component {
                 sort: { order: ASC, fields: frontmatter___order }
               ) {
                 nodes {
-                  slug
                   fields {
-                    slug
+                    uriPath
                   }
                   frontmatter {
                     title
@@ -88,7 +89,7 @@ class MannfrCarousel extends React.Component {
             >
               {data.allMdx.nodes.map((node, index) => (
                 <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
-                  <Link to={`/${node.slug}`} style={{ display: "block" }} draggable={false}>
+                  <Link to={node.fields.uriPath} style={{ display: "block" }} draggable={false}>
                     <div className={"tag"} draggable={false}>
                       <Img
                         className={"tag-img mann-carousel-img"}
@@ -115,7 +116,7 @@ class MannfrCarousel extends React.Component {
         />
 
         {/* <div className={"mann-carousel-item"}>
-<Link to={slug} style={{ display: "block" }}>
+<Link to={uriPath} style={{ display: "block" }}>
   <div className={"tag"}>
     <Img
       className={"tag-img mann-carousel-img"}

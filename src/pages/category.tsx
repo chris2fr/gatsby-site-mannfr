@@ -3,6 +3,8 @@ import React from 'react';
 import {Link, graphql, StaticQuery} from "gatsby"
 import Img from "gatsby-image"
 //import Img from "gatsby-image/withIEPolyfill"
+import { Trans } from '@lingui/macro'
+
 
 import "../css/screen.css"
 
@@ -22,7 +24,7 @@ export default function CategoryRoute({ data }) {
         ) {
           nodes {
             fields {
-              slug
+              uriPath
             }
             frontmatter {
               title
@@ -47,7 +49,7 @@ export default function CategoryRoute({ data }) {
           <h1>{data.allMdx.nodes[0].frontmatter.title}</h1>
 
 {/* <div className={"mann-carousel-item"}>
-<Link to={slug} style={{ display: "block" }}>
+<Link to={uriPath} style={{ display: "block" }}>
   <div className={"tag"}>
     <Img
       className={"tag-img mann-carousel-img"}

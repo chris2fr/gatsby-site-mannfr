@@ -9,10 +9,11 @@ import {
 import Img from "gatsby-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
+import { Trans } from "@lingui/macro";
 
 import Layout from "../components/layout";
 
-import "../css/screen.css"
+import "../css/screen.css";
 
 // import "../css/single.css";
 // import "../css/utilities.css";
@@ -40,12 +41,12 @@ function tagsForRender(tags) {
   var ret = [];
   if (!tags) return [];
   tags.forEach((tag) =>
-    ret.push({ name: tag, url: "/tags/" + tag, slug: tag })
+    ret.push({ name: tag, url: "/tags/" + tag, uriPath: tag })
   );
   return ret;
 }
 
-export default ({ data, location, pageContext }) => {
+export default ({ data, pageContext }) => {
   const { locale, config, defaultLang } = useLocalization();
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let description =
@@ -81,83 +82,85 @@ export default ({ data, location, pageContext }) => {
 
       <div className={"post-feed"}>
         {data.allMdx.nodes.map((node, index) => (
-            <article className={`post tag`} key={`tag-post-${index}`}>
-              <div className={"post-media"}>
-                <div
-                  className={"u-placeholder same-height rectangle"}
-                  style={{ overflow: "hidden" }}
-                >
-                  <Link className={"post-image-link"} to={`/${node.slug}`}>
-                    {node.frontmatter.feature_image && (
-                      <Img
-                        fluid={
-                          node.frontmatter.feature_image &&
-                          node.frontmatter.feature_image.childImageSharp.fluid
-                        }
-                        alt={node.frontmatter.title}
-                        className={"post-image-link"}
-                        overflow={"hidden"}
-                      />
-                    )}
-                  </Link>
-                </div>
+          <article className={`post tag`} key={`tag-post-${index}`}>
+            <div className={"post-media"}>
+              <div
+                className={"u-placeholder same-height rectangle"}
+                style={{ overflow: "hidden" }}
+              >
+                <Link className={"post-image-link"} 
+                to={node.fields.uriPath}>
+                  {node.frontmatter.feature_image && (
+                    <Img
+                      fluid={
+                        node.frontmatter.feature_image &&
+                        node.frontmatter.feature_image.childImageSharp.fluid
+                      }
+                      alt={node.frontmatter.title}
+                      className={"post-image-link"}
+                      overflow={"hidden"}
+                    />
+                  )}
+                </Link>
               </div>
+            </div>
 
-              <div className={"post-wrapper"}>
-                <header className={"post-header"}>
-                  <div className={"post-meta"}>
-                    <span className={"post-meta-item post-meta-date"}>
-                      <time dateTime="{node.frontmatter.created_at}">
-                        {node.frontmatter.created_at}
-                      </time>
-                    </span>
-                    <span className={"post-meta-item post-meta-length"}>
-                      {node.timeToRead} min read
-                    </span>
-                    {/* <span className={"post-meta-item"}>
+            <div className={"post-wrapper"}>
+              <header className={"post-header"}>
+                <div className={"post-meta"}>
+                  <span className={"post-meta-item post-meta-date"}>
+                    <time dateTime="{node.frontmatter.created_at}">
+                      {node.frontmatter.created_at}
+                    </time>
+                  </span>
+                  <span className={"post-meta-item post-meta-length"}>
+                    {node.timeToRead} <trans>min read</trans>
+                  </span>
+                  {/* <span className={"post-meta-item"}>
                     <PostHeaderTags
                         tags={tagsForRender(node.frontmatter.tags)}
                       />
                       </span> */}
-                  </div>
-                  <h2 className={"post-title"}>
-                    <Link className={"post-title-link"} to={`/${node.slug}`}>
-                      {node.frontmatter.title}
-                    </Link>
-                  </h2>
-                </header>
-                <div className={"post-excerpt"}>
-                  {node.frontmatter.description || node.excerpt}
                 </div>
-                <footer className={"post-footer"}>
-                  <div className={"post-author"}>
-                    <a className={"post-author-link"} href={"/author/chris"}>
-                      <img
-                        className={"post-author-image lazyautosizes lazyloaded"}
-                        data-src={
-                          "//www.gravatar.com/avatar/2b6de4ce6e6beeab606581305e0edebd?s=250&amp;d=mm&amp;r=x"
-                        }
-                        src={
-                          "//www.gravatar.com/avatar/2b6de4ce6e6beeab606581305e0edebd?s=250&amp;d=mm&amp;r=x"
-                        }
-                        data-sizes="auto"
-                        alt="Chris Mann"
-                        sizes="30px"
-                      />
-                    </a>
-                  </div>
+                <h2 className={"post-title"}>
                   <Link
-                    className={"read-more button-arrow-right"}
-                    to={`/${node.slug}`}
+                    className={"post-title-link"}
+                    to={node.fields.uriPath}
                   >
-                    Read More
-                    <i
-                      className={"button-arrow-icon icon icon-arrow-right"}
-                    ></i>
+                    {node.frontmatter.title}
                   </Link>
-                </footer>
+                </h2>
+              </header>
+              <div className={"post-excerpt"}>
+                {node.frontmatter.description || node.excerpt}
               </div>
-            </article>
+              <footer className={"post-footer"}>
+                <div className={"post-author"}>
+                  <a className={"post-author-link"} href={"/author/chris"}>
+                    <img
+                      className={"post-author-image lazyautosizes lazyloaded"}
+                      data-src={
+                        "//www.gravatar.com/avatar/2b6de4ce6e6beeab606581305e0edebd?s=250&amp;d=mm&amp;r=x"
+                      }
+                      src={
+                        "//www.gravatar.com/avatar/2b6de4ce6e6beeab606581305e0edebd?s=250&amp;d=mm&amp;r=x"
+                      }
+                      data-sizes="auto"
+                      alt="Chris Mann"
+                      sizes="30px"
+                    />
+                  </a>
+                </div>
+                <Link
+                  className={"read-more button-arrow-right"}
+                  to={node.fields.uriPath}
+                >
+                  <Trans>Read More</Trans>
+                  <i className={"button-arrow-icon icon icon-arrow-right"}></i>
+                </Link>
+              </footer>
+            </div>
+          </article>
         ))}
       </div>
     </Layout>
@@ -165,8 +168,8 @@ export default ({ data, location, pageContext }) => {
 };
 
 export const query = graphql`
-  query($slug: String!, $tag: String) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query($uriPath: String!, $tag: String) {
+    mdx(fields: { uriPath: { eq: $uriPath } }) {
       frontmatter {
         slug
         title
@@ -187,12 +190,12 @@ export const query = graphql`
       timeToRead
     }
     allMdx(
-      filter: { frontmatter: { tags: { eq: $tag }, type: {ne: "tag"} } }
+      filter: { frontmatter: { tags: { eq: $tag }, type: { ne: "tag" } } }
       sort: { fields: frontmatter___created_at, order: DESC }
     ) {
       nodes {
         fields {
-          slug
+          uriPath
         }
         frontmatter {
           slug
@@ -210,7 +213,6 @@ export const query = graphql`
           }
         }
         body
-        slug
         excerpt(pruneLength: 400)
         timeToRead
       }
