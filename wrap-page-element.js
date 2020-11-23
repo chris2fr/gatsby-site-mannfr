@@ -4,6 +4,9 @@ import * as React from "react"
 // import { Trans, t } from '@lingui/macro'
 import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
+import { plural } from '@lingui/macro'
+import { en, fr } from 'make-plural/plurals'
+
 import { messages as enMessages } from './i18n/lingui/locales/en/messages.js'
 import { messages as frMessages } from './i18n/lingui/locales/fr/messages.js'
 import { messages as enFrMessages } from './i18n/lingui/locales/en-FR/messages.js'
