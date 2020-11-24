@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React, { useEffect } from "react";
+import { graphql, navigate } from "gatsby";
 import Carousel from "react-elastic-carousel";
 // import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-theme-i18n";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
@@ -26,6 +26,22 @@ import "./index.css";
 import "../css/screen.css";
 import "../components/mannfr-carousel.css";
 
+const getRedirectLanguage = () => {
+  if (typeof navigator === `undefined`) {
+    return "en";
+  }
+
+  const lang = navigator && navigator.language && navigator.language.split("-")[0];
+  if (!lang) return "en";
+
+  switch (lang) {
+    case "fr":
+      return "fr";
+    default:
+      return "en";
+  }
+};
+
 export default function IndexRoute({ pageContext, disabled, data }) {
   // const { locale, config, defaultLang } = useLocalization();
   const breakPoints = [
@@ -37,7 +53,16 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     { width: 2200, itemsToShow: 6 },
   ];
   pageContext.translations = ["en","fr"];
-  pageContext.locale = (pageContext.locale==="en-FR")?"en":pageContext.locale;
+  if (pageContext.locale==="en-FR") {
+    useEffect(() => {
+      const urlLang = getRedirectLanguage();
+  
+      navigate(`/${urlLang}/`, {replace: true});
+    }, []);
+  
+    return null;
+  }
+
   return (
     <>
       <Header pageContext={pageContext} />
