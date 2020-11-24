@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import {
@@ -54,7 +54,6 @@ export default ({ data, pageContext }) => {
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let description =
     data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.description;
-  pageContext.translations = ["en","fr","en-FR"]
   // let imgSrc =
   //   data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
   //     ? data.mdx.frontmatter.feature_image.publicURL
@@ -64,6 +63,12 @@ export default ({ data, pageContext }) => {
   //     ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
   //     : null;
   // let tags = [];
+  pageContext.translations = []
+  let langs = {"en":"en","fr":"fr","enFR":"en-FR"} 
+  Object.keys(langs).map(key => {
+    data[key] && pageContext.translations.push(langs[key])
+    return false})
+
   return (
     <Layout pageContext={pageContext}>
       <Helmet>
@@ -190,6 +195,21 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    fr:mdx(fields: { realLocale: { eq: "fr" }, originalPath: { eq: $originalPath} }) {
+      frontmatter {
+        title
+      }
+    }
+    en:mdx(fields: { realLocale: { eq: "en" }, originalPath: { eq: $originalPath} }) {
+      frontmatter {
+        title
+      }
+    }
+    enFR:mdx(fields: { realLocale: { eq: "en-FR" }, originalPath: { eq: $originalPath} }) {
+      frontmatter {
+        title
       }
     }
     allMdx(
