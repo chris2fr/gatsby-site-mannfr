@@ -68,6 +68,12 @@
   background-color: var(--language-checked);
 }
 
+.language__control--off {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  color: grey;
+}
+
 .language__control:focus + .language__label,
 .language__control:checked:focus + .language__label {
   z-index: 2;

@@ -54,7 +54,7 @@ export default ({ data, pageContext }) => {
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let description =
     data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.description;
-
+  pageContext.translations = ["en","fr","en-FR"]
   // let imgSrc =
   //   data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
   //     ? data.mdx.frontmatter.feature_image.publicURL
