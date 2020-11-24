@@ -170,8 +170,11 @@ export default ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query($uriPath: String!, $uriSlug: String) {
-    mdx(fields: { uriPath: { eq: $uriPath } }) {
+  query($originalPath: String!, $uriSlug: String!, $realLocale: String!) {
+    mdx(fields: { realLocale: { eq: $realLocale }, originalPath: { eq: $originalPath} }) {
+      body
+      timeToRead
+      excerpt
       frontmatter {
         slug
         title
@@ -188,14 +191,15 @@ export const query = graphql`
           }
         }
       }
-      body
-      timeToRead
     }
     allMdx(
-      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { ne: "tag" } } }
+      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { ne: "tag" } }, fields: { realLocale: { eq: $realLocale } } }
       sort: { fields: frontmatter___created_at, order: DESC }
     ) {
       nodes {
+        body
+        excerpt(pruneLength: 400)
+        timeToRead
         fields {
           uriPath
         }
@@ -214,9 +218,6 @@ export const query = graphql`
             }
           }
         }
-        body
-        excerpt(pruneLength: 400)
-        timeToRead
       }
     }
   }
