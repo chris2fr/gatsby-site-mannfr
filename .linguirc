@@ -1,6 +1,10 @@
 {
   "locales": ["en", "fr", "en-FR"],
   "sourceLocale": "en-FR",
+  "fallbackLocales": {
+    "default":"en"
+  },
+  "pseudoLocale": '',
   "catalogs": [
     {
       "path": "./i18n/lingui/locales/{locale}/messages",

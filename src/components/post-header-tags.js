@@ -25,7 +25,7 @@ class PostHeaderTags extends React.Component {
       return (
         <div className={"post-tags"}>
           {this.tags.map((tag, index) =>(
-          <Link className={`post-tag post-tag-${tag.uriSlug}`} key={`tag-${index}`} to={tag.url} title={tag.name}>{tag.name}</Link>)
+          <Link className={`post-tag post-tag-${tag.uriSlug}`} key={`tag-${index}`} to={tag.uriPath} title={tag.name}>{tag.name}</Link>)
           )}
         </div>
       )

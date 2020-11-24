@@ -18,29 +18,25 @@ import "../css/screen.css"
 // // import "../css/basics.css";
 // // import "../pages/index.css";
 
-class PostHeader extends React.Component {
-  constructor(props) {
-    super(props);
-    this.props = props;
-  }
 
-  renderTitle() {
-    if (this.props.single || !this.props.to) {
-      return <h1 className={"post-title"}>{this.props.title}</h1>;
-    } else {
-      return (
-        <>
-          <div className="post-title">
-            <Link to={this.props.context.uriPath} className={"post-title-link"}>
-              {this.props.title}
-            </Link>
-          </div>
-        </>
-      );
+
+  const PostHeader = ({ children, pageContext, alt, fluid, to, className, tags, created_at, timeToRead, featured, single, title, ...props }) => {
+    const renderTitle = (single, to, title, context) => {
+      if (single || !to) {
+        return <h1 className={"post-title"}>{title}</h1>;
+      } else {
+        return (
+          <>
+            <div className="post-title">
+              <Link to={to} className={"post-title-link"}>
+                {title}
+              </Link> 
+            </div>
+          </>
+        );
+      }
     }
-  }
 
-  render() {
     // let tagsForRender = []
     // this.props.tags.forEach(tag =>
     //   tagsForRender.push({
@@ -53,35 +49,35 @@ class PostHeader extends React.Component {
       <>
         <div className="post-media">
           <div className="u-placeholder initialized" style={{ zIndex: "0" }}>
-            {this.props.fluid && (
+            {fluid && (
               <Img
-                fluid={this.props.fluid}
-                alt={this.props.alt}
+                fluid={fluid}
+                alt={alt}
                 objectFit="cover"
                 style={{
                   position: "absolute",
                   minWidth: "100vw",
                   height: "100%",
                 }}
-                className={this.props.className}
+                className={className}
               />
             )}
             <header className="post-header">
-              <PostHeaderTags tags={this.props.tags} />
-              {this.renderTitle()}
+              <PostHeaderTags tags={tags} />
+              {renderTitle(single, to, title, pageContext)}
               <div className="post-meta">
-                {this.props.created_at && (
+                {created_at && (
                   <span className="post-meta-item post-meta-date">
-                    {this.props.created_at}
+                    {created_at}
                   </span>
                 )}
-                {this.props.timeToRead && (
+                {timeToRead && (
                   <span className="post-meta-item post-meta-length">
-                    {this.props.timeToRead} min reading
+                    {timeToRead} min reading
                   </span>
                 )}
               </div>
-              {this.props.featured && (
+              {featured && (
                 <span className="post-meta-featured">
                   <i className="icon icon-star"></i>
                 </span>
@@ -114,6 +110,5 @@ class PostHeader extends React.Component {
       </>
     );
   }
-}
 
 export default PostHeader;
