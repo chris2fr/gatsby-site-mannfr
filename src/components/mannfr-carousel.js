@@ -90,7 +90,7 @@ class MannfrCarousel extends React.Component {
             >
               {data.allMdx.nodes.map((node, index) => (
                 <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
-                  <Link to={node.fields.uriPath} style={{ display: "block" }} draggable={false}>
+                  <Link to={node.fields.uriPath + "/"} style={{ display: "block" }} draggable={false}>
                     <div className={"tag"} draggable={false}>
                       <Img
                         className={"tag-img mann-carousel-img"}
