@@ -136,7 +136,7 @@ export default ({ data, pageContext }) => {
               </div>
               <footer className={"post-footer"}>
                 <div className={"post-author"}>
-                  <a className={"post-author-link"} href={"/author/chris"}>
+                  <Link className={"post-author-link"} to={"/author/chris"}>
                     <img
                       className={"post-author-image lazyautosizes lazyloaded"}
                       data-src={
@@ -149,7 +149,7 @@ export default ({ data, pageContext }) => {
                       alt="Chris Mann"
                       sizes="30px"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <Link
                   className={"read-more button-arrow-right"}

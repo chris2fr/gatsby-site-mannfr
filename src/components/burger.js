@@ -6,7 +6,6 @@ import "../css/screen.css"
 // import "../css/burger.css"
 
 class Burger extends React.Component  {
-
   render() {
     return (
       <PeekABoo 

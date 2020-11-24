@@ -319,3 +319,9 @@ from .linguirc
     "presets": ["babel-preset-gatsby"]
   }
 ```
+
+```
+success source and transform nodes - 0.692s
+warning Deprecation warning - adding inferred resolver for field MdxFrontmatter.feature_image. In Gatsby v3, only fields with an explicit directive/extension will get a resolver.
+success building schema - 0.428s
+```
