@@ -1,7 +1,6 @@
 import React from "react";
 import {
-  LocalizedLink as Link,
-  useLocalization,
+  LocalizedLink as Link
 } from "gatsby-theme-i18n"
 // import { Trans } from '@lingui/macro'
 // import { i18n } from '@lingui/core'
