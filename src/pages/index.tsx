@@ -36,7 +36,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     { width: 1950, itemsToShow: 5 },
     { width: 2200, itemsToShow: 6 },
   ];
-  pageContext.translations = ["en","fr","en-FR"];
+  pageContext.translations = ["en","fr"];
+  pageContext.locale = (pageContext.locale==="en-FR")?"en":pageContext.locale;
   return (
     <>
       <Header pageContext={pageContext} />

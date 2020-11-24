@@ -72,7 +72,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       type: String
       slug: String
       title: String
-      feature_image: File
+      feature_image: File @dontInfer
     }
 
   `
