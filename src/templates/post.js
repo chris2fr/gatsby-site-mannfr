@@ -43,7 +43,8 @@ export default ({ data, pageContext }) => {
   pageContext.translations = []
   let langs = {"en":"en","fr":"fr","enFR":"en-FR"} 
   Object.keys(langs).map(key => {
-    data[key] && pageContext.translations.push(langs[key])})
+    data[key] && pageContext.translations.push(langs[key])
+    return false})
 
   return (
     <Layout pageContext={pageContext}>
