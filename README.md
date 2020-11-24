@@ -17,18 +17,6 @@ The goals here were to :
 
 The website was built from the ground up. There are a couple of content assumptions. Tags are in the ./content/tags directory. Posts are in the content directory. You may notice that the tags are also pages. Tags have a special frontmatter attribute `type:tag`. The content comes from Ghost with my [ghost-to-md](https://github.com/chris2fr/ghost-to-md).
 
-## Internationalization
-
-https://www.gatsbyjs.com/plugins/gatsby-theme-i18n/
-
-## Replacements in Markdown Links
-
-My own content is in a git repository specific to me but not really backed up anywhere and that is scary. It is in ssh://chris2fr@contabo.mann.fr/home/chris2fr/git/mannfr-content.git and on my local machine under content. With the .gitignore on the main repository, I was able to put it there nicely. 
-
-[Shared Resources](https://www.mann.fr/en/realizations/drawing-board/resdigita/)  => ../resdigita
-
-/en/configmagic-com => ../configmagic-com
-
 ## Backlog
 
 13. Translate template pages, including tags
@@ -57,10 +45,18 @@ These are the changes done over the most recent versions
 
 ### Changelog v-0.0.4
 
+This release replaces i18n with i18next and repairs an impaired search.
+
+Done:
+
 11. Replaced i18n with i18next
 12. Repaired broken search
 
 ### Changelog v-0.0.3
+
+This website works well. Layouts need translation. Language groupings need isolation in searches. It works though.
+
+Done:
 
 7. Put meaningful content in the peekaboo/burger menu Done
 8. Put in the three flags to change languages per page Done
@@ -69,12 +65,31 @@ These are the changes done over the most recent versions
 
 ### Changelog v-0.0.2
 
+This release allows end-users to access all pages of the website.
+
+Done:
+
 4. Set up three languages
 5. Set up a contact form
 6. Set up a search mechanism
 
+#### Internationalization
+
+https://www.gatsbyjs.com/plugins/gatsby-theme-i18n/
+
+#### Replacements in Markdown Links
+
+My own content is in a git repository specific to me but not really backed up anywhere and that is scary. It is in ssh://chris2fr@contabo.mann.fr/home/chris2fr/git/mannfr-content.git and on my local machine under content. With the .gitignore on the main repository, I was able to put it there nicely. 
+
+[Shared Resources](https://www.mann.fr/en/realizations/drawing-board/resdigita/)  => ../resdigita
+
+/en/configmagic-com => ../configmagic-com
 
 ### Changelog v-0.0.1
+
+This is a working version of the mann.fr website when used with the current content repository. It can be reviewed at https://alpha.mann.fr.
+
+Done:
 
 1. Set up a basic website
 2. Import content
