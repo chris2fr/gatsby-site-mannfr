@@ -29,47 +29,59 @@ My own content is in a git repository specific to me but not really backed up an
 
 /en/configmagic-com => ../configmagic-com
 
-## Changelog v.0.0.1
+## Backlog
 
-1. Set up a basic website
-2. Import content
-3. Set up a home page
+13. Translate template pages, including tags
+14. Consider HTML boilerplate
+15. Better manage site content
+16. Consider Netlify CMS
+17. Authors from Ghost
+18. Other content types from Ghost
+19. Editing and proofreading
+20. Rework the presentation of the search results 
+21. Delete extraneous pages
+22. Fix header-width on pages without an image
+23. Better the cover-image handling for pages without an image
+24. Better the cover-image handling for posts, tags and pages
+25. Integrate specific data types for posts, pages, tags and authors 
+26. Put relationships between post, pages, tags and authors
+27. Maybe introduce a notion of categories
+28. Have different search indexes and content per language
+29. Set up a language router per browser language
+30. Automate translation extraction https://github.com/i18next/i18next-parsergats
+31. Integrate a CV application
 
-## Changelog v.0.0.2
+## Changelog
+
+These are the changes done over the most recent versions
+
+### Changelog v-0.0.4
+
+11. Replaced i18n with i18next
+12. Repaired broken search
+
+### Changelog v-0.0.3
+
+7. Put meaningful content in the peekaboo/burger menu Done
+8. Put in the three flags to change languages per page Done
+9. Hesitate to show a page if not in the language Done
+10. Fix links in markdown files Partially Done
+
+### Changelog v-0.0.2
 
 4. Set up three languages
 5. Set up a contact form
 6. Set up a search mechanism
 
-## Changelog v.0.0.3
 
-7. Put meaningful content in the peekaboo/burger menu Done
-3. Put in the three flags to change languages per page Done
-4. Hesitate to show a page if not in the language Done
-11. Fix links in markdown files Partially Done
+### Changelog v-0.0.1
 
-## Next Version
+1. Set up a basic website
+2. Import content
+3. Set up a home page
 
-11. Translate template pages
-9. Consider HTML boilerplate
-5. Better manage site content
-6. Consider Netlify CMS
-7. Authors from Ghost
-8. Other content types from Ghost
-9. Editing and proofreading
-11. Rework the presentation of the search results 
-1. Delete extraneous pages
-2. Fix header-width on pages without an image
-3. Better the cover-image handling for pages without an image
-4. Better the cover-image handling for posts, tags and pages
-12. Integrate specific data types for posts, pages, tags and authors 
-13. Put relationships between post, pages, tags and authors
-14. Maybe introduce a notion of categories
-15. Have different search indexes and content per language
-17. Set up a language router per browser language
-18. Automate translation extraction https://github.com/i18next/i18next-parsergats
 
-### Notes 
+## Notes 
 
 ```
 warning ESLintError:
@@ -82,3 +94,8 @@ C:\Users\chris\dox\mann.fr\src\components\peekaboo.js
   33:1  warning  Elements with the 'button' interactive role must be tabbable                                    jsx-a11y/interactive-supports-focus
 ```
 
+```
+success source and transform nodes - 11.681s
+warning Deprecation warning - adding inferred resolver for field MdxFrontmatter.feature_image. In Gatsby v3, only fields with an explicit directive/extension will get a resolver.
+success building schema - 0.732s
+```
