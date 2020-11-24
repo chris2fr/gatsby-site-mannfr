@@ -23,25 +23,23 @@ This is an ordered list of work items for the next releases.
 
 To do:
 
-13. Translate template pages, including tags
-14. Consider HTML boilerplate
-15. Better manage site content
-16. Consider Netlify CMS
-17. Authors from Ghost
-18. Other content types from Ghost
-19. Editing and proofreading
+16. Translate template pages, including tags
+16. Better manage site content
+16. Editing and proofreading
+16. Have different search indexes and content per language
 20. Rework the presentation of the search results 
-21. Delete extraneous pages
-22. Fix header-width on pages without an image
-23. Better the cover-image handling for pages without an image
-24. Better the cover-image handling for posts, tags and pages
-25. Integrate specific data types for posts, pages, tags and authors 
-26. Put relationships between post, pages, tags and authors
-27. Maybe introduce a notion of categories
-28. Have different search indexes and content per language
-29. Set up a language router per browser language
-30. Automate translation extraction https://github.com/i18next/i18next-parsergats
-31. Integrate a CV application
+20. Consider HTML boilerplate
+20. Better the cover-image handling for pages without an image
+20. Better the cover-image handling for posts, tags and pages
+20. Set up a language router per browser language
+25. Automate translation extraction https://github.com/i18next/i18next-parsergats
+25. Integrate a CV application
+25. Put relationships between post, pages, tags and authors
+25. Consider Netlify CMS
+25. Authors from Ghost
+30. Other content types from Ghost
+30. Integrate specific data types for posts, pages, tags and authors 
+30. Maybe introduce a notion of categories
 
 ## Changelog
 
@@ -55,6 +53,9 @@ Done:
 
 11. Replaced i18n with i18next
 12. Repaired broken search
+13. Removed extraneous dependencies
+14. Delete extraneous pages 
+15. Fix header-width on pages without an image
 
 ### Changelog v-0.0.3
 
