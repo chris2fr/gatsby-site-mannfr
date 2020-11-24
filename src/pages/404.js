@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-// import { LocalizedLink as Link } from "gatsby-theme-i18n";
+import { LocalizedLink as Link } from "gatsby-theme-i18n";
+import { useTranslation } from "react-i18next"
 
 import Layout from "../components/layout";
 import PostHeader from "../components/post-header";
@@ -8,10 +9,10 @@ import PostHeader from "../components/post-header";
 import "../css/screen.css"
 // import { Trans } from '@lingui/macro'
 
-export default class FourOhFour extends React.Component {
-  render() {
-    let pageContext = this.props.pageContext;
-    pageContext.path = "/404"
+export default ({ pageContext, data }) => {
+
+    //pageContext.path = "/404"
+    const { t } = useTranslation("translation")
     return (
       <Layout pageContext={pageContext}>
         <article
@@ -19,7 +20,7 @@ export default class FourOhFour extends React.Component {
           style={{ width: "100vw" }}
         >
           <PostHeader
-            fluid={this.props.data.file.childImageSharp.fluid}
+            fluid={data.file.childImageSharp.fluid}
             alt={"404"}
             title={"404"}
             to={"/404"}
@@ -30,15 +31,16 @@ export default class FourOhFour extends React.Component {
           />
           <div className="post-content kg-canvas u-text-format">
             404
-            {/* <h1><Trans>Lost in Hyperspace</Trans></h1>
-            <p><Trans>So sorry, but no content here now.</Trans></p>
-            <p><Link to="/"><Trans>Return Home</Trans></Link></p> */}
+            <h1>{t("Lost in Hyperspace")}</h1>
+            <p>{t("So sorry, but no content here now.")}</p>
+            <p><Link to="/">{t("Return Home")}</Link></p> 
           </div>
         </article>
       </Layout>
     );
+
   }
-}
+
 export const query = graphql`
   query {
     file(

@@ -9,7 +9,9 @@ import {
 import Img from "gatsby-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import { Trans } from "@lingui/macro";
+// import { Trans } from "@lingui/macro";
+
+import { useTranslation } from "react-i18next"
 
 import Layout from "../components/layout";
 
@@ -47,6 +49,7 @@ const components = {
 // }
 
 export default ({ data, pageContext }) => {
+  const { t } = useTranslation("translation")
   // const { locale, config, defaultLang } = useLocalization();
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let description =
@@ -61,7 +64,6 @@ export default ({ data, pageContext }) => {
   //     ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
   //     : null;
   // let tags = [];
-
   return (
     <Layout pageContext={pageContext}>
       <Helmet>
@@ -155,7 +157,7 @@ export default ({ data, pageContext }) => {
                   className={"read-more button-arrow-right"}
                   to={node.fields.uriPath}
                 >
-                  <Trans>Read More</Trans>
+                  {t("Read More")}
                   <i className={"button-arrow-icon icon icon-arrow-right"}></i>
                 </Link>
               </footer>
