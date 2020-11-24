@@ -19,6 +19,8 @@ The website was built from the ground up. There are a couple of content assumpti
 
 ## Backlog
 
+This is an ordered list of work items for the next releases.
+
 To do:
 
 13. Translate template pages, including tags
