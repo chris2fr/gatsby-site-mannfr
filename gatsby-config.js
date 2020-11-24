@@ -32,26 +32,6 @@ module.exports = {
         },
       },
     },
-    // `@lingui/react`,
-    // `@lingui/macro`,
-    // {
-    //   resolve: `gatsby-theme-i18n-lingui`,
-    //   options: {
-    //     localeDir: `./i18n/lingui`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-intl`,
-    //   options: {
-    //     path: `${__dirname}/i18n`,
-    //     languages: [
-    //       "en","fr","un"
-    //     ],
-    //     defaultLanguage: "un",
-    //     // This prevents gatsby-plugin-intl from auto-redirecting to default language versions
-    //     redirect: false,
-    //   },
-    // },
     // `gatsby-plugin-sass`,
     // You can have multiple instances of this plugin to create indexes with
     // different names or engines. For example, multi-lingual sites could create
@@ -81,7 +61,6 @@ module.exports = {
               nodes {
                 id
                 frontmatter {
-                  slug
                   title
                   tags
                   type
@@ -89,6 +68,10 @@ module.exports = {
                 body
                 slug
                 excerpt
+                fields {
+                  uriSlug
+                  uriPath
+                }
               }
             }
           }
@@ -106,7 +89,7 @@ module.exports = {
         // List of keys to store and make available in your UI. The values of
         // the keys are taken from the normalizer function below.
         // Default: all fields
-        store: ['id', 'path', 'title', 'excerpt', 'type','tags'],
+        store: ['id', 'path', 'title', 'excerpt', 'type','tags', 'path'],
 
         // Function used to map the result from the GraphQL query. This should
         // return an array of items to index in the form of flat objects
@@ -115,7 +98,7 @@ module.exports = {
         normalizer: ({ data }) =>
           data.allMdx.nodes.map(node => ({
             id: node.id,
-            path: node.slug,
+            path: node.fields.uriPath,
             title: node.frontmatter.title,
             body: node.body,
             excerpt: node.excerpt,
@@ -178,19 +161,12 @@ module.exports = {
         path: `${__dirname}/content/published`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `tags`,
-    //     path: `${__dirname}/content/tags/`,
-    //   },
-    // },
     {
       resolve: `gatsby-theme-i18n`,
       options: {
         defaultLang: `en-FR`,
         locales: `en fr en-FR`, // process.env.LOCALES || `en fr`,
-        configPath: require.resolve(`./i18n/config.json`),
+        configPath: require.resolve(`./locales/config.json`),
       },
     },
     {

@@ -17,4 +17,5 @@ p {
 article.single-post {
     position: absolute;
     left: 0;
+    width: 100vw;
 }

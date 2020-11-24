@@ -1,7 +1,0 @@
-{
-  "plugins": [
-    "macros",
-    "@babel/plugin-syntax-class-properties"
-  ],
-  "presets": ["@babel/preset-react"]
-}

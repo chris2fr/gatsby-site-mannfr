@@ -48,17 +48,19 @@ const SearchPage = ({ pageContext, data }) => {
         <input type="submit" value="Submit" />
       </form>
       <h2>{t("Results")} {queryString}</h2>
+  <p>{results.length} {t("results")}</p>
       <ul>
-        {results.map((result) => (
+        {results && results.map(result=> 
           <li key={result.id}>
-            <Link to={result.path}>{result.title}</Link>{" "}
-            {result.tags.map((tag, index) => (
-              <span key={index}>#{tag} </span>
-            ))}
+            <Link to={result.path}>{result.title}</Link> (
+            {result.tags && result.tags.map((tag, index) => 
+              <span key={index}>#{tag}</span>
+            )})
             <br />
             {result.excerpt}
           </li>
-        ))}
+        )
+        }
       </ul>
     </LayoutWithHeaderImage>
   );

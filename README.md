@@ -67,6 +67,7 @@ My own content is in a git repository specific to me but not really backed up an
 14. Maybe introduce a notion of categories
 15. Have different search indexes and content per language
 17. Set up a language router per browser language
+18. Automate translation extraction https://github.com/i18next/i18next-parsergats
 
 ### Notes 
 
@@ -81,11 +82,3 @@ C:\Users\chris\dox\mann.fr\src\components\peekaboo.js
   33:1  warning  Elements with the 'button' interactive role must be tabbable                                    jsx-a11y/interactive-supports-focus
 ```
 
-From Package Scripts 
-
-```
-
-    "add-locale": "lingui add-locale",
-    "extract": "lingui extract",
-    "compile": "lingui compile"
-```

@@ -1,6 +1,0 @@
-{
-  "compilerOptions": {
-    "jsx": "preserve",
-    "target": "es2016"
-  }
-}
