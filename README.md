@@ -19,6 +19,8 @@ The website was built from the ground up. There are a couple of content assumpti
 
 ## Backlog
 
+To do:
+
 13. Translate template pages, including tags
 14. Consider HTML boilerplate
 15. Better manage site content
