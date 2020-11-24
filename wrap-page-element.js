@@ -4,7 +4,6 @@ import * as React from "react"
 // import { Trans, t } from '@lingui/macro'
 import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
-import { plural } from '@lingui/macro'
 import { en as pluralEn, fr as pluralFr } from 'make-plural' // https://developer.aliyun.com/mirror/npm/package/make-plural/v/3.0.2 // 
 
 import { messages as enMessages } from './i18n/lingui/locales/en/messages.js'

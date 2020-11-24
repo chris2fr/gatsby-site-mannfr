@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
 
 
 import Layout from "../components/layout";
@@ -85,12 +85,12 @@ export default class MyForm extends React.Component {
               <strong>France</strong>
             </a>
           </p>
-          <label>Email:</label>
-          <input type="email" name="email" placeholder="email@example.com"/><br/>
-          <label>Message:</label>
+          <label>Email:
+          <input type="email" name="email" placeholder="email@example.com"/>
+          </label><br/><label>Message:
           <textarea name="message" value={this.state.message} onChange={this.handleChange} 
           style={{placeholder:"Message...",width:"100%",minHeight:"150px"}} />
-          <br/>
+          </label><br/>
           {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
           {status === "ERROR" && <p>Ooops! There was an error.</p>}
         </form>
@@ -111,7 +111,7 @@ export default class MyForm extends React.Component {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         form.reset();
-        this.state.message = "";
+        this.setState({ message: "" });
         this.setState({ status: "SUCCESS" });
       } else {
         this.setState({ status: "ERROR" });

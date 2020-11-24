@@ -325,3 +325,105 @@ success source and transform nodes - 0.692s
 warning Deprecation warning - adding inferred resolver for field MdxFrontmatter.feature_image. In Gatsby v3, only fields with an explicit directive/extension will get a resolver.
 success building schema - 0.428s
 ```
+
+```
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\langswitch.js
+   6:10  warning  'Trans' is defined but never used    no-unused-vars
+  28:52  warning  Expected '===' and instead saw '=='  eqeqeq
+  31:50  warning  Expected '===' and instead saw '=='  eqeqeq
+  38:52  warning  Expected '===' and instead saw '=='  eqeqeq
+
+✖ 4 problems (0 errors, 4 warnings)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\layout-with-header-image.js
+  5:10  warning  'Trans' is defined but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\layout.js
+  6:10  warning  'Trans' is defined but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\logo.js
+   5:10  warning  'Trans' is defined but never used  no-unused-vars
+  35:20  warning  Unexpected mix of '&&' and '||'    no-mixed-operators
+  41:13  warning  Unexpected mix of '&&' and '||'    no-mixed-operators
+
+✖ 3 problems (0 errors, 3 warnings)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\mannfr-carousel.js
+  4:10  warning  'useLocalization' is defined but never used  no-unused-vars
+  4:27  warning  'LocalesList' is defined but never used      no-unused-vars
+  5:10  warning  'Trans' is defined but never used            no-unused-vars
+
+✖ 3 problems (0 errors, 3 warnings)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\peekaboo.js
+   3:10  warning  'Trans' is defined but never used                                                               no-unused-vars
+  25:7   warning  Visible, non-interactive elements with click handlers must have at least one keyboard listener  jsx-a11y/click-events-have-key-events
+  25:7   warning  Elements with the 'button' interactive role must be tabbable                                    jsx-a11y/interactive-supports-focus
+  32:1   warning  Visible, non-interactive elements with click handlers must have at least one keyboard listener  jsx-a11y/click-events-have-key-events
+  32:1   warning  Non-interactive elements should not be assigned mouse or keyboard event listeners               jsx-a11y/no-noninteractive-element-interactions
+  33:1   warning  Visible, non-interactive elements with click handlers must have at least one keyboard listener  jsx-a11y/click-events-have-key-events
+  33:1   warning  Elements with the 'button' interactive role must be tabbable                                    jsx-a11y/interactive-supports-focus
+
+✖ 7 problems (0 errors, 7 warnings)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\post-header-tags.js
+  3:10  warning  'Trans' is defined but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\post-header.js
+  4:10  warning  'Trans' is defined but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\pages\app.js
+  2:61  warning  'Link' is defined but never used             no-unused-vars
+  6:9   warning  'locale' is assigned a value but never used  no-unused-vars
+  7:20  warning  Expected '===' and instead saw '=='          eqeqeq
+
+✖ 3 problems (0 errors, 3 warnings)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\pages\contact.js
+    3:10  warning  'Trans' is defined but never used               no-unused-vars
+   88:11  warning  A form label must be associated with a control  jsx-a11y/label-has-associated-control
+   90:11  warning  A form label must be associated with a control  jsx-a11y/label-has-associated-control
+  114:9   warning  Do not mutate state directly. Use setState()    react/no-direct-mutation-state
+
+✖ 4 problems (0 errors, 4 warnings)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\templates\post.js
+  17:36  warning  'Link' is defined but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\templates\tag.js
+  40:10  warning  'tagsForRender' is defined but never used         no-unused-vars
+  50:11  warning  'locale' is assigned a value but never used       no-unused-vars
+  50:19  warning  'config' is assigned a value but never used       no-unused-vars
+  50:27  warning  'defaultLang' is assigned a value but never used  no-unused-vars
+  55:7   warning  'imgSrc' is assigned a value but never used       no-unused-vars
+  59:7   warning  'imageFluid' is assigned a value but never used   no-unused-vars
+  63:7   warning  'tags' is assigned a value but never used         no-unused-vars
+
+✖ 7 problems (0 errors, 7 warnings)
+
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\wrap-page-element.js
+  7:10  warning  'plural' is defined but never used  no-unused-vars
+```

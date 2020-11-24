@@ -1,6 +1,6 @@
 import React from "react";
 import "./peekaboo.css"
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
 
 
 import "../css/screen.css"

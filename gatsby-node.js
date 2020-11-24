@@ -66,7 +66,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       type: String
       slug: String
       title: String
-      feature_image: File @dontInfer 
+      feature_image: File
     }
   `
   createTypes(typeDefs)

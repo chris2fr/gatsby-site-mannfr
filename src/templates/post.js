@@ -14,7 +14,7 @@ import "../css/screen.css"
 
 import "./post.css"
 
-import { MdxLink, LocalizedLink as Link } from "gatsby-theme-i18n";
+import { MdxLink } from "gatsby-theme-i18n";
 //import { isPropertySignature } from "typescript";
 
 const components = {

@@ -20,22 +20,22 @@ const LangSwitch = ({ pageContext }) => {
       aria-labelledby="language-swith1"
     >
       <p className="hidden" id="language-switcher2">
-        Choose a language for this website
+        <Trans>Choose a language for this website</Trans>
       </p>
       {["en", "fr", "en-FR"].map((lang, index) => (
         <div
           key={`${lang}`}
-          className={`language__container--${(index==0)?"left":(index<2)?"middle":"right"} language__container--${lang}`}
+          className={`language__container--${(index===0)?"left":(index<2)?"middle":"right"} language__container--${lang}`}
         >
           <Link
-            className={`language__control ${(lang==locale)?"language__control--current":""}`}
+            className={`language__control ${(lang===locale)?"language__control--current":""}`}
             id="language1-1"
             name="language-switch1"
             value={`${lang}`}
             to={pageContext.originalPath}
             language={lang}
           >
-          <span className={`language__label ${(lang==locale)?"language__control--current":""}`} for="language1-1">
+          <span className={`language__label ${(lang===locale)?"language__control--current":""}`} for="language1-1">
           {i18n._(t`${lang}`)}
               <span className="hidden"> Language {i18n._(t`${lang}`)}{lang}</span>
             </span>

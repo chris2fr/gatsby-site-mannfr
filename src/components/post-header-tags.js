@@ -1,6 +1,6 @@
 import React from "react";
 import {LocalizedLink as Link  } from "gatsby-theme-i18n";
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
 
 
 import "../css/screen.css"

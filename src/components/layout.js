@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./header"
 // import Helmet from "react-helmet"
 // import { LocalizedLink as Link } from "gatsby-theme-i18n";
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
 
 
 import "../css/screen.css"
