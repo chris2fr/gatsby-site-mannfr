@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import {
-  useLocalization,
+  // useLocalization,
   MdxLink,
   LocalizedLink as Link,
 } from "gatsby-theme-i18n";
@@ -37,30 +37,30 @@ const components = {
   a: MdxLink,
 };
 
-function tagsForRender(tags) {
-  var ret = [];
-  if (!tags) return [];
-  tags.forEach((tag) =>
-    ret.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: tag })
-  );
-  return ret;
-}
+// function tagsForRender(tags) {
+//   var ret = [];
+//   if (!tags) return [];
+//   tags.forEach((tag) =>
+//     ret.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: tag })
+//   );
+//   return ret;
+// }
 
 export default ({ data, pageContext }) => {
-  const { locale, config, defaultLang } = useLocalization();
+  // const { locale, config, defaultLang } = useLocalization();
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let description =
     data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.description;
 
-  let imgSrc =
-    data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
-      ? data.mdx.frontmatter.feature_image.publicURL
-      : null;
-  let imageFluid =
-    data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
-      ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
-      : null;
-  let tags = [];
+  // let imgSrc =
+  //   data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
+  //     ? data.mdx.frontmatter.feature_image.publicURL
+  //     : null;
+  // let imageFluid =
+  //   data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
+  //     ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
+  //     : null;
+  // let tags = [];
 
   return (
     <Layout pageContext={pageContext}>

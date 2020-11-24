@@ -1,7 +1,7 @@
 import React from "react";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import Img from "gatsby-image";
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
 
 
 import PostHeaderTags from "../components/post-header-tags";

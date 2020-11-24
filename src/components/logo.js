@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import { StaticQuery, graphql } from "gatsby";
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
 
 
 import "../css/screen.css"
@@ -38,7 +38,7 @@ export default function Logo() {
                 fixed={data.file.childImageSharp.fixed}
                 alt={data.site.siteMetadata.title}
               />
-            ||
+      }{!data.file &&
             <span className={"logo-text"}>
               {data.site.siteMetadata.title}
             </span>

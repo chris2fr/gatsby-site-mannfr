@@ -1,8 +1,9 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
 import { StaticQuery, graphql } from "gatsby";
-import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-theme-i18n";
-import { Trans } from '@lingui/macro'
+// import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-theme-i18n";
+import { LocalizedLink as Link  } from "gatsby-theme-i18n";
+// import { Trans } from '@lingui/macro'
 
 
 import Img from "gatsby-image";
