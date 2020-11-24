@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { useFlexSearch } from "react-use-flexsearch";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
-import { Trans } from '@lingui/macro'
+// import { Trans } from '@lingui/macro'
+import { useTranslation } from "react-i18next"
 
 import LayoutWithHeaderImage from "../components/layout-with-header-image";
 
@@ -24,7 +25,7 @@ const SearchPage = ({ pageContext, data }) => {
     evt.preventDefault();
     setQueryString(tempQueryString);
   };
-
+  const { t } = useTranslation("translation")
   return (
     <LayoutWithHeaderImage
       title={"Search"}
@@ -33,11 +34,11 @@ const SearchPage = ({ pageContext, data }) => {
       tags={[]}
       fluid={data.file && data.file.childImageSharp.fluid}
     >
-      <h1><Trans>Search</Trans></h1>
+      <h1>{t("Search")}</h1>
 
       <form onSubmit={handleSubmit}>
         <label>
-          <Trans>Search</Trans>:
+          {t("Search")}:
           <input
             type="text"
             style={{ placeholder: "Search" }}
@@ -46,7 +47,7 @@ const SearchPage = ({ pageContext, data }) => {
         </label>
         <input type="submit" value="Submit" />
       </form>
-      <h2><Trans>Results</Trans> {queryString}</h2>
+      <h2>{t("Results")} {queryString}</h2>
       <ul>
         {results.map((result) => (
           <li key={result.id}>

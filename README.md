@@ -67,3 +67,25 @@ My own content is in a git repository specific to me but not really backed up an
 14. Maybe introduce a notion of categories
 15. Have different search indexes and content per language
 17. Set up a language router per browser language
+
+### Notes 
+
+```
+warning ESLintError:
+C:\Users\chris\dox\mann.fr\src\components\peekaboo.js
+  25:7  warning  Visible, non-interactive elements with click handlers must have at least one keyboard listener  jsx-a11y/click-events-have-key-events
+  25:7  warning  Elements with the 'button' interactive role must be tabbable                                    jsx-a11y/interactive-supports-focus
+  32:1  warning  Visible, non-interactive elements with click handlers must have at least one keyboard listener  jsx-a11y/click-events-have-key-events
+  32:1  warning  Non-interactive elements should not be assigned mouse or keyboard event listeners               jsx-a11y/no-noninteractive-element-interactions
+  33:1  warning  Visible, non-interactive elements with click handlers must have at least one keyboard listener  jsx-a11y/click-events-have-key-events
+  33:1  warning  Elements with the 'button' interactive role must be tabbable                                    jsx-a11y/interactive-supports-focus
+```
+
+From Package Scripts 
+
+```
+
+    "add-locale": "lingui add-locale",
+    "extract": "lingui extract",
+    "compile": "lingui compile"
+```

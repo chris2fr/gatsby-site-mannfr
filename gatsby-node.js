@@ -1,6 +1,6 @@
-const localesDir = "./i18n/lingui"
-const path = require("path")
-let didRunAlready = false
+// const localesDir = "./i18n/lingui"
+// const path = require("path")
+// let didRunAlready = false
 
 function slugger (path) {
   let pathComponents = path.split("/")
@@ -20,31 +20,31 @@ function localer (fileAbsolutePath) {
   return (realLocale && realLocale.includes(".")?realLocale:"en-FR") // Replace static type by value from gatsby-config.js
 }
 
-exports.onPreInit = ({ store }, { localeDir }) => {
-  // localeDir must be defined, no default option will be defined
-  if (!localesDir) {
-    throw new Error(`
-      Please define the 'localeDir' option of gatsby-theme-i18n-lingui
-    `)
-  }
+// exports.onPreInit = ({ store }, { localeDir }) => {
+//   // localeDir must be defined, no default option will be defined
+//   if (!localesDir) {
+//     throw new Error(`
+//       Please define the 'localeDir' option of gatsby-theme-i18n-lingui
+//     `)
+//   }
 
-  if (didRunAlready) {
-    throw new Error(
-      `You can only have single instance of gatsby-theme-i18n-lingui in your gatsby-config.js`
-    )
-  }
+//   if (didRunAlready) {
+//     throw new Error(
+//       `You can only have single instance of gatsby-theme-i18n-lingui in your gatsby-config.js`
+//     )
+//   }
 
-  didRunAlready = true
-  absoluteLocalesDirectory = path.join(
-    store.getState().program.directory,
-    localesDir
-  )
+//   didRunAlready = true
+//   absoluteLocalesDirectory = path.join(
+//     store.getState().program.directory,
+//     localesDir
+//   )
 
-  absoluteLocalesDirectory = path.join(
-    store.getState().program.directory,
-    "./i18n/lingui/locales"
-  )
-}
+//   absoluteLocalesDirectory = path.join(
+//     store.getState().program.directory,
+//     "./i18n/lingui/locales"
+//   )
+// }
 
 // exports.onCreateWebpackConfig = ({ actions, plugins }) => {
 //   actions.setWebpackConfig({
@@ -68,6 +68,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       feature_image: File
     }
+
   `
   createTypes(typeDefs)
 }

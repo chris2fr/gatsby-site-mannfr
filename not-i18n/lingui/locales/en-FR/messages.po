@@ -13,13 +13,17 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
 
-#: src/pages/default.js:29
+#: src/components/langswitch.js:24
+msgid "Choose a language for this website"
+msgstr "Choose a language for this website"
+
+#: src/pages/default.js:30
 msgid "Default Page"
 msgstr "Default Page / Page par défault"
 
 #: src/pages/404.js:30
-msgid "Lost in Hyperspace"
-msgstr "Lost in Hyperspace"
+#~ msgid "Lost in Hyperspace"
+#~ msgstr "Lost in Hyperspace"
 
 #: src/templates/tag.js:158
 msgid "Read More"
@@ -30,8 +34,8 @@ msgid "Results"
 msgstr "Results"
 
 #: src/pages/404.js:32
-msgid "Return Home"
-msgstr "Return Home"
+#~ msgid "Return Home"
+#~ msgstr "Return Home"
 
 #: src/pages/search.js:36
 #: src/pages/search.js:40
@@ -39,10 +43,10 @@ msgid "Search"
 msgstr "Search"
 
 #: src/pages/404.js:31
-msgid "So sorry, but no content here now."
-msgstr "So sorry, but no content here now."
+#~ msgid "So sorry, but no content here now."
+#~ msgstr "So sorry, but no content here now."
 
-#: src/pages/default.js:30
+#: src/pages/default.js:31
 msgid "This is a default page."
 msgstr "This is a default page. Ceci est une page par défault."
 
@@ -59,10 +63,10 @@ msgstr "This page hasn't been translated yet"
 #~ msgstr "lang"
 
 #: src/pages/default.js:31
-msgid "{0}"
-msgstr "{0}"
+#~ msgid "{0}"
+#~ msgstr "{0}"
 
 #: src/components/langswitch.js:39
 #: src/components/langswitch.js:40
-msgid "{lang}"
-msgstr "{lang}"
+#~ msgid "{lang}"
+#~ msgstr "{lang}"

@@ -3,8 +3,8 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 // import Img from "gatsby-image";
-import { Trans } from '@lingui/macro'
-
+// import { Trans } from '@lingui/macro'
+import { useTranslation } from "react-i18next"
 
 import Layout from "../components/layout";
 // import Header from "../components/header";
@@ -39,6 +39,9 @@ export default ({ data, pageContext }) => {
     tagsForRender.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: tag })
     );
   }
+
+  const { t } = useTranslation("translation")
+
   return (
     <Layout pageContext={pageContext}>
       {/* originalPath {pageContext.originalPath} locale {pageContext.locale} uriPath {pageContext.uriPath}  */}
@@ -68,7 +71,7 @@ export default ({ data, pageContext }) => {
               </React.Fragment>
                   </>
             ) : (
-              <div><Trans>This page hasn't been translated yet</Trans></div>
+              <div>{t("This page hasn't been translated yet")}</div>
             )}
                     {/* <p>I was able to help friends prepare their CAPES and AGREGATION oral presentations with success, I was able to help a Director of a multi-national non-profit present in English at an international conference in Japan with success. My talent is listening to your presentation and feed back to you what I hear such that you better your way of expressing yourself.</p><p>This works very well for English identity seeking. When French speakers express themselves in English, they sometimes forget that language is also a tool for conveying identity. For them, English speaking is a handicap. I help francophones apprehend their handicap in this sense.</p><p>This works well also for cross-cultural collaborations. In seeking to work with teams from other countries, it is important to understand how others may apprehend you requests or work fulfillment.</p> */}
                 </div>

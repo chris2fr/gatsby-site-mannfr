@@ -23,8 +23,17 @@ module.exports = {
     ],
   },
   plugins: [
-    `@lingui/react`,
-    `@lingui/macro`,
+    {
+      resolve: `gatsby-theme-i18n-react-i18next`,
+      options: {
+        locales: `./locales`,
+        i18nextOptions: {
+          ns: ["translation", "blog", "404"],
+        },
+      },
+    },
+    // `@lingui/react`,
+    // `@lingui/macro`,
     // {
     //   resolve: `gatsby-theme-i18n-lingui`,
     //   options: {
