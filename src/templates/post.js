@@ -105,8 +105,8 @@ export default ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query LocalePost($uriPath: String!, $locale: String!) {
-    mdx(fields: { realLocale: { eq: $locale }, uriPath: { eq: $uriPath} }) {
+  query LocalePost($uriPath: String!, $realLocale: String!) {
+    mdx(fields: { realLocale: { eq: $realLocale }, uriPath: { eq: $uriPath} }) {
       frontmatter {
         slug
         title

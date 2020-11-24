@@ -23,7 +23,7 @@ This is an ordered list of work items for the next releases.
 
 To do:
 
-16. Translate template pages, including tags
+16. Translate template pages
 16. Better manage site content
 16. Editing and proofreading
 16. Have different search indexes and content per language
@@ -44,6 +44,15 @@ To do:
 ## Changelog
 
 These are the changes done over the most recent versions
+
+### Changelog v-0.0.5
+
+I put the page context in place manually. Pretty soon, I may not need gatsby-theme-i18n.
+
+Done:
+
+16. Put effective translation mechanism in place on home and tag pages
+17. Had a better way of passing locale logic in pageContext (technical thing and bug fix)
 
 ### Changelog v-0.0.4
 

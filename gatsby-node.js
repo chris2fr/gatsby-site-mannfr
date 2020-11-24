@@ -2,6 +2,12 @@
 // const path = require("path")
 // let didRunAlready = false
 
+const configI18n = require("./locales/config.json")
+var configLocales = {}
+configI18n.map (item =>
+  configLocales[item.code] = item
+  )
+
 function slugger (path) {
   let pathComponents = path.split("/")
   let ret = pathComponents.pop()
@@ -77,15 +83,26 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions}) => {
   if (node.internal.type === "Mdx") {
-
-    const relativeFilePath = createFilePath({ node, getNode, trailingSlash:false});
+    let relativeFilePath = createFilePath({ node, getNode, trailingSlash:false});
+    let originalPath = relativeFilePath
+    let realLocale = relativeFilePath.split(".").pop()
     // relativeFilePath = (node.frontmatter.type)?`${relativeFilePath}/${node.frontmatter.type}`:relativeFilePath;
     // relativeFilePath = (node.frontmatter.visibility)?`${relativeFilePath}/${node.frontmatter.visibility}`:relativeFilePath;
     // relativeFilePath = (node.frontmatter.tags && node.frontmatter.tags.length > 0 && node.frontmatter.type && node.frontmatter.type != "tag")?`${relativeFilePath}/${node.frontmatter.tags[0]}`:relativeFilePath;
+    if (realLocale && Object.keys(configLocales).includes(realLocale)) {
+      originalPath = relativeFilePath.substring(0,relativeFilePath.length - realLocale.length -1)
+      relativeFilePath = "/" + realLocale + originalPath
+    } else {
+      realLocale = "en-FR"
+    }
 
     actions.createNodeField({ node, name: "uriPath", value: relativeFilePath});
     actions.createNodeField({ node, name: "uriSlug", value: slugger(relativeFilePath)});
-    actions.createNodeField({ node, name: "realLocale", value: localer(node.fileAbsolutePath)});
+    actions.createNodeField({ node, name: "realLocale", value: realLocale});
+    actions.createNodeField({ node, name: "originalPath", value: originalPath});
+    actions.createNodeField({ node, name: "dateFormat", value: configLocales[realLocale].dateFormat});
+    //actions.createNodeField({ node, name: "locale", value: configLocales[realLocale].code});
+    actions.createNodeField({ node, name: "hrefLang", value: configLocales[realLocale].hrefLang});
     // actions.createNodeField({ node, name: "locale", value: localer(node.fileAbsolutePath)});
     // actions.createNodeField({ node, name: "slug", value: relativeFilePath});
     // actions.createNodeField({ node, name: "path", value: relativeFilePath});
@@ -103,6 +120,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         fields {
           uriPath
           uriSlug
+          realLocale
+          originalPath
+          locale
+          dateFormat
+          hrefLang
         }
       }
     }
@@ -112,6 +134,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         fields {
           uriPath
           uriSlug
+          realLocale
+          originalPath
+          locale
+          dateFormat
+          hrefLang
         }
       }
     }
@@ -128,12 +155,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   posts.forEach(node => {
     actions.createPage({
       path: node.fields.uriPath,
-      matchPath: "/" + node.slug,
+      //matchPath:  node.fields.originalPath,
       component: require.resolve(`./src/templates/post.js`),
       context: {
         uriPath: node.fields.uriPath,
-        // uriSlug: node.slug,
-        // to: node.path
+        uriSlug: node.fields.uriSlug,
+        realLocale: node.fields.realLocale,
+        originalPath: node.fields.originalPath,
+        locale: node.fields.realLocale,
+        hrefLang: node.fields.hrefLang,
+        dateFormat: node.fields.dateFormat
       },
     }) 
     // actions.createNodeField({ node, name: "path", value: `${relativeFilePath}`});
@@ -142,12 +173,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   mdxQueryResult.data.tags.nodes.forEach(node => {
     actions.createPage({
       path: node.fields.uriPath,
-      matchPath: "/" + node.slug,
+      //matchPath:  node.fields.originalPath,
       component: require.resolve(`./src/templates/tag.js`),
       context: {
         uriPath: node.fields.uriPath,
         uriSlug: node.fields.uriSlug,
+        realLocale: node.fields.realLocale,
+        originalPath: node.fields.originalPath,
+        locale: node.fields.realLocale,
+        hrefLang: node.fields.hrefLang,
+        dateFormat: node.fields.dateFormat
       },
+      locale: node.fields.realLocale
     }) 
   })
 }
