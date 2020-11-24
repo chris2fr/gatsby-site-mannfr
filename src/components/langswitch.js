@@ -29,6 +29,7 @@ const LangSwitch = ({ pageContext }) => {
           key={`${lang}`}
           className={`language__container--${(index===0)?"left":(index<2)?"middle":"right"} language__container--${lang}`}
         >
+          {(!pageContext.translations || pageContext.translations.includes(lang)) && 
           <Link
             className={`language__control ${(lang===locale)?"language__control--current":""}`}
             id="language1-1"
@@ -37,11 +38,21 @@ const LangSwitch = ({ pageContext }) => {
             to={pageContext.originalPath}
             language={lang}
           >
-          <span className={`language__label ${(lang===locale)?"language__control--current":""}`} for="language1-1">
+          <span className={`language__label ${(lang===locale)?"language__control--current":""}`}  for="language1-1">
           {t(lang)}
               <span className="hidden"> Language {t(lang)}</span>
             </span>
+
           </Link>
+          }
+          {(pageContext.translations && !pageContext.translations.includes(lang)) &&
+          <span className={`language__control`}>
+          <span className={"language__label language__control--off"} for={"language1-1"}>
+          {t(lang)}
+              <span className="hidden"> Language {t(lang)}</span>
+            </span> 
+          </span>
+          }
         </div>
       ))}
     </div>

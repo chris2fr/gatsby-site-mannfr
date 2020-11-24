@@ -22,6 +22,7 @@ const components = {
 };
 
 export default ({ data, pageContext }) => {
+  const { t } = useTranslation("translation")
   // const { locale, config, defaultLang } = useLocalization();
   let title = data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.title;
   let imageFluid =
@@ -39,12 +40,15 @@ export default ({ data, pageContext }) => {
     tagsForRender.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: tag })
     );
   }
-
-  const { t } = useTranslation("translation")
+  pageContext.translations = []
+  let langs = {"en":"en","fr":"fr","enFR":"en-FR"} 
+  Object.keys(langs).map(key => {
+    console.log(key, data[key]);
+    data[key] && pageContext.translations.push(langs[key])})
 
   return (
     <Layout pageContext={pageContext}>
-      {/* originalPath {pageContext.originalPath} locale {pageContext.locale} uriPath {pageContext.uriPath}  */}
+       {/* originalPath {pageContext.originalPath} locale {pageContext.locale} uriPath {pageContext.uriPath}   */}
         <article class="post tag-mann-fr tag-human single-post">
           <PostHeader
             tags={tagsForRender}
@@ -128,6 +132,21 @@ export const query = graphql`
       }
       body
       timeToRead
+    }
+    fr:mdx(fields: { uriPath: { eq: $uriPath }, realLocale: { eq: "fr"} }) {
+      frontmatter {
+        title
+      }
+    }
+    en:mdx(fields: { uriPath: { eq: $uriPath }, realLocale: { eq: "en"} }) {
+      frontmatter {
+        title
+      }
+    }
+    enFR:mdx(fields: { uriPath: { eq: $uriPath }, realLocale: { eq: "en-FR"} }) {
+      frontmatter {
+        title
+      }
     }
   }
 `;
