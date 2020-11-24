@@ -146,6 +146,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve(`./src/templates/tag.js`),
       context: {
         uriPath: node.fields.uriPath,
+        uriSlug: node.fields.uriSlug,
         // slug: node.slug,
         // tag: node.slug,
         // to: node.path

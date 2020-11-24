@@ -41,7 +41,7 @@ function tagsForRender(tags) {
   var ret = [];
   if (!tags) return [];
   tags.forEach((tag) =>
-    ret.push({ name: tag, url: "/tags/" + tag, uriPath: tag })
+    ret.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: tag })
   );
   return ret;
 }
@@ -168,7 +168,7 @@ export default ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query($uriPath: String!, $tag: String) {
+  query($uriPath: String!, $uriSlug: String) {
     mdx(fields: { uriPath: { eq: $uriPath } }) {
       frontmatter {
         slug
@@ -190,7 +190,7 @@ export const query = graphql`
       timeToRead
     }
     allMdx(
-      filter: { frontmatter: { tags: { eq: $tag }, type: { ne: "tag" } } }
+      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { ne: "tag" } } }
       sort: { fields: frontmatter___created_at, order: DESC }
     ) {
       nodes {
