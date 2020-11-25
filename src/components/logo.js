@@ -30,8 +30,8 @@ export default function Logo() {
           }
         }
       `}
-      render={data => (
-        <><Link to="/" className={"logo"}>
+      render={data =>
+        <Link to="/tags/mann-fr/" className={"logo"}>
         {data.file && 
             
               <Img
@@ -45,8 +45,6 @@ export default function Logo() {
           
           }
           </Link>
-        </>
-          )
       }
     />
     </>

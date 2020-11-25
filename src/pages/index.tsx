@@ -7,6 +7,7 @@ import { LocalizedLink as Link } from "gatsby-theme-i18n";
 // import { useLocalization, LocalesList, LocalizedLink as Link  } from "gatsby-theme-i18n";
 // import { Trans } from '@lingui/macro'
 import Img from "gatsby-image";
+import { useTranslation } from "react-i18next"
 
 // import MannfrCarousel from "../components/mannfr-carousel";
 import Header from "../components/header";
@@ -43,6 +44,8 @@ const getRedirectLanguage = () => {
 };
 
 export default function IndexRoute({ pageContext, disabled, data }) {
+  
+  const { t } = useTranslation("translation")
   // const { locale, config, defaultLang } = useLocalization();
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -76,13 +79,13 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <button
             className={
               "rec rec-arrow rec rec-arrow-" +
-              (type === "NEXT" ? "right" : "left")
+            (type === "NEXT" ? "right" : "left")
             }
             onClick={onClick}
             disabled={disabled}
             {...rest}
           >
-            {type}
+            {t(type)}
           </button>
         )}
       >

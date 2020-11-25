@@ -109,8 +109,8 @@ export default ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query LocalePost($uriPath: String!, $realLocale: String!) {
-    mdx(fields: { realLocale: { eq: $realLocale }, uriPath: { eq: $uriPath} }) {
+  query LocalePost($originalPath: String!, $realLocale: String!) {
+    mdx(fields: { realLocale: { eq: $realLocale }, originalPath: { eq: $originalPath} }) {
       frontmatter {
         slug
         title
@@ -133,17 +133,17 @@ export const query = graphql`
       body
       timeToRead
     }
-    fr:mdx(fields: { uriPath: { eq: $uriPath }, realLocale: { eq: "fr"} }) {
+    fr:mdx(fields: { originalPath: { eq: $originalPath }, realLocale: { eq: "fr"} }) {
       frontmatter {
         title
       }
     }
-    en:mdx(fields: { uriPath: { eq: $uriPath }, realLocale: { eq: "en"} }) {
+    en:mdx(fields: { originalPath: { eq: $originalPath }, realLocale: { eq: "en"} }) {
       frontmatter {
         title
       }
     }
-    enFR:mdx(fields: { uriPath: { eq: $uriPath }, realLocale: { eq: "en-FR"} }) {
+    enFR:mdx(fields: { originalPath: { eq: $originalPath }, realLocale: { eq: "en-FR"} }) {
       frontmatter {
         title
       }

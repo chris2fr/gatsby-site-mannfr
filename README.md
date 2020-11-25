@@ -23,7 +23,6 @@ This is an ordered list of work items for the next releases.
 
 To do:
 
-19. Translate template pages
 25. Better manage site content
 25. Editing and proofreading
 25. Have different search indexes and content per language
@@ -31,7 +30,6 @@ To do:
 30. Consider HTML boilerplate
 30. Better the cover-image handling for pages without an image
 30. Better the cover-image handling for posts, tags and pages
-30. Set up a language router per browser language
 35. Automate translation extraction https://github.com/i18next/i18next-parsergats
 35. Integrate a CV application
 35. Put relationships between post, pages, tags and authors
@@ -45,9 +43,15 @@ To do:
 
 These are the changes done over the most recent versions
 
-### Changelog v-0.0.6 (in progress)
+### Changelog v-0.0.6
 
 18. Variable language chooser according to available posts
+19. Import French-Language Content
+20. Set up a language router per browser language
+21. Translated arrows on home page
+22. Fixed the "/index" that was at the end of the URLs
+23. Translate template pages
+
 
 ### Changelog v-0.0.5
 

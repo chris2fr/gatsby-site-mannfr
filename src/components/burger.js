@@ -1,31 +1,33 @@
 import React from "react";
 import {LocalizedLink as Link} from "gatsby-theme-i18n"
 import PeekABoo from "./peekaboo"
+import { useTranslation } from "react-i18next"
 
 import "../css/screen.css"
 // import "../css/burger.css"
 
-class Burger extends React.Component  {
-  render() {
+
+export default ({ pageContext }) => {
+    const { t } = useTranslation("translation")
     return (
       <PeekABoo 
-      pageContext={this.props.pageContext}>
+      pageContext={pageContext}>
       <div className={"canvas-close"}></div>
       <nav className={"main-menu widget"}>
         <ul className={"nav-list u-plain-list"}>
           <li className={"menu-item menu-item-home menu-item-current"}>
             <Link to="/" className="menu-item-link u-underline">
-              Home
+              {t("Home")}
             </Link>
           </li>
           <li className={"menu-item menu-item-home menu-item-current"}>
             <Link to="/contact" className="menu-item-link u-underline">
-              Contact
+              {t("Contact")}
             </Link>
           </li>
           <li className={"menu-item menu-item-home menu-item-current"}>
             <Link to="/search" className="menu-item-link u-underline">
-              Search
+              {t("Search")}
             </Link>
           </li>
         </ul>
@@ -99,7 +101,3 @@ class Burger extends React.Component  {
     )
 
   }
-
-}
-
-export default Burger;
