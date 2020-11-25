@@ -83,14 +83,14 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions}) => {
   if (node.internal.type === "Mdx") {
-    let relativeFilePath = createFilePath({ node, getNode, trailingSlash:false});
+    let relativeFilePath = createFilePath({ node, getNode, trailingSlash:true}).replace(/\/$/,"");
     let originalPath = relativeFilePath
     let realLocale = relativeFilePath.split(".").pop()
     // relativeFilePath = (node.frontmatter.type)?`${relativeFilePath}/${node.frontmatter.type}`:relativeFilePath;
     // relativeFilePath = (node.frontmatter.visibility)?`${relativeFilePath}/${node.frontmatter.visibility}`:relativeFilePath;
     // relativeFilePath = (node.frontmatter.tags && node.frontmatter.tags.length > 0 && node.frontmatter.type && node.frontmatter.type != "tag")?`${relativeFilePath}/${node.frontmatter.tags[0]}`:relativeFilePath;
     if (realLocale && Object.keys(configLocales).includes(realLocale)) {
-      originalPath = relativeFilePath.substring(0,relativeFilePath.length - realLocale.length -1)
+      originalPath = relativeFilePath.substring(0,relativeFilePath.length - realLocale.length -1).replace(/index$/,"")
       relativeFilePath = "/" + realLocale + originalPath
     } else {
       realLocale = "en-FR"
