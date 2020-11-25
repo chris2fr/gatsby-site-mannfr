@@ -114,7 +114,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const mdxQueryResult = await graphql(`
    {
-    posts: allMdx(filter: {frontmatter: {type: {ne: "tag"}}}) {
+    posts: allMdx(filter: {frontmatter: {type: {ne: "hometag"}}}) {
       nodes {
         slug
         fields {
@@ -128,7 +128,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-    tags: allMdx(filter: {frontmatter: {type: {eq: "tag"}}}) {
+    tags: allMdx(filter: {frontmatter: {type: {eq: "hometag"}}}) {
       nodes {
         slug
         fields {

@@ -23,9 +23,10 @@ import "../css/screen.css";
 // import "../css/burger.css";
 // import "../css/widget.css";
 
-import "./index.css";
+
 import "../css/screen.css";
-import "../components/mannfr-carousel.css";
+import "./index.css";
+// import "../components/mannfr-carousel.css";
 
 const getRedirectLanguage = () => {
   if (typeof navigator === `undefined`) {
@@ -49,11 +50,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
   // const { locale, config, defaultLang } = useLocalization();
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 650, itemsToShow: 2 },
-    { width: 1150, itemsToShow: 3 },
-    { width: 1500, itemsToShow: 4 },
-    { width: 1950, itemsToShow: 5 },
-    { width: 2200, itemsToShow: 6 },
+    { width: 800, itemsToShow: 2 },
+    { width: 1200, itemsToShow: 3 },
+    { width: 1600, itemsToShow: 4 },
+    { width: 2000, itemsToShow: 5 },
+    { width: 2400, itemsToShow: 6 },
   ];
   pageContext.translations = ["en","fr"];
   if (pageContext.locale==="en-FR") {
@@ -75,7 +76,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         className="mann-carousel"
         enableMouseSwipe={true}
         focusOnSelect={true}
-        renderArrow={({ type, onClick, ...rest }) => (
+        renderArrow={({ type, onClick }) => (
           <button
             className={
               "rec rec-arrow rec rec-arrow-" +
@@ -83,7 +84,6 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             }
             onClick={onClick}
             disabled={disabled}
-            {...rest}
           >
             {t(type)}
           </button>
@@ -95,6 +95,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               to={node.fields.uriPath + "/"}
               style={{ display: "block" }}
               draggable={false}
+              language={pageContext.locale}
             >
               <div className={"tag"} draggable={false}>
                 <Img
@@ -127,7 +128,7 @@ export const query = graphql`
     allMdx(
       sort: { fields: frontmatter___order }
       filter: {
-        frontmatter: { type: { eq: "tag" } }
+        frontmatter: { type: { eq: "hometag" } }
         fields: { realLocale: { eq: $locale } }
       }
     ) {

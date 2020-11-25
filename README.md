@@ -47,6 +47,10 @@ To do:
 
 These are the changes done over the most recent versions
 
+### Changelog v-0.0.7 (in progress)
+
+
+
 ### Changelog v-0.0.6
 
 Finishing changes to how the website is viewed from afar. Synched with content repository.
@@ -141,4 +145,14 @@ C:\Users\chris\dox\mann.fr\src\components\peekaboo.js
 success source and transform nodes - 11.681s
 warning Deprecation warning - adding inferred resolver for field MdxFrontmatter.feature_image. In Gatsby v3, only fields with an explicit directive/extension will get a resolver.
 success building schema - 0.732s
+```
+
+```
+https://github.com/facebook/react/issues/18178#issuecomment-595846312
+index.js:2177 Warning: Cannot update a component (`LangSwitch`) while rendering a different component (`PageRenderer`). To locate the bad setState() call inside `PageRenderer`, follow the stack trace as described in https://reactjs.org/link/setstate-in-rende
+```
+
+```
+React-Hot-Loader: react-🔥-dom patch is not detected. React 16.6+ features may not work. 
+    at AppContainer (eval at ES6ProxyComponentFactory (http://localhost:8000/commons.js:61895:10), <anonymous>:14:7)
 ```

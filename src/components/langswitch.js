@@ -38,7 +38,7 @@ const LangSwitch = ({ pageContext }) => {
             to={pageContext.originalPath}
             language={lang}
           >
-          <span className={`language__label ${(lang===locale)?"language__control--current":""}`}  for="language1-1">
+          <span className={`language__label ${(lang===locale)?"language__control--current":""}`}  htmlFor="language1-1">
           {t(lang)}
               <span className="hidden"> Language {t(lang)}</span>
             </span>
@@ -47,7 +47,7 @@ const LangSwitch = ({ pageContext }) => {
           }
           {(pageContext.translations && !pageContext.translations.includes(lang)) &&
           <span className={`language__control`}>
-          <span className={"language__label language__control--off"} for={"language1-1"}>
+          <span className={"language__label language__control--off"} htmlFor={"language1-1"}>
           {t(lang)}
               <span className="hidden"> Language {t(lang)}</span>
             </span> 

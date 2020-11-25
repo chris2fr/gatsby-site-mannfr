@@ -121,7 +121,7 @@ export default ({ data, pageContext }) => {
                     </time>
                   </span>
                   <span className={"post-meta-item post-meta-length"}>
-                    {node.timeToRead} <trans>min read</trans>
+                    {node.timeToRead} {t("min read")}
                   </span>
                   {/* <span className={"post-meta-item"}>
                     <PostHeaderTags
@@ -213,7 +213,7 @@ export const query = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { ne: "tag" } }, fields: { realLocale: { eq: $realLocale } } }
+      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { ne: "hometag" } }, fields: { realLocale: { eq: $realLocale } } }
       sort: { fields: frontmatter___created_at, order: DESC }
     ) {
       nodes {
