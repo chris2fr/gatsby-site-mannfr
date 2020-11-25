@@ -23,6 +23,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `@hot-loader/react-dom`,
     {
       resolve: `gatsby-theme-i18n-react-i18next`,
       options: {
@@ -145,13 +146,6 @@ module.exports = {
         },
         /*/
         gatsbyRemarkPlugins: ["gatsby-remark-images"],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `tags`,
-        path: `${__dirname}/content/tags`,
       },
     },
     {
