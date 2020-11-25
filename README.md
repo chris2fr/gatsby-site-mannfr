@@ -47,15 +47,21 @@ To do:
 
 These are the changes done over the most recent versions
 
-### Changelog v-0.0.7 (in progress)
+### Changelog v-0.0.7 
 
-24. Clear internal warnings and invisible errores
+We are now ready for beta.
+
+Done:
+
+24. Clear internal warnings and invisible errors
 25. Calibrate tags in content/published with type: hometag in frontmatter
-26. Introduced favicon.ico folder at static root
+26. Introduce favicon.ico folder at static root with app icons and manifest.json
 
 ### Changelog v-0.0.6
 
 Finishing changes to how the website is viewed from afar. Synched with content repository.
+
+Done:
 
 18. Variable language chooser according to available posts
 19. Import French-Language Content
