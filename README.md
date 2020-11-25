@@ -23,25 +23,25 @@ This is an ordered list of work items for the next releases.
 
 To do:
 
-25. Editing and proofreading
-25. Better manage site content
-25. Have different search indexes and content per language
-30. Rework the presentation of the search results 
-30. Consider HTML boilerplate
-30. Better the cover-image handling for pages without an image
-35. Better the cover-image handling for posts, tags and pages
-35. Activate SEO, especiall for site header and correct fav.ico
-35. Integrate a CV application
-40. Automate translation extraction https://github.com/i18next/i18next-parsergats
-40. Put relationships between post, pages, tags and authors
-40. Consider Netlify CMS
-45. Authors from Ghost
-45. Automatic translation from loclz or similar
-45. Document this experience
-50. Transpose password-protected content
-50. Other content types from Ghost
-50. Integrate specific data types for posts, pages, tags and authors 
-55. Maybe introduce a notion of categories
+27. Editing and proofreading
+40. Better manage site content
+50. Have different search indexes and content per language
+60. Rework the presentation of the search results 
+70. Consider HTML boilerplate
+80. Better the cover-image handling for pages without an image
+90. Better the cover-image handling for posts, tags and pages
+100. Activate SEO, especially for site header 
+110. Integrate a CV application
+120. Automate translation extraction https://github.com/i18next/i18next-parsergats
+130. Put relationships between post, pages, tags and authors
+140. Consider Netlify CMS
+150. Authors from Ghost
+160. Automatic translation from loclz or similar
+170. Document this experience
+180. Transpose password-protected content
+190. Other content types from Ghost
+200. Integrate specific data types for posts, pages, tags and authors 
+210. Maybe introduce a notion of categories
 
 ## Changelog
 
@@ -49,7 +49,9 @@ These are the changes done over the most recent versions
 
 ### Changelog v-0.0.7 (in progress)
 
-
+24. Clear internal warnings and invisible errores
+25. Calibrate tags in content/published with type: hometag in frontmatter
+26. Introduced favicon.ico folder at static root
 
 ### Changelog v-0.0.6
 
