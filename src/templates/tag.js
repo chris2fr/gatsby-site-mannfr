@@ -76,7 +76,7 @@ export default ({ data, pageContext }) => {
       </Helmet>
       <section className={"term"}>
         <div className={"term-wrapper"}>
-          <h1 className={"term-name"}>{title}</h1>
+          <h1 className={"term-name"}><Link to="/tags/">{t("Tags")}</Link>  / {t(title)}</h1>
           <div className={"term-description"}>{description}</div>
         </div>
       </section>
