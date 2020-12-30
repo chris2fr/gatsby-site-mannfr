@@ -65,16 +65,18 @@ function localer (fileAbsolutePath) {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type MdxFrontmatter implements Node @infer {
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter
+    }
+    type MdxFrontmatter {
       description: String
       tags: [String]
       order: String
       type: String
       slug: String
       title: String
-      feature_image: File @dontInfer
+      feature_image: File 
     }
-
   `
   createTypes(typeDefs)
 }
@@ -114,7 +116,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const mdxQueryResult = await graphql(`
    {
-    posts: allMdx(filter: {frontmatter: {type: {ne: "hometag"}}}) {
+    posts: allMdx(filter: {frontmatter: {type: {nin: ["hometag","tag"]}}}) {
       nodes {
         slug
         fields {
@@ -128,7 +130,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-    tags: allMdx(filter: {frontmatter: {type: {eq: "hometag"}}}) {
+    tags: allMdx(filter: {frontmatter: {type: {in: ["hometag","tag"]}}}) {
       nodes {
         slug
         fields {

@@ -213,7 +213,7 @@ export const query = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { ne: "hometag" } }, fields: { realLocale: { eq: $realLocale } } }
+      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { nin: ["hometag","tag"] } }, fields: { realLocale: { eq: $realLocale } } }
       sort: { fields: frontmatter___created_at, order: DESC }
     ) {
       nodes {
