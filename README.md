@@ -135,7 +135,6 @@ Done:
 2. Import content
 3. Set up a home page
 
-
 ## Notes 
 
 ```
