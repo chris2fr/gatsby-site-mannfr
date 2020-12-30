@@ -47,6 +47,8 @@ To do:
 
 These are the changes done over the most recent versions
 
+28. Changed link on main logo to return to main website.
+
 ### Changelog v-0.0.7 
 
 We are now ready for beta.
