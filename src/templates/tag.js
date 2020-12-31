@@ -76,7 +76,8 @@ export default ({ data, pageContext }) => {
       </Helmet>
       <section className={"term"}>
         <div className={"term-wrapper"}>
-          <h1 className={"term-name"}><Link to="/tags/">{t("Tags")}</Link>  / {t(title)}</h1>
+          <h1 className={"term-name"}><Link to="/tags/">{t("Tags")}</Link> 
+           / {t(title)}</h1>
           <div className={"term-description"}>{description}</div>
         </div>
       </section>
@@ -212,9 +213,37 @@ export const query = graphql`
         title
       }
     }
-    allMdx(
-      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { nin: ["hometag","tag"] } }, fields: { realLocale: { eq: $realLocale } } }
+    tags: allMdx(
+      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { in: ["hometag","tag"] } }, fields: { realLocale: { eq: $realLocale } } }
       sort: { fields: frontmatter___created_at, order: DESC }
+    ) {
+      nodes {
+        body
+        excerpt(pruneLength: 400)
+        timeToRead
+        fields {
+          uriPath
+        }
+        frontmatter {
+          slug
+          title
+          tags
+          created_at(formatString: "YYYY-MM-DD")
+          description
+          feature_image {
+            publicURL
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+    allMdx(
+      filter: { frontmatter: { tags: { eq: $uriSlug } }, fields: { realLocale: { eq: $realLocale } } }
+      sort: { fields: [frontmatter___order, frontmatter___created_at], order: [ASC, DESC]}, 
     ) {
       nodes {
         body
