@@ -76,8 +76,7 @@ export default ({ data, pageContext }) => {
       </Helmet>
       <section className={"term"}>
         <div className={"term-wrapper"}>
-          <h1 className={"term-name"}><Link to="/tags/">{t("Tags")}</Link> 
-           / {t(title)}</h1>
+          <h1 className={"term-name"}><Link to="/tags/">..</Link> &nbsp; #{t(title)}</h1>
           <div className={"term-description"}>{description}</div>
         </div>
       </section>
@@ -134,8 +133,11 @@ export default ({ data, pageContext }) => {
                   <Link
                     className={"post-title-link"}
                     to={node.fields.uriPath}
-                  >
-                    {node.frontmatter.title}
+                  >{node.frontmatter.type != "post" && 
+                  (
+                    <>#</>
+                  )
+                  }{node.frontmatter.title}
                   </Link>
                 </h2>
               </header>
@@ -256,6 +258,7 @@ export const query = graphql`
           slug
           title
           tags
+          type
           created_at(formatString: "YYYY-MM-DD")
           description
           feature_image {
