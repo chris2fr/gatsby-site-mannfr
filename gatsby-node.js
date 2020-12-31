@@ -102,6 +102,7 @@ exports.onCreateNode = ({ node, getNode, actions}) => {
     actions.createNodeField({ node, name: "uriSlug", value: slugger(relativeFilePath)});
     actions.createNodeField({ node, name: "realLocale", value: realLocale});
     actions.createNodeField({ node, name: "originalPath", value: originalPath});
+    // actions.createNodeField({ node, name: "upslug", value: upslug});
     actions.createNodeField({ node, name: "dateFormat", value: configLocales[realLocale].dateFormat});
     //actions.createNodeField({ node, name: "locale", value: configLocales[realLocale].code});
     actions.createNodeField({ node, name: "hrefLang", value: configLocales[realLocale].hrefLang});
@@ -162,6 +163,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         uriPath: node.fields.uriPath,
         uriSlug: node.fields.uriSlug,
+        // upSlug: node.fields.upSlug,
         realLocale: node.fields.realLocale,
         originalPath: node.fields.originalPath,
         locale: node.fields.realLocale,
