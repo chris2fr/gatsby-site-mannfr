@@ -7,3 +7,9 @@
   min-height: 100vh;
   object-fit: cover;
 }
+
+article.single-post {
+  position: relative;
+  left: 0;
+  width: 100vw;
+}
