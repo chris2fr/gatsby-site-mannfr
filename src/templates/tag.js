@@ -10,6 +10,7 @@ import Img from "gatsby-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 // import { Trans } from "@lingui/macro";
+import PostHeaderTags from "../components/post-header-tags";
 
 import { useTranslation } from "react-i18next"
 
@@ -69,25 +70,55 @@ export default ({ data, pageContext }) => {
     data[key] && pageContext.translations.push(langs[key])
     return false})
 
+  let imageFluid =
+    data.mdx && data.mdx.frontmatter && data.mdx.frontmatter.feature_image
+      ? data.mdx.frontmatter.feature_image.childImageSharp.fluid
+      : null;
+  let tagsForRender = [];
+  if (
+    data.mdx &&
+    data.mdx.frontmatter &&
+    data.mdx.frontmatter.tags &&
+    data.mdx.frontmatter.tags.length > 0
+  ) {
+    data.mdx.frontmatter.tags.forEach((tag) =>
+    tagsForRender.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: "#" + tag })
+    );
+  }
+
+  const renderTitle = (single, to, title, context) => {
+    if (single || !to) {
+      return <h1 className={"post-title"}>{title}</h1>;
+    } else {
+      return (
+        <>
+          <div className="post-title">
+            <Link to={to} className={"post-title-link"}>
+              {title}
+            </Link> 
+          </div>
+        </>
+      );
+    }
+  }
+
+
   return (
     <Layout pageContext={pageContext}>
       <Helmet>
         <body className={"tag-template tag-digital"} />
       </Helmet>
-      <section className={"term"}>
-        <div className={"term-wrapper"}>
-          <h1 className={"term-name"}><Link to="/tags/">..</Link> &nbsp; #{t(title)}</h1>
-          <div className={"term-description"}>{description}</div>
-        </div>
-      </section>
-
+          
+      <div className={"post-feed"}>
+      <header className="post-header">
+      <h1>{renderTitle(false, false, "#" + t(title), pageContext)}</h1>
+              <PostHeaderTags tags={tagsForRender} />
       <React.Fragment>
         <MDXProvider components={components}>
           <MDXRenderer components={components}>{data.mdx.body}</MDXRenderer>
         </MDXProvider>
       </React.Fragment>
-
-      <div className={"post-feed"}>
+      </header>
         {data.allMdx.nodes.map((node, index) => (
           <article className={`post tag`} key={`tag-post-${index}`}>
             <div className={"post-media"}>
@@ -133,7 +164,7 @@ export default ({ data, pageContext }) => {
                   <Link
                     className={"post-title-link"}
                     to={node.fields.uriPath}
-                  >{node.frontmatter.type != "post" && 
+                  >{node.frontmatter.type !== "post" && 
                   (
                     <>#</>
                   )
@@ -173,6 +204,7 @@ export default ({ data, pageContext }) => {
           </article>
         ))}
       </div>
+
     </Layout>
   );
 };
@@ -217,7 +249,7 @@ export const query = graphql`
     }
     tags: allMdx(
       filter: { frontmatter: { tags: { eq: $uriSlug }, type: { in: ["hometag","tag"] } }, fields: { realLocale: { eq: $realLocale } } }
-      sort: { fields: frontmatter___created_at, order: DESC }
+      sort: { fields: [frontmatter___order, frontmatter___created_at], order: [ASC, DESC]},
     ) {
       nodes {
         body
@@ -244,7 +276,7 @@ export const query = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { tags: { eq: $uriSlug } }, fields: { realLocale: { eq: $realLocale } } }
+      filter: { frontmatter: { tags: { eq: $uriSlug }, type: { nin: ["tag", "hometag"]} }, fields: { realLocale: { eq: $realLocale } } }
       sort: { fields: [frontmatter___order, frontmatter___created_at], order: [ASC, DESC]}, 
     ) {
       nodes {
