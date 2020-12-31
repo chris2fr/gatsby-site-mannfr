@@ -65,17 +65,18 @@ function localer (fileAbsolutePath) {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type Mdx implements Node {
-      frontmatter: MdxFrontmatter
+    type Mdx implements Node @childOf(types: ["File", "Markdown"]) @infer {
+      frontmatter: MdxFrontmatter @infer
     }
-    type MdxFrontmatter {
-      description: String
-      tags: [String]
-      order: String
-      type: String
-      slug: String
-      title: String
-      feature_image: File 
+    type MdxFrontmatter @infer {
+      description: String @infer
+      tags: [String] @infer
+      order: String @infer
+      type: String @infer
+      slug: String @infer
+      title: String @infer
+      created_at: Date @dateformat
+      feature_image: File @fileByRelativePath
     }
   `
   createTypes(typeDefs)
