@@ -203,6 +203,7 @@ export default ({ data, pageContext }) => {
             </div>
           </article>
         ))}
+                          <a href={"https://github.com/chris2fr/content-mann-fr/edit/master/published" + data.mdx.fields.originalPath + "." + data.mdx.fields.realLocale + ".md"} target="_new">{t("edit")}</a>
       </div>
 
     </Layout>
@@ -230,6 +231,10 @@ export const query = graphql`
             }
           }
         }
+      }
+      fields {
+        originalPath
+        realLocale
       }
     }
     fr:mdx(fields: { realLocale: { eq: "fr" }, originalPath: { eq: $originalPath} }) {

@@ -80,7 +80,7 @@ export default ({ data, pageContext }) => {
                     {/* <p>I was able to help friends prepare their CAPES and AGREGATION oral presentations with success, I was able to help a Director of a multi-national non-profit present in English at an international conference in Japan with success. My talent is listening to your presentation and feed back to you what I hear such that you better your way of expressing yourself.</p><p>This works very well for English identity seeking. When French speakers express themselves in English, they sometimes forget that language is also a tool for conveying identity. For them, English speaking is a handicap. I help francophones apprehend their handicap in this sense.</p><p>This works well also for cross-cultural collaborations. In seeking to work with teams from other countries, it is important to understand how others may apprehend you requests or work fulfillment.</p> */}
                 </div>
                 <div className="share container medium">
-                  <a href={"https://gollum.mann.fr/published" + data.mdx.fields.originalPath + "index." + data.mdx.fields.realLocale + ".md"} target="_new">{t("edit")}</a>
+                  <a href={"https://github.com/chris2fr/content-mann-fr/edit/master/published" + data.mdx.fields.originalPath + "/index." + data.mdx.fields.realLocale + ".md"} target="_new">{t("edit")}</a>
     {/* <a className="share-item share-facebook" href="https://www.facebook.com/sharer.php?u=https://en.mann.fr/presentation-and-expression-feedback/" target="_blank">
         <i className="icon icon-facebook"></i>
         <span className="share-label">Share</span>
