@@ -82,7 +82,7 @@ export default ({ data, pageContext }) => {
     data.mdx.frontmatter.tags.length > 0
   ) {
     data.mdx.frontmatter.tags.forEach((tag) =>
-    tagsForRender.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: "#" + tag })
+    tagsForRender.push({ name: "#" + t(tag), uriPath: "/tags/" + tag, uriSlug: tag })
     );
   }
 

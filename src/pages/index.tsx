@@ -137,6 +137,7 @@ export const query = graphql`
         excerpt
         fields {
           uriPath
+          realLocale
         }
         frontmatter {
           title

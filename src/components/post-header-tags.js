@@ -14,29 +14,29 @@ import "../css/screen.css"
 // // import "../css/basics.css";
 // // import "../pages/index.css";
 
-class PostHeaderTags extends React.Component {
-  constructor(props) {
-    super(props);
-    this.tags = props.tags;
-  }
+export default ({tags}) => {
+  return (
+    <>
+    <div className={"post-tags"}>
+        {tags && tags.map((tag, index) =>(
+        <Link className={`post-tag post-tag-${tag.uriSlug}`} key={`tag-${index}`} to={tag.uriPath} title={tag.name}>{tag.name}</Link>)
+        )}
+      </div>
+      </>
+  );
 
-  render() {
-    if (this.tags) {
-      return (
-        <div className={"post-tags"}>
-          {this.tags.map((tag, index) =>(
-          <Link className={`post-tag post-tag-${tag.uriSlug}`} key={`tag-${index}`} to={tag.uriPath} title={tag.name}>#{tag.name}</Link>)
-          )}
-        </div>
-      )
-    } else {
-      return (
-        <>
-        </>
-      )
-    }
-  }
-
-}
-
-export default PostHeaderTags;
+  // if (props.pageContext.tags) {
+  //   return (
+  //     <div className={"post-tags"}>
+  //       {props.pageContext.tags.map((tag, index) =>(
+  //       <Link className={`post-tag post-tag-${tag.uriSlug}`} key={`tag-${index}`} to={tag.uriPath} title={tag.name}>#{t(tag.name)}</Link>)
+  //       )}
+  //     </div>
+  //   )
+  // } else {
+  //   return (
+  //     <>
+  //     </>
+  //   )
+  // }
+};
