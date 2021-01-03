@@ -68,7 +68,6 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type Mdx implements Node @childOf(types: ["File", "Markdown"]) @infer {
       frontmatter: MdxFrontmatter @infer
-      tags: [MannTag] @link(by: "id")
     }
     type MdxFrontmatter @infer {
       description: String @infer
@@ -82,15 +81,25 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type MannTag implements Node {
       mdx: Mdx! @link(by: "id")
-      slug: String!
-      locale: String!
+      uriSlug: String!
+      realLocale: String!
+      uriPath: String!
+      originalPath: String!
       tags: [MannTag] @link(by: "id")
+      type: String
+      dateFormat: String
+      hrefLang: String
     }
     type MannPost implements Node {
       mdx: Mdx! @link(by: "id")
-      slug: String!
-      locale: String!
+      uriSlug: String!
+      realLocale: String!
+      uriPath: String!
+      originalPath: String!
       tags: [MannTag] @link(by: "id")
+      type: String
+      dateFormat: String
+      hrefLang: String
     }
   `
   createTypes(typeDefs)
@@ -123,44 +132,45 @@ exports.onCreateNode = ({ node, getNode, actions}) => {
     //actions.createNodeField({ node, name: "locale", value: configLocales[realLocale].code});
     actions.createNodeField({ node, name: "hrefLang", value: configLocales[realLocale].hrefLang});
     // Below is tags per post
-    let tagsToAdd = [];
+    let fieldData = {
+      id: relativeFilePath,
+      uriPath: relativeFilePath,
+      uriSlug: slugger(relativeFilePath),
+      realLocale: realLocale,
+      originalPath: originalPath,
+      dateFormat: configLocales[realLocale].dateFormat,
+      hrefLang: configLocales[realLocale].hrefLang,
+      mdx: node.id,
+      tags: [],
+      type: node.frontmatter.type
+    };
     if (node.frontmatter && node.frontmatter.tags) {
       node.frontmatter.tags.forEach(tag => {
         // Kind of hacky
-        tagsToAdd.push("/" + realLocale + "/tags/" + tag );
+        fieldData.tags.push("/" + realLocale + "/tags/" + tag );
       })
     }
     if (["tag","hometag"].includes(node.frontmatter.type) ) {
       actions.createNode(
         {
-        id: relativeFilePath,
-        slug: slugger(relativeFilePath),
-        locale: realLocale,
-        mdx: node.id,
-        tags: tagsToAdd,
-        type: node.frontmatter.type,
+        ...fieldData,
         internal: {
           type: "MannTag",
           contentDigest: crypto
           .createHash(`md5`)
-          .update(relativeFilePath)
+          .update(JSON.stringify(fieldData))
           .digest(`hex`),
         } 
       });
     } else if (node.frontmatter.type === "post") {
       actions.createNode(
         {
-        id: relativeFilePath,
-        slug: slugger(relativeFilePath),
-        locale: realLocale,
-        mdx: node.id,
-        tags: tagsToAdd,
-        type: node.frontmatter.type,
+        ...fieldData,
         internal: {
           type: "MannPost",
           contentDigest: crypto
           .createHash(`md5`)
-          .update(relativeFilePath)
+          .update(JSON.stringify(fieldData))
           .digest(`hex`),
         } 
       });
