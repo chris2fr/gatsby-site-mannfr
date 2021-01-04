@@ -16,8 +16,6 @@ const PostsPage = ({ pageContext, data }) => {
     postsByTags[tag.fieldValue] = tag.nodes;
   });
 
-  console.log(postsByTags);
-
   return (
     <Layout
       title={t("Posts")}
