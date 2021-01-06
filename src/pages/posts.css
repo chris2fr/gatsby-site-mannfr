@@ -1,3 +1,15 @@
 table.allPosts {
   white-space: nowrap;
 }
+
+.tag-digital {
+  background-color: aquamarine;
+}
+
+.tag-whowhatetc {
+  background-color: lightgreen;
+}
+
+.tag-human {
+  background-color: lightsalmon;
+}

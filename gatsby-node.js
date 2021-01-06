@@ -81,6 +81,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type MannTag implements Node {
       mdx: Mdx! @link(by: "id")
+      title: String!
       uriSlug: String!
       realLocale: String!
       uriPath: String!
@@ -92,6 +93,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type MannPost implements Node {
       mdx: Mdx! @link(by: "id")
+      title: String!
       uriSlug: String!
       realLocale: String!
       uriPath: String!
@@ -141,6 +143,7 @@ exports.onCreateNode = ({ node, getNode, actions}) => {
       dateFormat: configLocales[realLocale].dateFormat,
       hrefLang: configLocales[realLocale].hrefLang,
       mdx: node.id,
+      title: node.frontmatter.title,
       tags: [],
       type: node.frontmatter.type
     };
