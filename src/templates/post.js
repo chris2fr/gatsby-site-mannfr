@@ -49,7 +49,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout pageContext={pageContext}>
        {/* originalPath {pageContext.originalPath} locale {pageContext.locale} uriPath {pageContext.uriPath}   */}
-        <article className="post tag-mann-fr tag-human single-post">
+        <article className="post single-post">
           <PostHeader
             tags={tagsForRender}
             single={true}

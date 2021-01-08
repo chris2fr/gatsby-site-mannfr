@@ -106,7 +106,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout pageContext={pageContext}>
       <Helmet>
-        <body className={"tag-template tag-digital"} />
+        <body className={"tag-template"} />
       </Helmet>
           
       <div className={"post-feed"}>
