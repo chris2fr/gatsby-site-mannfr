@@ -24,7 +24,7 @@ const LayoutWithHeaderImage = ({
   return (
         <Layout pageContext={pageContext}>
           <article
-            className="post tag-mann-fr tag-human single-post"
+            className="post single-post"
             style={{ width: "100vw" }}
           >
             <PostHeader

@@ -131,7 +131,6 @@ const PostsPage = ({ pageContext, data }) => {
   )
   }
 </ul> */}
-{console.log(postsByTags)}
 </Layout>
 );
 };
