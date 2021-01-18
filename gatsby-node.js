@@ -1,6 +1,7 @@
 // const localesDir = "./i18n/lingui"
 // const path = require("path")
 // let didRunAlready = false
+const crypto = require('crypto');
 
 const configI18n = require("./locales/config.json")
 var configLocales = {}
@@ -70,7 +71,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type MdxFrontmatter @infer {
       description: String @infer
-      tags: [String] @infer
+      tags: [String]
       order: String @infer
       type: String @infer
       slug: String @infer
@@ -78,11 +79,36 @@ exports.createSchemaCustomization = ({ actions }) => {
       created_at: Date @dateformat
       feature_image: File @fileByRelativePath
     }
+    type MannTag implements Node {
+      mdx: Mdx! @link(by: "id")
+      title: String!
+      uriSlug: String!
+      realLocale: String!
+      uriPath: String!
+      originalPath: String!
+      tags: [MannTag] @link(by: "id")
+      type: String
+      dateFormat: String
+      hrefLang: String
+    }
+    type MannPost implements Node {
+      mdx: Mdx! @link(by: "id")
+      title: String!
+      uriSlug: String!
+      realLocale: String!
+      uriPath: String!
+      originalPath: String!
+      tags: [MannTag] @link(by: "id")
+      type: String
+      dateFormat: String
+      hrefLang: String
+    }
   `
   createTypes(typeDefs)
 }
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
+// const { createNode } = require("typescript")
 
 exports.onCreateNode = ({ node, getNode, actions}) => {
   if (node.internal.type === "Mdx") {
@@ -107,10 +133,51 @@ exports.onCreateNode = ({ node, getNode, actions}) => {
     actions.createNodeField({ node, name: "dateFormat", value: configLocales[realLocale].dateFormat});
     //actions.createNodeField({ node, name: "locale", value: configLocales[realLocale].code});
     actions.createNodeField({ node, name: "hrefLang", value: configLocales[realLocale].hrefLang});
-    // actions.createNodeField({ node, name: "locale", value: localer(node.fileAbsolutePath)});
-    // actions.createNodeField({ node, name: "slug", value: relativeFilePath});
-    // actions.createNodeField({ node, name: "path", value: relativeFilePath});
-    // actions.createNodeField({ node, name: "slug", value: `${relativeFilePath}`});
+    // Below is tags per post
+    let fieldData = {
+      id: relativeFilePath,
+      uriPath: relativeFilePath,
+      uriSlug: slugger(relativeFilePath),
+      realLocale: realLocale,
+      originalPath: originalPath,
+      dateFormat: configLocales[realLocale].dateFormat,
+      hrefLang: configLocales[realLocale].hrefLang,
+      mdx: node.id,
+      title: node.frontmatter.title,
+      tags: [],
+      type: node.frontmatter.type
+    };
+    if (node.frontmatter && node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        // Kind of hacky
+        fieldData.tags.push("/" + realLocale + "/tags/" + tag );
+      })
+    }
+    if (["tag","hometag"].includes(node.frontmatter.type) ) {
+      actions.createNode(
+        {
+        ...fieldData,
+        internal: {
+          type: "MannTag",
+          contentDigest: crypto
+          .createHash(`md5`)
+          .update(JSON.stringify(fieldData))
+          .digest(`hex`),
+        } 
+      });
+    } else if (node.frontmatter.type === "post") {
+      actions.createNode(
+        {
+        ...fieldData,
+        internal: {
+          type: "MannPost",
+          contentDigest: crypto
+          .createHash(`md5`)
+          .update(JSON.stringify(fieldData))
+          .digest(`hex`),
+        } 
+      });
+    }
   }
 }
 

@@ -49,5 +49,23 @@ query TagsPageQuery($locale: String!) {
       totalCount
     }
   }
+  allMannTag(filter: {realLocale: {eq: $locale}, type: {eq: "hometag"}}) {
+    nodes {
+      id
+      uriPath
+      uriSlug
+      realLocale
+      tags {
+        id
+        uriPath
+        uriSlug
+        mdx {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
 }
 `;

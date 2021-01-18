@@ -82,7 +82,7 @@ export default ({ data, pageContext }) => {
     data.mdx.frontmatter.tags.length > 0
   ) {
     data.mdx.frontmatter.tags.forEach((tag) =>
-    tagsForRender.push({ name: tag, uriPath: "/tags/" + tag, uriSlug: "#" + tag })
+    tagsForRender.push({ name: "#" + t(tag), uriPath: "/tags/" + tag, uriSlug: tag })
     );
   }
 
@@ -106,7 +106,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout pageContext={pageContext}>
       <Helmet>
-        <body className={"tag-template tag-digital"} />
+        <body className={"tag-template"} />
       </Helmet>
           
       <div className={"post-feed"}>
@@ -203,6 +203,7 @@ export default ({ data, pageContext }) => {
             </div>
           </article>
         ))}
+                          <a href={"https://github.com/chris2fr/content-mann-fr/edit/master/published" + data.mdx.fields.originalPath + "." + data.mdx.fields.realLocale + ".md"} target="_new">{t("edit")}</a>
       </div>
 
     </Layout>
@@ -230,6 +231,10 @@ export const query = graphql`
             }
           }
         }
+      }
+      fields {
+        originalPath
+        realLocale
       }
     }
     fr:mdx(fields: { realLocale: { eq: "fr" }, originalPath: { eq: $originalPath} }) {
