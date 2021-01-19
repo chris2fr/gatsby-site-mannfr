@@ -4,4 +4,4 @@
 /content/*
 /content
 /package-lock.json
-
+/static/files
