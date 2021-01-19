@@ -27,9 +27,10 @@ export default class MyForm extends React.Component {
 
   render() {
     const { status } = this.state;
+
     return (
       <Layout pageContext={this.props.pageContext}>
-        <article className="post tag-mann-fr tag-human single-post" style={{width:"100vw"}}>
+        <article className="post tag-mann-fr single-post" style={{width:"100vw"}}>
         <PostHeader
           fluid={this.props.data.file.childImageSharp.fluid}
           alt={"Contact"}
@@ -42,6 +43,7 @@ export default class MyForm extends React.Component {
 
         />
          <div className="post-content kg-canvas u-text-format">
+
         <h1>Contact</h1>
         <form
           onSubmit={this.submitForm}
@@ -94,6 +96,7 @@ export default class MyForm extends React.Component {
           {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
           {status === "ERROR" && <p>Ooops! There was an error.</p>}
         </form>
+
         </div>
         </article>
       </Layout>
@@ -120,6 +123,8 @@ export default class MyForm extends React.Component {
     xhr.send(data);
   }
 }
+
+
 
 export const query = graphql`
   query {

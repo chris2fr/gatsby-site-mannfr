@@ -23,6 +23,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `react-google-recaptcha-v3`,
     `@hot-loader/react-dom`,
     {
       resolve: `gatsby-theme-i18n-react-i18next`,
