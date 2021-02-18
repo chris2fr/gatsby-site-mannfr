@@ -165,7 +165,7 @@ exports.onCreateNode = ({ node, getNode, actions}) => {
           .digest(`hex`),
         } 
       });
-    } else if (node.frontmatter.type === "post") {
+    } else if (["post","author"].includes(node.frontmatter.type)) {
       actions.createNode(
         {
         ...fieldData,
