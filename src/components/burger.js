@@ -21,7 +21,7 @@ export default ({ pageContext }) => {
             </Link>
           </li>
           <li className={"menu-item menu-item-home menu-item-current"}>
-            <Link to="/contact" className="menu-item-link u-underline">
+            <Link to="/pages/contact" className="menu-item-link u-underline">
               {t("Contact")}
             </Link>
           </li>

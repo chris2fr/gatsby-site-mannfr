@@ -48,6 +48,7 @@ To do:
 These are the changes done over the most recent versions
 
 28. Changed link on main logo to return to main website.
+29. Changed contact link in src/composants/burger.js to /pages/contact
 
 ### Changelog v-0.0.7 
 
@@ -165,3 +166,11 @@ index.js:2177 Warning: Cannot update a component (`LangSwitch`) while rendering 
 React-Hot-Loader: react-🔥-dom patch is not detected. React 16.6+ features may not work. 
     at AppContainer (eval at ES6ProxyComponentFactory (http://localhost:8000/commons.js:61895:10), <anonymous>:14:7)
 ```
+
+## Search Feature Documentation
+
+This website uses gastby-plugin-local-search with FlexSearch. 
+
+https://www.gatsbyjs.com/plugins/gatsby-plugin-local-search/
+
+I am not sure the index is up-to-date.
