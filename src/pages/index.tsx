@@ -130,7 +130,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </p>
           </div>
           <div>
-            <h2>{t("current_projects")}</h2>
+            <p>{t("current_projects")}:</p>
             <ul>
               <li>
                 <a href={t("url_lesgrandsvoisins")}>
@@ -149,16 +149,16 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </ul>
           </div>
           <div>
-            <p>{t("I help:")}</p>
+            <p>{t("ihelp")}</p>
             <ul>
               <li>
-                {t("from audit to analysis to recommendations, to proposals, ...")}
+                {t("fromaudittoanalysis")}
               </li>
-              <li>{t("on definition, deployment, ...")}</li>
+              <li>{t("ondefinitiondeployment")}</li>
               <li>
-                {t("through management of steering meetings, roadmap management, ...")}
+                {t("throughmanagementof")}
               </li>
-              <li>{t("with specification, prototyping, ...")}</li>
+              <li>{t("withspecificationprototyping")}</li>
             </ul>
           </div>
         </div>
