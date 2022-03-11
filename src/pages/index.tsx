@@ -149,18 +149,14 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </ul>
           </div>
           <div>
-            <p>{t("I help :")}</p>
+            <p>{t("I help:")}</p>
             <ul>
               <li>
-                {t(
-                  "from audit to analysis to recommendations, to proposals, ..."
-                )}
+                {t("from audit to analysis to recommendations, to proposals, ...")}
               </li>
               <li>{t("on definition, deployment, ...")}</li>
               <li>
-                {t(
-                  "through management of steering meetings, roadmap management, ..."
-                )}
+                {t("through management of steering meetings, roadmap management, ...")}
               </li>
               <li>{t("with specification, prototyping, ...")}</li>
             </ul>
