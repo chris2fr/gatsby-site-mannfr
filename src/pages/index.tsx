@@ -149,7 +149,9 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </ul>
           </div>
           <div>
-              {t("I help ...")}
+          <p>I help :</p><ul><li>from audit to analysis to recommendations, to proposals, to implementation, to constant follow-up, to user-acceptance and after: all this by privileging an iterative approach</li><li>on definition, deployment, documentation, administration of servers and tools including content management systems, group productivity servers, cloud tools, GDPR compliance, etc.</li><li>through management of steering meetings, roadmap management, load planning, Agile meetings, listening and patient support of users with a focus on mastery at the appropriate levels</li><li>with specification, prototyping, development, testing, evaluation and re-evaluation of technology tips with a focus on elegant solutions.</li></ul>
+          <i><p>J'interviens :</p> <ul>  <li>de l'audit aux analyses aux recommandations et/ou préconisations, aux propositions, à la mise en oeuvre, au suivi constant, à la recette et après: le tout en privilégiant une démarche itérative</li>  <li>de la définition, au déploiement, à la documentation, à l'administration de serveurs et d'outils dont des systèmes de gestion de contenu, des serveurs de productivité de groupe, des outils cloud, une conformité GDPR, etc. </li>  <li>de la gestion de réunions de pilotage, à la gestion de feuilles de route, à la planification en charges, aux réunions Agile, à l'écoute et accompagnement patients d'utilisateurs avec un accent sur la maîtrise aux niveaux adéquats </li>  <li>de la spécification, au prototypage, au développement, aux tests, à l'évaluation et la ré-evaluation d'astuces technologiques avec un priorité aux solutions élégantes.</li>  </ul></i>
+          
           </div>
         </div>
       </div>
