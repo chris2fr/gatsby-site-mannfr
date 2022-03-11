@@ -149,9 +149,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </ul>
           </div>
           <div>
-            <p>
               {t("J'interviens ...")}
-            </p>
           </div>
         </div>
       </div>
