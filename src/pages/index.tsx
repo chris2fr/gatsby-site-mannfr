@@ -133,7 +133,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             <h2>{t("current_projects")}</h2>
             <ul>
               <li>
-                <a href={{t("url_lesgrandsvoisins")}}>
+                <a href={t("url_lesgrandsvoisins")}>
                   {t("Les Grands Voisins")}
                 </a>
               </li>
