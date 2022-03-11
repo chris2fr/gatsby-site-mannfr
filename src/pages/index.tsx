@@ -121,15 +121,15 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       </Carousel>
       <div className={"home-blabla"} style={{ padding: "2em" }}>
         <h1>Chris Mann</h1>
-        <div style={{ display: "flex", "justify-content": "space-around" }}>
-          <div>
+        <div style={{ "display": "flex", "justify-content": "space-around", "flex-wrap": "wrap" }}>
+          <div style={{ "flex-grow": "1"}}>
             <p>
               +33 7 68 40 38 38
               <br />
               chris@mann.fr
             </p>
           </div>
-          <div>
+          <div style={{ "flex-grow": "1"}}>
             <p>{t("current_projects")}:</p>
             <ul>
               <li>
@@ -148,7 +148,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               </li>
             </ul>
           </div>
-          <div>
+          <div style={{ "flex-grow": "1"}}>
             <p>{t("ihelp")}</p>
             <ul>
               <li>
