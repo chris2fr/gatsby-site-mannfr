@@ -80,7 +80,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <button
             className={
               "rec rec-arrow rec rec-arrow-" +
-            (type === "NEXT" ? "right" : "left")
+              (type === "NEXT" ? "right" : "left")
             }
             onClick={onClick}
             disabled={disabled}
@@ -119,26 +119,41 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           </div>
         ))}
       </Carousel>
-      <div className={"home-blabla"} style={{padding: "2em"}}>
-      <h1>Chris Mann</h1>
-      <p>+33 7 68 40 38 38<br/>
-      chris@mann.fr</p>
-      <div style={{"display":"flex"}}>
-        <div>
-      <h2>{t("current_projects")}</h2>
-      <ul><li><a href={t("https://www.lesgrandsvoisins.com")}>{t("Les Grands Voisins")}</a></li>
-      <li><a href={"https://www.configmagic.com"}>ConfigMagic</a></li>
-      <li><a href={"https://www.resdigita.com"}>ResDigita</a></li>
-      <li><a href={"https://www.caplancity.com"}>CaPlanCity</a></li></ul>
-      </div>
-      <div>
-      <h2>{t("current_projects")}</h2>
-      <ul><li><a href={t("https://www.lesgrandsvoisins.com")}>{t("Les Grands Voisins")}</a></li>
-      <li><a href={"https://www.configmagic.com"}>ConfigMagic</a></li>
-      <li><a href={"https://www.resdigita.com"}>ResDigita</a></li>
-      <li><a href={"https://www.caplancity.com"}>CaPlanCity</a></li></ul>
-      </div>
-      </div>
+      <div className={"home-blabla"} style={{ padding: "2em" }}>
+        <h1>Chris Mann</h1>
+        <div style={{ display: "flex", "justify-content": "space-around" }}>
+          <div>
+            <p>
+              +33 7 68 40 38 38
+              <br />
+              chris@mann.fr
+            </p>
+          </div>
+          <div>
+            <h2>{t("current_projects")}</h2>
+            <ul>
+              <li>
+                <a href={t("https://www.lesgrandsvoisins.com")}>
+                  {t("Les Grands Voisins")}
+                </a>
+              </li>
+              <li>
+                <a href={"https://www.configmagic.com"}>ConfigMagic</a>
+              </li>
+              <li>
+                <a href={"https://www.resdigita.com"}>ResDigita</a>
+              </li>
+              <li>
+                <a href={"https://www.caplancity.com"}>CaPlanCity</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              {t("J'interviens ...")}
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
