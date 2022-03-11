@@ -124,7 +124,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <p>+33 7 68 40 38 38<br/>
       chris@mann.fr</p>
       <h2>{t("current_projects")}</h2>
-      <ul><li><a href={"https://www.lesgrandsvoisins.com"}>Les Grands Voisins / <i>Communitiness</i></a></li>
+      <ul><li><a href={t("https://www.lesgrandsvoisins.com")}>{t("Les Grands Voisins")}</a></li>
       <li><a href={"https://www.configmagic.com"}>ConfigMagic</a></li>
       <li><a href={"https://www.resdigita.com"}>ResDigita</a></li>
       <li><a href={"https://www.caplancity.com"}>CaPlanCity</a></li></ul>
