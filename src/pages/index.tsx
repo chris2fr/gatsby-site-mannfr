@@ -123,11 +123,22 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <h1>Chris Mann</h1>
       <p>+33 7 68 40 38 38<br/>
       chris@mann.fr</p>
+      <div style={{"display":"flex"}}>
+        <div>
       <h2>{t("current_projects")}</h2>
       <ul><li><a href={t("https://www.lesgrandsvoisins.com")}>{t("Les Grands Voisins")}</a></li>
       <li><a href={"https://www.configmagic.com"}>ConfigMagic</a></li>
       <li><a href={"https://www.resdigita.com"}>ResDigita</a></li>
       <li><a href={"https://www.caplancity.com"}>CaPlanCity</a></li></ul>
+      </div>
+      <div>
+      <h2>{t("current_projects")}</h2>
+      <ul><li><a href={t("https://www.lesgrandsvoisins.com")}>{t("Les Grands Voisins")}</a></li>
+      <li><a href={"https://www.configmagic.com"}>ConfigMagic</a></li>
+      <li><a href={"https://www.resdigita.com"}>ResDigita</a></li>
+      <li><a href={"https://www.caplancity.com"}>CaPlanCity</a></li></ul>
+      </div>
+      </div>
       </div>
     </>
   );
