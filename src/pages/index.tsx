@@ -119,6 +119,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           </div>
         ))}
       </Carousel>
+      <h1>Chris Mann</h1>
+      <p>+33 7 68 40 38 38</p>
     </>
   );
 }
