@@ -135,18 +135,21 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             <p>{t("current_projects")}:</p>
             <ul>
               <li>
+                <a href={t("url_configmagic")}>ConfigMagic</a>
+              </li>
+              <li>
+                <a href={t("url_resdigita")}>ResDigita</a>
+              </li>
+              <li>
+                <a href={t("url_caplancity")}>CaPlanCity</a>
+              </li>
+              <li>
+                <a href={t("url_distractives")}>Distractives</a>
+              </li>
+              <li>
                 <a href={t("url_lesgrandsvoisins")}>
                   {t("Les Grands Voisins")}
                 </a>
-              </li>
-              <li>
-                <a href={"https://www.configmagic.com"}>ConfigMagic</a>
-              </li>
-              <li>
-                <a href={"https://www.resdigita.com"}>ResDigita</a>
-              </li>
-              <li>
-                <a href={"https://www.caplancity.com"}>CaPlanCity</a>
               </li>
             </ul>
           </div>
