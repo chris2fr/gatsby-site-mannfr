@@ -128,7 +128,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <br />
               chris@mann.fr
               <br/>
-              <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf">Télécharger mon CV ici.</a>
+              <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf">{t("downloadcvhere")}</a>
             </p>
           </div>
           <div style={{ "flex-grow": "1"}}>

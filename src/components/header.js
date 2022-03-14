@@ -85,6 +85,7 @@ const Header = ({ pageContext }) => {
         <link rel="manifest" href="/favicon.ico/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="Cache-Control" content="max-age=43200"/>
       </Helmet>
       <div className={"navbar"}>
         <Logo />
