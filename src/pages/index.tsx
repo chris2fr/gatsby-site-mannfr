@@ -127,6 +127,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               +33 7 68 40 38 38
               <br />
               chris@mann.fr
+              <br/>
+              <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf">Télécharger mon CV ici.</a>
             </p>
           </div>
           <div style={{ "flex-grow": "1"}}>
