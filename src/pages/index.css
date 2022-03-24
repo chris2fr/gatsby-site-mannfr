@@ -24,7 +24,7 @@ html, body {
 }
 
 .mann-homegrid-stage {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex: 1;
 }
@@ -43,7 +43,7 @@ html, body {
 @media (max-width: 900px) {
   .mann-homegrid-outer {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
   }
   .mann-homegrid-stage {
     flex-direction: column;
@@ -135,23 +135,23 @@ html, body {
 }
 
 .main-mann-carousel {
-  height: 100vh;
+  height: 80vh;
   display: flex;
 }
 
 .mann-carousel-item {
-  height: 100vh;
+  height: 80vh;
   display: flex;
 }
 
 .mann-carousel-img {
-  min-height: 100vh;
+  min-height: 80vh;
   object-fit: cover;
 }
 
 .mann-carousel div .rec.rec-slider-container {
   margin: 0;
-  height: 100vh;
+  height: 80vh;
 }
 
 .mann-carousel div .rec.rec-arrow {

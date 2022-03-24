@@ -50,11 +50,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
   // const { locale, config, defaultLang } = useLocalization();
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 800, itemsToShow: 2 },
-    { width: 1200, itemsToShow: 3 },
-    { width: 1600, itemsToShow: 4 },
-    { width: 2000, itemsToShow: 5 },
-    { width: 2400, itemsToShow: 6 },
+    { width: 600, itemsToShow: 2 },
+    { width: 800, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 4 },
+    { width: 1600, itemsToShow: 5 },
+    { width: 2000, itemsToShow: 6 },
   ];
   pageContext.translations = ["en","fr"];
   if (pageContext.locale==="en-FR") {
