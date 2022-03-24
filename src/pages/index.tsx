@@ -51,8 +51,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 600, itemsToShow: 2 },
-    { width: 800, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 },
+    { width: 1198, itemsToShow: 3 },
+    { width: 1199, itemsToShow: 4 },
     { width: 1600, itemsToShow: 5 },
     { width: 2000, itemsToShow: 6 },
   ];
