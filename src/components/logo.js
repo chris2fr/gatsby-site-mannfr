@@ -38,7 +38,7 @@ export default function Logo() {
                 fixed={data.file.childImageSharp.fixed}
                 alt={data.site.siteMetadata.title}
               />
-      }{!data.file &&
+      }{data.file &&
             <span className={"logo-text"}>
               {data.site.siteMetadata.title}
             </span>

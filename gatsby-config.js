@@ -4,13 +4,12 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://alpha.mann.fr`,
-    title: `Mann.fr Digital Wellbeing`,
-    description: "MANN.FR Website",
+    siteUrl: `https://www.mann.fr`,
+    title: `Digital Executive`,
+    description: "MANN.FR, Chris, Digital Executive Idéaliste en Région Parisienne, Idéaliste et Créatif en Accompagnement, Ingénierie, Organisation, Accompagnement ",
     author: `Chris Mann <chris@mann.fr>`,
     logoRelativePathInSrcImages: "logo.png",
     name: 'mann.fr',
-    description: "Mann.fr is about making things work with Digital and with Humans in Organizations.",
     hero: {
       heading: 'Digital Augmentation of Life can be Holistic',
       maxWidth: 652
