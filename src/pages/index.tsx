@@ -111,7 +111,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
                 <div className={"tag-content"}>
                   <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
                   <div className={"tag-description"}>
-                    {"" || node.frontmatter.description || node.excerpt}
+                    {"" && node.frontmatter.description || node.excerpt}
                   </div>
                 </div>
               </div>
