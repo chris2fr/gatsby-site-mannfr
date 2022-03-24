@@ -31,7 +31,7 @@ export default function Logo() {
         }
       `}
       render={data =>
-        <Link to="/" className={"logo"}>
+        <Link to="/" className={"logo"} style={{display:"flex"}}>
         {data.file && 
             
               <Img
@@ -39,7 +39,8 @@ export default function Logo() {
                 alt={data.site.siteMetadata.title}
               />
       }{data.file &&
-            <span className={"logo-text"}>
+            <span className={"logo-text"} style={{background:"rgba(255,255,255,0.5)",
+            alignSelf:"center"}}>
               {data.site.siteMetadata.title}
             </span>
           
