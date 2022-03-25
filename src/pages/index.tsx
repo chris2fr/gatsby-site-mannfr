@@ -72,7 +72,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <Header pageContext={pageContext} />
       <Carousel
         breakPoints={breakPoints}
-        pagination={true}
+        pagination={false}
         className="mann-carousel"
         enableMouseSwipe={true}
         focusOnSelect={true}
