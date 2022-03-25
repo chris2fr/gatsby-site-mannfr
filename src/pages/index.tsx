@@ -133,25 +133,30 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           </div>
           <div style={{ "flex-grow": "1"}}>
             <p>{t("current_projects")}:</p>
-            <ul>
-              <li>
-                <a href={t("url_configmagic")}>ConfigMagic</a>
-              </li>
-              <li>
-                <a href={t("url_resdigita")}>ResDigita</a>
-              </li>
-              <li>
-                <a href={t("url_caplancity")}>CaPlanCity</a>
-              </li>
-              <li>
-                <a href={t("url_distractives")}>Distractives</a>
-              </li>
-              <li>
+            <dl>
+              <dt>
                 <a href={t("url_lesgrandsvoisins")}>
                   {t("Les Grands Voisins")}
                 </a>
-              </li>
-            </ul>
+              </dt>
+              <dd>{t("lesgrandsvoisinsdesc")}</dd>
+              <dt>
+                <a href={t("url_caplancity")}>CaPlanCity</a>
+              </dt>
+              <dd>{t("caplancitydesc")}</dd>
+              <dt>
+                <a href={t("url_resdigita")}>ResDigita</a>
+              </dt>
+              <dd>{t("resdigitadesc")}</dd>
+              <dt>
+                <a href={t("url_configmagic")}>ConfigMagic</a>
+              </dt>
+              <dd>{t("configmagicdesc")}</dd>
+              <dt>
+                <a href={t("url_distractives")}>Distractives</a>
+              </dt>
+              <dd>{t("distractivesdesc")}</dd>
+            </dl>
           </div>
           <div style={{ "flex-grow": "1"}}>
             <p>{t("ihelp")}</p>
