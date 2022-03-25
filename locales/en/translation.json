@@ -13,13 +13,13 @@
   "PREV":"^PREV",
   "NEXT":"NEXT^",
   "current_projects":"Current Projets",
-  "Les Grands Voisins": "Communitiness L.G.V.",
+  "Les Grands Voisins": "Les Grands Voisins .com",
   "url_lesgrandsvoisins":"https://www.communitiness.com",
   "url_caplancity":"https://www.caplancity.com/en/pages/caplancity/",
   "url_resdigita":"https://www.resdigita.com/en/articles/2022/resdigita/",
   "url_configmagic":"https://www.configmagic.com/en/articles/2022/configmagic/",
   "url_distractives":"https://focus.distractives.com/doc/tip/www/en.md",
-  "ihelp": "I help:",
+  "ihelp": "Idealistic and creative by my nature, I work for you:",
   "organizationdesc":"from audit to analysis to recommendations, to proposals, to implementation, to constant follow-up, to user-acceptance and after: all this by privileging an iterative approach",
   "animationdesc":"on definition, deployment, documentation, administration of servers and tools including content management systems, group productivity servers, cloud tools, GDPR compliance, etc.",
   "animationdesc":"through management of steering meetings, roadmap management, load planning, Agile meetings, listening and patient support of users with a focus on mastery at the appropriate levels",
@@ -29,5 +29,6 @@
   "caplancitydesc": "Everything that serves the sustainable achievement -- time, talents, resources, quality, budgets, ... -- as much profit centers as cost centers",
   "resdigitadesc": "Anything that serves IT engineering and sharing including IT development, devices for fully integrated in-person and online hybrid meetings, subscription and server sharing, etc.",
   "configmagicdesc": "Anything related to computer system and network administration, document management, authorization, secret management, configuration management, etc. ",
-  "distractivesdesc": "Anything related to the ADHD condition including peer support meetings, my presentation and proposed tools."
+  "distractivesdesc": "Anything related to the ADHD condition including peer support meetings, my presentation and proposed tools.",
+  "statutdesc":"Freelance under wage-portage"
 }
