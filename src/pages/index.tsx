@@ -125,7 +125,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <div style={{ "display": "flex", "justify-content": "space-around", "flex-wrap": "wrap" }}>
           <div style={{ "flex-grow": "1"}}>
             <p>
-            {t("statutdes")}
+            {t("statutdesc")}
               
               <br />
               +33 7 68 40 38 38

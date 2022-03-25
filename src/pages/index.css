@@ -235,6 +235,7 @@ html, body {
   box-shadow: 0 0 1px 3px white;
   background-color: white;
   color: -internal-light-dark(white, black);
+  display: none; /* temporary */
 }
 
 .rec-dot:hover,
