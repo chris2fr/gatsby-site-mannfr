@@ -20,9 +20,9 @@
   "url_configmagic":"https://www.configmagic.com/en/articles/2022/configmagic/",
   "url_distractives":"https://focus.distractives.com/doc/tip/www/en.md",
   "ihelp": "I help:",
-  "fromaudittoanalysis":"from audit to analysis to recommendations, to proposals, to implementation, to constant follow-up, to user-acceptance and after: all this by privileging an iterative approach",
-  "ondefinitiondeployment":"on definition, deployment, documentation, administration of servers and tools including content management systems, group productivity servers, cloud tools, GDPR compliance, etc.",
-  "throughmanagementof":"through management of steering meetings, roadmap management, load planning, Agile meetings, listening and patient support of users with a focus on mastery at the appropriate levels",
-  "withspecificationprototyping":"with specification, prototyping, development, testing, evaluation and re-evaluation of technology tips with a focus on elegant solutions.",
+  "organizationdesc":"from audit to analysis to recommendations, to proposals, to implementation, to constant follow-up, to user-acceptance and after: all this by privileging an iterative approach",
+  "animationdesc":"on definition, deployment, documentation, administration of servers and tools including content management systems, group productivity servers, cloud tools, GDPR compliance, etc.",
+  "animationdesc":"through management of steering meetings, roadmap management, load planning, Agile meetings, listening and patient support of users with a focus on mastery at the appropriate levels",
+  "engingeeringdesc":"with specification, prototyping, development, testing, evaluation and re-evaluation of technology tips with a focus on elegant solutions.",
   "downloadcvhere":"Download my CV here"
 }

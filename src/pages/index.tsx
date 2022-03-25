@@ -156,14 +156,10 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <div style={{ "flex-grow": "1"}}>
             <p>{t("ihelp")}</p>
             <ul>
-              <li>
-                {t("fromaudittoanalysis")}
-              </li>
-              <li>{t("ondefinitiondeployment")}</li>
-              <li>
-                {t("throughmanagementof")}
-              </li>
-              <li>{t("withspecificationprototyping")}</li>
+              <li>{t("consultingdesc")}</li>
+              <li>{t("engineeringdesc")}</li>
+              <li>{t("organizationdesc")}</li>
+              <li>{t("animationdesc")}</li>
             </ul>
           </div>
         </div>
