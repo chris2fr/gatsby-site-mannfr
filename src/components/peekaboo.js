@@ -26,14 +26,14 @@ class PeekABoo extends React.Component  {
         className={"burger"}
         role="button"
         onClick={this.handleClick}
-        style={{position:"relative",flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","backgroundColor":"var(--white-color)",cursor:"pointer"}}
+        style={{position:"relative",flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","backgroundColor":"var(--white-color)",cursor:"pointer",borderRadius:"4px"}}
         >
         <div id="peekaboo" style={{"visibility":this.state.showComponent?"visible":"hidden"}}>
 <aside className={`peekaboo ${this.state.showComponent ?"open" : ""} was-off-canvas`} id='peekabooeaside' onClick={this.handleClick}>
 <div 
         role="button"
         onClick={this.handleClick}
-        style={{position:"absolute",right:20,top:20,flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","backgroundColor":"var(--white-color)",cursor:"pointer"}}
+        style={{position:"absolute",right:20,top:20,flexShrink:0,width:"34px",height:"34px",border:"2px solid var(--mid-gray-color)","backgroundColor":"var(--white-color)",cursor:"pointer",borderRadius:"4px"}}
         >[ X ]</div>
         {this.children}
       </aside>
