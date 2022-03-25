@@ -174,7 +174,7 @@ html, body {
   position: absolute;
   text-align: center;
   text-transform: uppercase;
-  top: 50%;
+  top: 40vh;
   transition: color .5s var(--animation-base),opacity .5s var(--animation-base);
   width: 80px;
   z-index: 100;
@@ -259,7 +259,7 @@ html, body {
 
 .mann-carousel .rec.rec-pagination {
   position: absolute;
-  bottom: 0;
+  bottom: 20vh;
   z-index: 999;
   /* background-color: white; */
 }
