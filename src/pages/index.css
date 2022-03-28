@@ -227,6 +227,11 @@ html, body {
   grid-template-areas: "title title" "left right";
 }
 
+.home-blabla a {
+  text-decoration: underline;
+  color: blue;
+}
+
 .title {
   grid-area: title;
 }

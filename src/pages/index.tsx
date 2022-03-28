@@ -137,9 +137,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             {/*/}
             <p>{t("ihelp")}</p>
             {/*/}
-            
               <h3>{t("itprog")}</h3> 
-              <p className={"sub-h3"}>{t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)</p>
+              <p className={"sub-h3"}>({t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)</p>
               <p>{t("itprogdesc")}</p>
               <div className={"grey-back"}>
               <h3>{t("digdev")}</h3> 
@@ -149,12 +148,12 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <h3>{t("orgrob")}</h3>
               <p className={"sub-h3"}>({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a></p>
               <p>{t("orgrobdesc")}</p>
-
               <p className={"grey-back"}>{t("statutdesc")}</p>
             </div>
             <div className={"right grey-back"}>
-            <h3 className={"h3"}>Les Grands Voisins ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>)</h3>
-            <p className={"sub-h3"}>{t("lesgrandsvoisisntagline")}</p>
+            <h3 className={"h3"}>Les Grands Voisins</h3>
+            <p className={"sub-h3"}>{t("lesgrandsvoisisntagline")}<br/>
+            ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>)</p>
             <p>{t("lgvexemple")} .</p>
             <p>Tour Montparnasse<br/>
             33 rue du Maine<br/>
