@@ -138,11 +138,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             {/*/}
             <dl>
               <dt>{t("itprog")}</dt>
-              <dd>({t("see")} <a href={t("url_caplancity")}>CaPlanCity.com</a>)</dd>
+              <dd>{t("itprogdesc")} ({t("see")} <a href={t("url_caplancity")}>CaPlanCity.com</a>)</dd>
               <dt>{t("digdev")}</dt>
-              <dd>({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</dd>
+              <dd>{t("digdevdesc")} ({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</dd>
               <dt>{t("orgrob")}</dt>
-              <dd>({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
+              <dd>{t("orgrobdesc")} ({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
 
             </dl>
         <div style={{ "display": "flex", "justify-content": "space-around", "flex-wrap": "wrap" }}>
