@@ -133,7 +133,9 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <br/>
               {t("statutdesc")}
             </p>
+            {/*/}
             <p>{t("ihelp")}</p>
+            {/*/}
             <dl>
               <dt>{t("orgrob")}</dt>
               <dd>({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
