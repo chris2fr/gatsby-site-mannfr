@@ -76,6 +76,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         className="mann-carousel"
         enableMouseSwipe={true}
         focusOnSelect={true}
+        disableArrowsOnEnd={true}
         renderArrow={({ type, onClick }) => (
           <button
             className={
