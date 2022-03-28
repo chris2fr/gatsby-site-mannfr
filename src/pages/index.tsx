@@ -149,8 +149,21 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             {t("statutdesc")}
             </div>
             <div>
-            <h2 className={"h2"}><a href="https://www.lesgrandsvoisins.com">Les Grands Voisins</a></h2>
+            <h2 className={"h2"}>Les Grands Voisins</h2>
             <p className={"sub-h2"}>{t("lesgrandsvoisisntagline")}</p>
+            <p> ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>).</p>
+            <p>Tour Montparnasse<br/>
+            33 rue du Maine<br/>
+            75015 PARIS<br/>
+            52e étage - sur rendez-vous</p>
+            <dl>
+              <dt>{t("Voisins")}</dt>
+              <dd>{t("Voisinsdesc")}</dd>
+              <dt>{t("Bienscommuns")}</dt>
+              <dd>{t("BienscommunsDesc")}</dd>
+              <dt>{t("Cooperations")}</dt>
+              <dd>{t("CooperationsDesc")}</dd>
+            </dl>
             </div>
       </div>
     </>
