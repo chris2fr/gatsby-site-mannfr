@@ -139,26 +139,18 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <div style={{ "flex-grow": "1"}}>
             <p>{t("current_projects")}:</p>
             <dl>
+              <dt>{t("orgcons")} - <a href="https://www.assholasaservice.com">AssholeAsAService.com</a></dt>
+              <dd>{t("assholeasaservicedesc")}</dd>
               <dt>
-                <a href={t("url_lesgrandsvoisins")}>
-                  {t("Les Grands Voisins")}
-                </a>
-              </dt>
-              <dd>{t("lesgrandsvoisinsdesc")}</dd>
-              <dt>
-                <a href={t("url_caplancity")}>CaPlanCity</a>
+              {t("projcons")} - <a href={t("url_caplancity")}>CaPlanCity.com</a>
               </dt>
               <dd>{t("caplancitydesc")}</dd>
               <dt>
-                <a href={t("url_resdigita")}>ResDigita</a>
+              {t("digcons")} - <a href={t("url_resdigita")}>ResDigita.com</a> - <a href={t("url_configmagic")}>ConfigMagic.com</a>
               </dt>
-              <dd>{t("resdigitadesc")}</dd>
+              <dd>{t("resdigitadesc")}<br/>{t("configmagicdesc")}</dd>
               <dt>
-                <a href={t("url_configmagic")}>ConfigMagic</a>
-              </dt>
-              <dd>{t("configmagicdesc")}</dd>
-              <dt>
-                <a href={t("url_distractives")}>Distractives</a>
+                {t("divcons")} - <a href={t("url_distractives")}>Distractives.com</a>
               </dt>
               <dd>{t("distractivesdesc")}</dd>
             </dl>

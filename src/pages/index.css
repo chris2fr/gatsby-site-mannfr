@@ -213,8 +213,10 @@ html, body {
 } */
 /* hide disabled buttons  */
 .rec.rec-arrow:disabled {
-  color: white !important;
+  /* color: white !important;
   background-color: white !important;
+   hide disabled buttons */
+  visibility: hidden;
 }
 
 /* disable default outline on focused items */

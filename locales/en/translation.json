@@ -14,6 +14,7 @@
   "NEXT":"NEXT^",
   "current_projects":"Current Projets",
   "Les Grands Voisins": "Les Grands Voisins .com",
+  "url_assholeasaservice":"https://www.assholeasaservice.com",
   "url_lesgrandsvoisins":"https://www.communitiness.com",
   "url_caplancity":"https://www.caplancity.com/en/pages/caplancity/",
   "url_resdigita":"https://www.resdigita.com/en/articles/2022/resdigita/",
@@ -24,11 +25,17 @@
   "consultingdesc":"on definition, deployment, documentation, administration of servers and tools including content management systems, group productivity servers, cloud tools, GDPR compliance, etc.",
   "animationdesc":"through management of steering meetings, roadmap management, load planning, Agile meetings, listening and patient support of users with a focus on mastery at the appropriate levels",
   "engineeringdesc":"with specification, prototyping, development, testing, evaluation and re-evaluation of technology tips with a focus on elegant solutions.",
-  "downloadcvhere":"Download my CV here",
+  "downloadcvhere":"CV or Resume",
   "lesgrandsvoisinsdesc": "Local, Global & Vital",
   "caplancitydesc": "Everything that serves the sustainable achievement -- time, talents, resources, quality, budgets, ... -- as much profit centers as cost centers",
   "resdigitadesc": "Anything that serves IT engineering and sharing including IT development, devices for fully integrated in-person and online hybrid meetings, subscription and server sharing, etc.",
   "configmagicdesc": "Anything related to computer system and network administration, document management, authorization, secret management, configuration management, etc. ",
   "distractivesdesc": "Anything related to the ADHD condition including peer support meetings, my presentation and proposed tools.",
-  "statutdesc":"Idealistic and Creative Freelance under Wage-Portage in the Greater-Paris Region"
+  "statutdesc":"Idealistic and Creative Freelance under Wage-Portage in the Greater-Paris Region",
+  "assholeasaservicedesc":"Anything pertaining to psycho-social risk, anxiety and stress.",
+  "orgcons":"Organizational Consulting",
+  "projcons":"Project Consulting",
+  "capcons":"Capacity Consulting",
+  "digcons":"Digital Development",
+  "divcons":"Diversity Coaching"
 }
