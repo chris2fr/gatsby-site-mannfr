@@ -137,12 +137,13 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             <p>{t("ihelp")}</p>
             {/*/}
             <dl>
-              <dt>{t("orgrob")}</dt>
-              <dd>({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
               <dt>{t("itprog")}</dt>
               <dd>({t("see")} <a href={t("url_caplancity")}>CaPlanCity.com</a>)</dd>
               <dt>{t("digdev")}</dt>
               <dd>({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</dd>
+              <dt>{t("orgrob")}</dt>
+              <dd>({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
+
             </dl>
         <div style={{ "display": "flex", "justify-content": "space-around", "flex-wrap": "wrap" }}>
 
