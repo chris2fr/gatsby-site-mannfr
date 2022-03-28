@@ -151,7 +151,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             <div>
             <h2 className={"h2"}>Les Grands Voisins</h2>
             <p className={"sub-h2"}>{t("lesgrandsvoisisntagline")}</p>
-            <p> ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>).</p>
+            <p>{t("lgvexemple")} ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>).</p>
             <p>Tour Montparnasse<br/>
             33 rue du Maine<br/>
             75015 PARIS<br/>
