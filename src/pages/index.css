@@ -212,7 +212,7 @@ html, body {
   border-radius: 50%;
 } */
 /* hide disabled buttons  */
-.rec.rec-arrow:disabled {
+.mann-carousel div  .rec.rec-arrow:disabled {
   /* color: white !important;
   background-color: white !important;
    hide disabled buttons */
