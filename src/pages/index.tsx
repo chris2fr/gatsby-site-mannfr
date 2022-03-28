@@ -121,7 +121,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           </div>
         ))}
       </Carousel>
-      <div className={"home-blabla"} style={{ padding: "2em" }}>
+      <div className={"home-blabla"}>
+<div>
         <h2 className={"h2"}>Chris Mann</h2>
         <p className={"sub-h2"}>Digital Executive</p>
         <p className={"p"}>
@@ -146,6 +147,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
 
             </dl>
             {t("statutdesc")}
+            </div>
+            <div>
+            <h2 className={"h2"}><a href="https://www.lesgrandsvoisins.com">Les Grands Voisins</a></h2>
+            <p className={"sub-h2"}>{t("lesgrandsvoisisntagline")}</p>
+            </div>
       </div>
     </>
   );

@@ -218,6 +218,17 @@ html, body {
   visibility: hidden;
 }
 
+.home-blabla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+}
+
+.sub-h2 {
+  font-size: larger;
+  font-style: italic;
+}
+
 /* disable default outline on focused items */
 /* add custom outline on focused items */
 .rec-carousel-item {
