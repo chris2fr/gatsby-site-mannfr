@@ -15,9 +15,16 @@
 }
 
 .logo {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
+    /*position: relative;
+     display: inline-block;
+    vertical-align: middle;*/
+    gap:1;
+    display:flex;
+    align-items: center;
+    background:rgba(255,255,255,0.5);
+    border-radius:.5rem;
+    padding:1rem;
+    margin-top: 2rem;
 }
 
 .logo-image {
