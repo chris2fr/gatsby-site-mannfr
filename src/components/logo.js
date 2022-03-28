@@ -3,11 +3,13 @@ import Img from "gatsby-image";
 import { LocalizedLink as Link } from "gatsby-theme-i18n";
 import { StaticQuery, graphql } from "gatsby";
 // import { Trans } from '@lingui/macro'
+import { useTranslation } from "react-i18next"
 
 
 import "../css/screen.css"
 
 export default function Logo() {
+  const { t } = useTranslation("translation")
   return (
     <>
     <StaticQuery
@@ -39,8 +41,7 @@ export default function Logo() {
                 alt={data.site.siteMetadata.title}
               />
       }{data.file &&
-            <span className={"logo-text"} style={{background:"rgba(255,255,255,0.5)",
-            alignSelf:"center",borderRadius:"4px",padding:"1rem"}}>
+            <span className={"logo-text"} style={{background:"rgba(255,255,255,0.5)",alignSelf:"center",borderRadius:"4px",padding:"1rem"}}>
               {t("tagline")}
             </span>
           
