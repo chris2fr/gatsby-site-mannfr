@@ -237,6 +237,10 @@ html, body {
 
 .right {
   grid-area: right;
+
+}
+
+.grey-back {
   padding: 1rem;
   border-radius: 2rem;
   background-color: #ccc;

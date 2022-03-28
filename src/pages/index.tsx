@@ -137,18 +137,20 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             {/*/}
             <p>{t("ihelp")}</p>
             {/*/}
-            <dl>
-              <dt>{t("itprog")}</dt>
-              <dd>{t("itprogdesc")} ({t("see")} <a href={t("url_caplancity")}>CaPlanCity.com</a>)</dd>
-              <dt>{t("digdev")}</dt>
-              <dd>{t("digdevdesc")} ({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</dd>
-              <dt>{t("orgrob")}</dt>
-              <dd>{t("orgrobdesc")} ({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
+            
+              <h3>{t("itprog")} ({t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)</h3>
+              <p>{t("itprogdesc")}</p>
+              <div className={"grey-back"}>
+              <h3>{t("digdev")} ({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</h3>
+              <p>{t("digdevdesc")}</p>
+              </div>
+              <h3>{t("orgrob")} ({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dt>
+              <p>{t("orgrobdesc")}</p>
 
             </dl>
             {t("statutdesc")}
             </div>
-            <div className={"right"}>
+            <div className={"right grey-back"}>
             <h3 className={"h3"}>Les Grands Voisins</h3>
             <p className={"sub-h3"}>{t("lesgrandsvoisisntagline")}</p>
             <p>{t("lgvexemple")} ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>).</p>
