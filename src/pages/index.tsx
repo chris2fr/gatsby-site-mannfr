@@ -122,10 +122,9 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         ))}
       </Carousel>
       <div className={"home-blabla"} style={{ padding: "2em" }}>
-        <h1>Chris Mann</h1>
-        <div style={{ "display": "flex", "justify-content": "space-around", "flex-wrap": "wrap" }}>
-          <div style={{ "flex-grow": "1"}}>
-            <p>
+        <h2 className={"h2"}>Chris Mann</h2>
+        <p className={"sub-h2"}>Digital Executive</p>
+        <p className={"p"}>
               +33 7 68 40 38 38
               <br />
               chris@mann.fr
@@ -134,35 +133,17 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <br/>
               {t("statutdesc")}
             </p>
-          </div>
-          <div style={{ "flex-grow": "1"}}>
-            <p>{t("current_projects")}:</p>
-            <dl>
-              <dt>{t("orgcons")} - <a href="https://www.assholasaservice.com">AssholeAsAService.com</a></dt>
-              <dd>{t("assholeasaservicedesc")}</dd>
-              <dt>
-              {t("projcons")} - <a href={t("url_caplancity")}>CaPlanCity.com</a>
-              </dt>
-              <dd>{t("caplancitydesc")}</dd>
-              <dt>
-              {t("digcons")} - <a href={t("url_resdigita")}>ResDigita.com</a> - <a href={t("url_configmagic")}>ConfigMagic.com</a>
-              </dt>
-              <dd>{t("resdigitadesc")}<br/>{t("configmagicdesc")}</dd>
-              <dt>
-                {t("divcons")} - <a href={t("url_distractives")}>Distractives.com</a>
-              </dt>
-              <dd>{t("distractivesdesc")}</dd>
-            </dl>
-          </div>
-          <div style={{ "flex-grow": "1"}}>
             <p>{t("ihelp")}</p>
-            <ul>
-              <li>{t("consultingdesc")}</li>
-              <li>{t("engineeringdesc")}</li>
-              <li>{t("organizationdesc")}</li>
-              <li>{t("animationdesc")}</li>
-            </ul>
-          </div>
+            <dl>
+              <dt>{t("orgrob")}</dt>
+              <dd>({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
+              <dt>{t("itprog")}</dt>
+              <dd>({t("see")} <a href={t("url_caplancity")}>CaPlanCity.com</a>)</dd>
+              <dt>{t("digdev")}</dt>
+              <dd>({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</dd>
+            </dl>
+        <div style={{ "display": "flex", "justify-content": "space-around", "flex-wrap": "wrap" }}>
+
         </div>
       </div>
     </>

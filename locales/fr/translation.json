@@ -39,9 +39,13 @@
   "distractivesdesc":"Tout ce qui touche à la condition du TDAH dont des réunions de soutien entre pairs, ma présentation et outils proposés.",
   "statutdesc":"avec un style idéaliste et créatif, je suis indépendant en portage salarial en Ile de France",
   "assholeasaservicedesc":"Tout ce qui cencerne les risques psycho-sociaux, le burnout, l'anxiété, la stresse, etc. ",
-  "orgcons":"Conseil en organisation",
-  "projcons":"Conseil en gestion par projets",
-  "capcons":"Conseil en capacités",
-  "digcons":"Conseil et développement en digital",
-  "divcons":"Conseil en diversité TDAH"
+  "orgcons":"Robustesse organisationnelle",
+  "procons":"Avancements itératifs",
+  "capcons":"Activation de capacités",
+  "devcons":"Réalisations numériques",
+  "orgconsdesc":"Robustesse organisationnelle",
+  "proconsdesc":"Avancements itératifs",
+  "capconsdesc":"Activation de capacités",
+  "devconsdesc":"Réalisations numériques",
+  "see":"voir"
 }

@@ -33,9 +33,13 @@
   "distractivesdesc": "Anything related to the ADHD condition including peer support meetings, my presentation and proposed tools.",
   "statutdesc":"Idealistic and Creative Freelance under Wage-Portage in the Greater-Paris Region",
   "assholeasaservicedesc":"Anything pertaining to psycho-social risk, anxiety and stress.",
-  "orgcons":"Organizational Consulting",
-  "projcons":"Project Consulting",
-  "capcons":"Capacity Consulting",
-  "digcons":"Digital Development",
-  "divcons":"Diversity Coaching"
+  "orgrob":"Organizational Robustness",
+  "itprog":"Iterative Progress",
+  "caplan":"Capability Planning",
+  "digdev":"Digital Development",
+  "orgconsdesc":"Robustesse organisationnelle",
+  "proconsdesc":"Avancements itératifs",
+  "capconsdesc":"Activation de capacités",
+  "devconsdesc":"Réalisations numériques",
+  "see":"see"
 }
