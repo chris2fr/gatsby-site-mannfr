@@ -223,7 +223,7 @@ html, body {
   grid-template-columns: repeat(2, 1fr);
   padding: 2rem;
   column-rule: 1px solid #ccc;
-  gap: 2rem;
+  column-gap: 2rem;
   grid-template-areas: "title title" "left right";
 }
 
@@ -237,6 +237,9 @@ html, body {
 
 .right {
   grid-area: right;
+  padding 1rem;
+  border-radius: 2rem;
+  background-color: #ccc;
 }
 
 @media(max-width:60rem) {
@@ -248,6 +251,10 @@ html, body {
 
 .sub-h2 {
   font-size: larger;
+  font-style: italic;
+}
+.sub-h3 {
+  font-size: large;
   font-style: italic;
 }
 
