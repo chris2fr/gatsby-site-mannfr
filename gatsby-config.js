@@ -5,7 +5,7 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.mann.fr`,
-    title: `Digital Executive`,
+    title: `Mann.fr: Chris Mann, Digital Executive`,
     description: "MANN.FR, Chris, Digital Executive Idéaliste en Région Parisienne, Idéaliste et Créatif en Accompagnement, Ingénierie, Organisation, Accompagnement ",
     author: `Chris Mann <chris@mann.fr>`,
     logoRelativePathInSrcImages: "logo.png",

@@ -41,7 +41,7 @@ export default function Logo() {
       }{data.file &&
             <span className={"logo-text"} style={{background:"rgba(255,255,255,0.5)",
             alignSelf:"center",borderRadius:"4px",padding:"1rem"}}>
-              {data.site.siteMetadata.title}
+              {t("tagline")}
             </span>
           
           }

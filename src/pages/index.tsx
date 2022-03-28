@@ -131,7 +131,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <br/>
               <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf">{t("downloadcvhere")}</a>
               <br/>
-              {t("statutdesc")}
+              
             </p>
             {/*/}
             <p>{t("ihelp")}</p>
@@ -145,9 +145,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <dd>{t("orgrobdesc")} ({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a>)</dd>
 
             </dl>
-        <div style={{ "display": "flex", "justify-content": "space-around", "flex-wrap": "wrap" }}>
-
-        </div>
+            {t("statutdesc")}
       </div>
     </>
   );
