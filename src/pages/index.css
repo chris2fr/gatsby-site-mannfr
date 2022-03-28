@@ -222,6 +222,8 @@ html, body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 2rem;
+  column-rule: 1px solid #ccc;
+  gap: 2rem;
 }
 
 @media(max-length:60rem) {

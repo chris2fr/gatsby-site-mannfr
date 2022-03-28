@@ -158,7 +158,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             52e étage - sur rendez-vous</p>
             <dl>
               <dt>{t("Voisins")}</dt>
-              <dd>{t("Voisinsdesc")}</dd>
+              <dd>{t("VoisinsDesc")}</dd>
               <dt>{t("Bienscommuns")}</dt>
               <dd>{t("BienscommunsDesc")}</dd>
               <dt>{t("Cooperations")}</dt>
