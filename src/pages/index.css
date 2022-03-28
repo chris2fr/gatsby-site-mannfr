@@ -224,11 +224,25 @@ html, body {
   padding: 2rem;
   column-rule: 1px solid #ccc;
   gap: 2rem;
+  grid-template-areas: "title title" "left right";
+}
+
+.title {
+  grid-area: title;
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
 }
 
 @media(max-width:60rem) {
   .home-blabla {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "title" "left" "right";
   }
 }
 

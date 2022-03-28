@@ -122,7 +122,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         ))}
       </Carousel>
       <div className={"home-blabla"}>
-<div>
+<div className={"title"}>
         <h2 className={"h2"}>Chris Mann</h2>
         <p className={"sub-h2"}>Digital Executive</p>
         <p className={"p"}>
@@ -131,9 +131,9 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               chris@mann.fr
               <br/>
               <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf">{t("downloadcvhere")}</a>
-              <br/>
-              
             </p>
+            </div>
+            <div className={"left"}>
             {/*/}
             <p>{t("ihelp")}</p>
             {/*/}
@@ -148,7 +148,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </dl>
             {t("statutdesc")}
             </div>
-            <div>
+            <div className={"right"}>
             <h2 className={"h2"}>Les Grands Voisins</h2>
             <p className={"sub-h2"}>{t("lesgrandsvoisisntagline")}</p>
             <p>{t("lgvexemple")} ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>).</p>
