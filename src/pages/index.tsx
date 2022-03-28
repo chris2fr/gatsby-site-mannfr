@@ -150,8 +150,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <p className={"sub-h3"}>({t("see")} <a href="https://www.assholasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a></p>
               <p>{t("orgrobdesc")}</p>
 
-            </dl>
-            {t("statutdesc")}
+              <p className={"grey-back"}>{t("statutdesc")}</p>
             </div>
             <div className={"right grey-back"}>
             <h3 className={"h3"}>Les Grands Voisins ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>)</h3>
