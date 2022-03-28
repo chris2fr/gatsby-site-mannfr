@@ -77,14 +77,14 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         enableMouseSwipe={true}
         focusOnSelect={true}
         disableArrowsOnEnd={true}
-        renderArrow={({ type, onClick }) => (
+        renderArrow={({ type, onClick, isEdge }) => (
           <button
             className={
               "rec rec-arrow rec rec-arrow-" +
               (type === "NEXT" ? "right" : "left")
             }
             onClick={onClick}
-            disabled={disabled}
+            disabled={isEdge}
           >
             {t(type)}
           </button>
