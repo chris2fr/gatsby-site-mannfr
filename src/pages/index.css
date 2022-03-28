@@ -224,6 +224,12 @@ html, body {
   padding: 2rem;
 }
 
+@media(max-length:60rem) {
+  .home-blabla {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .sub-h2 {
   font-size: larger;
   font-style: italic;
