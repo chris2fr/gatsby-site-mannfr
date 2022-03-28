@@ -226,7 +226,7 @@ html, body {
   gap: 2rem;
 }
 
-@media(max-length:60rem) {
+@media(max-width:60rem) {
   .home-blabla {
     grid-template-columns: repeat(1, 1fr);
   }
