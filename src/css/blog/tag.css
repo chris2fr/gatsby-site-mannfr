@@ -33,6 +33,7 @@
     left: 0;
     z-index: 10;
     padding: 45px 45px 60px 45px;
+    margin-top: 5rem;
 }
 
 .tag-content::before {
