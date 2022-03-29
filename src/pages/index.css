@@ -262,7 +262,11 @@ html, body {
 }
 
 @media(max-width:60rem) {
-  .home-blabla {
+  .home-top {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "title" "video" "table" "carousel" "left" "right";
+  }
+  .home-bottom {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "title" "video" "table" "carousel" "left" "right";
   }
@@ -384,7 +388,6 @@ div.rec-carousel-wrapper {
   padding: 1rem;
 }
 
-.overfig h3,
 .overfig h2 {
   align-self: center;
   justify-self: center;
