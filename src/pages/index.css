@@ -171,7 +171,8 @@ html, body {
   margin-top: -20px;
   outline: none;
   padding: 0 0 0 2px;
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   top: 40vh;
@@ -339,14 +340,16 @@ html, body {
   vertical-align: top;
 }
 
-td.row-header {
-  vertical-align: unset;
-  transform: rotate(270deg);
-  font-weight: bold;
+.metier th {
+  vertical-align: middle;
+  text-align: center;
 }
 
-div.title {
-  margin-top:5rem;
+td.row-header {
+  vertical-align: middle;
+  text-align: center;
+  transform: rotate(270deg);
+  font-weight: bold;
 }
 
 h.with-sub {
