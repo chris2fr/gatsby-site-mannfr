@@ -334,6 +334,7 @@ html, body {
 
 .metier {
   grid-area: table;
+  margin-top: 1.5rem;
 }
 
 .metier td {
@@ -348,11 +349,11 @@ html, body {
 td.row-header {
   vertical-align: middle;
   text-align: center;
-  transform: rotate(270deg);
+  transform: rotate(315deg);
   font-weight: bold;
 }
 
-h.with-sub {
+.with-sub {
   margin-bottom: 0px;
 }
 
