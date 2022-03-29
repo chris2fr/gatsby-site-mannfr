@@ -390,17 +390,17 @@ div.rec-carousel-wrapper {
   .overfig {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "corner consulting" 
-                         "corner engineering"
-                         "corner steering"
-                         "itprog itprogc"
-                         "itprog itproge"
-                         "itprog itprogs"
-                         "digdev digdevc"
-                         "digdev digdeve"
-                         "digdev digdevs"
-                         "orgrob orgrobc"
-                         "orgrob orgrobe"
-                         "orgrob orgrobs";
+    grid-template-areas: "corner itprog" 
+                         "consulting itprogc"
+                         "engineering itproge"
+                         "steering itprogs"
+                         "corner digdev"
+                         "consulting digdevc"
+                         "engineering digdeve"
+                         "steering digdevs"
+                         "corner orgrob"
+                         "consulting orgrobc"
+                         "engineering orgrobe"
+                         "steering orgrobs";
   }
 }
