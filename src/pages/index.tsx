@@ -133,7 +133,91 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf">{t("downloadcvhere")}</a>
             </p>
             </div>
+            <div className={"video"}>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ryCZwyp9Xas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <div className={"left"}>
+<table className="metier">
+  <tr>
+    <th></th>
+    <th>Consulting</th>
+    <th>Engeneering</th>
+    <th>Steering</th>
+  </tr>
+  <tr>
+    <td className={"row-header"}>Iterative&nbsp;Progress</td>
+    <td>
+      <ul>
+        <li>Ceremony Facilitation</li>
+        <li>Backlog and Changelog Management</li>
+        <li>Workshop Management</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>Time Accounting and Forecasting</li>
+        <li>Real Kick-Butt Hybrid Meetings</li>
+        <li>Process Modeling and Workflow Implementation</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>Program and Project Management Office</li>
+        <li>Making Projets and Teams Work</li>
+        <li>Method and Quality Plans</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td className={"row-header"}>Digital&nbsp;Development</td>
+    <td>
+    <ul>
+        <li>Configuration Management</li>
+        <li>Webmastering</li>
+        <li>Quality Control</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>Script Programming (JS, Py, Ru, ...)</li>
+        <li>Server Adminisitration</li>
+        <li>Service and Application Integration</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>Product Ownership Assistance</li>
+        <li>Research and Development</li>
+        <li>Right-Sourcing</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td className={"row-header"}>Organizational&nbsp;Robustness</td>
+    <td>
+    <ul>
+        <li>Individual Coaching (English, ADHD, etc.)</li>
+        <li>Systemic Internal Communication</li>
+        <li>Psychosocial Risk Audits</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>Document Management</li>
+        <li>GDPR Implementation</li>
+        <li>Cross-Border Rollouts</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>Listening for Advocacy</li>
+        <li>Words and Actions Alignment</li>
+        <li>Betterment</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
             {/*/}
             <p>{t("ihelp")}</p>
             {/*/}
