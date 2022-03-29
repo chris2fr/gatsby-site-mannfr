@@ -344,6 +344,7 @@ html, body {
 .metier {
   grid-area: table;
   margin-top: 1.5rem;
+  margin: 0 auto;
 }
 
 .metier td {
