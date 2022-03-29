@@ -381,6 +381,11 @@ div.rec-carousel-wrapper {
   margin: 0 auto;
 }
 
+.overfig h3 {
+  align-self: center;
+  justify-self: center;
+}
+
 @media(max-width:60rem) {
   .overfig {
     display: grid;
