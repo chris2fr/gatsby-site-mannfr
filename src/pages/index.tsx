@@ -93,8 +93,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     
     
 
-    <h2 style={{gridArea:"itprog"}} className={"grey-back"}>{t("itprog")}</h2>
-      <div style={{gridArea:"itprogc"}} className={"grey-back"}>
+    <h2 style={{gridArea:"itprog"}}>{t("itprog")}</h2>
+      <div style={{gridArea:"itprogc"}}>
       <h3>{t("consulting")}</h3>
         <ul>
         <li>{t("ceremonyfacilitation")}</li>
@@ -102,7 +102,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("workshopmanagement")}</li>
         </ul>
       </div>
-    <div style={{gridArea:"itproge"}} className={"grey-back"}>
+    <div style={{gridArea:"itproge"}}>
     <h3>{t("engineering")}</h3>
       <ul>
         <li>{t("timeaccountingandforecasting")}</li>
@@ -110,7 +110,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("processandworkflowmanagement")}</li>
         </ul>
     </div>
-    <div style={{gridArea:"itprogs"}} className={"grey-back"}>
+    <div style={{gridArea:"itprogs"}}>
     <h3 >{t("steering")}</h3>
     <ul>
         <li>{t("programandprojectmanagementoffice")}</li>
@@ -118,8 +118,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("methodandqualityplans")}</li>
       </ul>
     </div>
-    <h2  style={{gridArea:"digdev"}}>{t("digdev")}</h2>
-<div style={{gridArea:"digdevc"}}>
+    <h2  style={{gridArea:"digdev"}} className={"grey-back"}>{t("digdev")}</h2>
+<div style={{gridArea:"digdevc"}} className={"grey-back"}>
 <h3>{t("consulting")}</h3>
 <ul>
         <li>{t("configurationmanagement")}</li>
@@ -127,7 +127,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("qualitycontrol")}</li>
       </ul>
     </div>
-<div style={{gridArea:"digdeve"}}>
+<div style={{gridArea:"digdeve"}} className={"grey-back"}>
 <h3>{t("engineering")}</h3>
 <ul>
         <li>{t("scriptprogramming")}</li>
@@ -135,7 +135,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("serviceandappintegration")}</li>
       </ul>
     </div>
-<div style={{gridArea:"digdevs"}}>
+<div style={{gridArea:"digdevs"}} className={"grey-back"}>
 <h3>{t("steering")}</h3>
 <ul>
         <li>{t("productownershipassist")}</li>
@@ -168,7 +168,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("betterment")}</li>
       </ul>
 </div>
-</div>
+</div><a name="carousel"></a>
       <Carousel
         breakPoints={breakPoints}
         pagination={false}
