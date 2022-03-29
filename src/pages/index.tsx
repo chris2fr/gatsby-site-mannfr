@@ -94,55 +94,72 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     <h3 style={{gridArea:"steering"}}>{t("steering")}</h3>
 
     <h3 style={{gridArea:"itprog"}}>{t("itprog")}</h3>
-      <ul style={{gridArea:"itprogc"}}>
+      <div style={{gridArea:"itprogc"}}>
+        <ul>
         <li>{t("ceremonyfacilitation")}</li>
         <li>{t("backandchangelogmanagement")}</li>
         <li>{t("workshopmanagement")}</li>
-      </ul>
-    <ul style={{gridArea:"itproge"}}>
+        </ul>
+      </div>
+    <div style={{gridArea:"itproge"}}>
+      <ul>
         <li>{t("timeaccountingandforecasting")}</li>
         <li>{t("realhybridmeetings")}</li>
         <li>{t("processandworkflowmanagement")}</li>
-      </ul>
-    <ul style={{gridArea:"itprogs"}}>
+        </ul>
+    </div>
+<div style={{gridArea:"itprogs"}}>
+<ul>
         <li>{t("programandprojectmanagementoffice")}</li>
         <li>{t("makingprojectsandteamswork")}</li>
         <li>{t("methodandqualityplans")}</li>
       </ul>
     <h3  style={{gridArea:"digdev"}}>{t("digdev")}</h3>
-    <ul style={{gridArea:"digdevc"}}>
+    </div>
+<div style={{gridArea:"digdevc"}}>
+<ul>
         <li>{t("configurationmanagement")}</li>
         <li>{t("webmastering")}</li>
         <li>{t("qualitycontrol")}</li>
       </ul>
-    <ul style={{gridArea:"digdeve"}}>
+    </div>
+<div style={{gridArea:"digdeve"}}>
+<ul>
         <li>{t("scriptprogramming")}</li>
         <li>{t("serveradmin")}</li>
         <li>{t("serviceandappintegration")}</li>
       </ul>
-    <ul style={{gridArea:"digdevs"}}>
+    </div>
+<div style={{gridArea:"digdevs"}}>
+<ul>
         <li>{t("productownershipassist")}</li>
         <li>{t("researchanddevelopment")}</li>
         <li>{t("rightsourcing")}</li>
       </ul>
     <h3  style={{gridArea:"orgrob"}}>{t("orgrob")}</h3>
-    <ul style={{gridArea:"orgrobc"}}>
+    </div>
+<div style={{gridArea:"orgrobc"}}>
+<ul>
         <li>{t("individualcoaching")}</li>
         <li>{t("systemicinternalcommunication")}</li>
         <li>{t("psysocriskaudits")}</li>
       </ul>
-    <ul style={{gridArea:"orgrobe"}}>
+    </div>
+<div style={{gridArea:"orgrobe"}}>
+<ul>
         <li>{t("docmanagement")}</li>
         <li>{t("gdprimplement")}</li>
         <li>{t("xborderroolouts")}</li>
       </ul>
-    <ul style={{gridArea:"orgrobs"}}>
+    </div>
+<div style={{gridArea:"orgrobs"}}>
+<ul>
         <li>{t("listeningforaadvocacy")}</li>
         <li>{t("wordsanddeedsalignment")}</li>
         <li>{t("betterment")}</li>
       </ul>
 </div>
-
+</div>
       <Carousel
         breakPoints={breakPoints}
         pagination={false}
