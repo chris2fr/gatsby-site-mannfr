@@ -85,88 +85,88 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             <div className={"video"}>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ryCZwyp9Xas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div className={"left"}>
+
 <table className="metier">
   <tr>
     <th></th>
-    <th>Consulting</th>
-    <th>Engeneering</th>
-    <th>Steering</th>
+    <th>{t("consulting")}</th>
+    <th>{t("engineering")}</th>
+    <th>{t("steering")}</th>
   </tr>
   <tr>
-    <td className={"row-header"}>Iterative&nbsp;Progress</td>
+    <td className={"row-header"}>{t("itprog")}</td>
     <td>
       <ul>
-        <li>Ceremony Facilitation</li>
-        <li>Backlog and Changelog Management</li>
-        <li>Workshop Management</li>
+        <li>{t("ceremonyfacilitation")}</li>
+        <li>{t("backandchangelogmanagement")}</li>
+        <li>{t("workshopmanagement")}</li>
       </ul>
     </td>
     <td>
     <ul>
-        <li>Time Accounting and Forecasting</li>
-        <li>Real Kick-Butt Hybrid Meetings</li>
-        <li>Process Modeling and Workflow Implementation</li>
+        <li>{t("timeaccountingandforecasting")}</li>
+        <li>{t("realhybridmeetings")}</li>
+        <li>{t("processandworkflowmanagement")}</li>
       </ul>
     </td>
     <td>
     <ul>
-        <li>Program and Project Management Office</li>
-        <li>Making Projets and Teams Work</li>
-        <li>Method and Quality Plans</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td className={"row-header"}>Digital&nbsp;Development</td>
-    <td>
-    <ul>
-        <li>Configuration Management</li>
-        <li>Webmastering</li>
-        <li>Quality Control</li>
-      </ul>
-    </td>
-    <td>
-    <ul>
-        <li>Script Programming (JS, Py, Ru, ...)</li>
-        <li>Server Adminisitration</li>
-        <li>Service and Application Integration</li>
-      </ul>
-    </td>
-    <td>
-    <ul>
-        <li>Product Ownership Assistance</li>
-        <li>Research and Development</li>
-        <li>Right-Sourcing</li>
+        <li>{t("programandprojectmanagementoffice")}</li>
+        <li>{t("makingprojectsandteamswork")}</li>
+        <li>{t("methodandqualityplans")}</li>
       </ul>
     </td>
   </tr>
   <tr>
-    <td className={"row-header"}>Organizational&nbsp;Robustness</td>
+    <td className={"row-header"}>{t("digdev")}</td>
     <td>
     <ul>
-        <li>Individual Coaching (English, ADHD, etc.)</li>
-        <li>Systemic Internal Communication</li>
-        <li>Psychosocial Risk Audits</li>
+        <li>{t("configurationmanagement")}</li>
+        <li>{t("webmastering")}</li>
+        <li>{t("qualitycontrol")}</li>
       </ul>
     </td>
     <td>
     <ul>
-        <li>Document Management</li>
-        <li>GDPR Implementation</li>
-        <li>Cross-Border Rollouts</li>
+        <li>{t("scriptprogramming")}</li>
+        <li>{t("serveradmin")}</li>
+        <li>{t("serviceandappintegration")}</li>
       </ul>
     </td>
     <td>
     <ul>
-        <li>Listening for Advocacy</li>
-        <li>Words and Actions Alignment</li>
-        <li>Betterment</li>
+        <li>{t("productownershipassist")}</li>
+        <li>{t("researchanddevelopment")}</li>
+        <li>{t("rightsourcing")}</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td className={"row-header"}>{t("orgrob")}</td>
+    <td>
+    <ul>
+        <li>{t("individualcoaching")}</li>
+        <li>{t("systemicinternalcommunication")}</li>
+        <li>{t("psysocriskaudits")}</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>{t("docmanagement")}</li>
+        <li>{t("gdprimplement")}</li>
+        <li>{t("xborderroolouts")}</li>
+      </ul>
+    </td>
+    <td>
+    <ul>
+        <li>{t("listeningforaadvocacy")}</li>
+        <li>{t("wordsanddeedsalignment")}</li>
+        <li>{t("betterment")}</li>
       </ul>
     </td>
   </tr>
 </table>
-
+<div className={"left"}>
             {/*/}
             <p>{t("ihelp")}</p>
             {/*/}
