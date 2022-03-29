@@ -87,86 +87,61 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ryCZwyp9Xas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
       </div>
-<table className="metier">
-  <tr>
-    <th></th>
-    <th>{t("consulting")}</th>
-    <th>{t("engineering")}</th>
-    <th>{t("steering")}</th>
-  </tr>
-  <tr>
-    <td className={"row-header"}>{t("itprog")}</td>
-    <td>
-      <ul>
+<div className="overfig">
+
+    <h3 style={"grid-area:"}>{t("consulting")}</h3>
+    <h3 style={"grid-area:"}>{t("engineering")}</h3>
+    <h3 style={"grid-area:"}>{t("steering")}</h3>
+
+    <h3 style={"grid-area:itprog"}>{t("itprog")}</h3>
+      <ul style={"grid-area:itprogc"}>
         <li>{t("ceremonyfacilitation")}</li>
         <li>{t("backandchangelogmanagement")}</li>
         <li>{t("workshopmanagement")}</li>
       </ul>
-    </td>
-    <td>
-    <ul>
+    <ul style={"grid-area:itproge"}>
         <li>{t("timeaccountingandforecasting")}</li>
         <li>{t("realhybridmeetings")}</li>
         <li>{t("processandworkflowmanagement")}</li>
       </ul>
-    </td>
-    <td>
-    <ul>
+    <ul style={"grid-area:itprogs"}>
         <li>{t("programandprojectmanagementoffice")}</li>
         <li>{t("makingprojectsandteamswork")}</li>
         <li>{t("methodandqualityplans")}</li>
       </ul>
-    </td>
-  </tr>
-  <tr>
-    <td className={"row-header"}>{t("digdev")}</td>
-    <td>
-    <ul>
+    <h3  style={"grid-area:digdev"}>{t("digdev")}</h3>
+    <ul style={"grid-area:digdevc"}>
         <li>{t("configurationmanagement")}</li>
         <li>{t("webmastering")}</li>
         <li>{t("qualitycontrol")}</li>
       </ul>
-    </td>
-    <td>
-    <ul>
+    <ul style={"grid-area:digdeve"}>
         <li>{t("scriptprogramming")}</li>
         <li>{t("serveradmin")}</li>
         <li>{t("serviceandappintegration")}</li>
       </ul>
-    </td>
-    <td>
-    <ul>
+    <ul style={"grid-area:digdevs"}>
         <li>{t("productownershipassist")}</li>
         <li>{t("researchanddevelopment")}</li>
         <li>{t("rightsourcing")}</li>
       </ul>
-    </td>
-  </tr>
-  <tr>
-    <td className={"row-header"}>{t("orgrob")}</td>
-    <td>
-    <ul>
+    <h3  style={"grid-area:orgrob"}>{t("orgrob")}</h3>
+    <ul style={"grid-area:orgrobc"}>
         <li>{t("individualcoaching")}</li>
         <li>{t("systemicinternalcommunication")}</li>
         <li>{t("psysocriskaudits")}</li>
       </ul>
-    </td>
-    <td>
-    <ul>
+    <ul style={"grid-area:orgrobe"}>
         <li>{t("docmanagement")}</li>
         <li>{t("gdprimplement")}</li>
         <li>{t("xborderroolouts")}</li>
       </ul>
-    </td>
-    <td>
-    <ul>
+    <ul style={"grid-area:orgrobs"}>
         <li>{t("listeningforaadvocacy")}</li>
         <li>{t("wordsanddeedsalignment")}</li>
         <li>{t("betterment")}</li>
       </ul>
-    </td>
-  </tr>
-</table>
+</div>
 
       <Carousel
         breakPoints={breakPoints}

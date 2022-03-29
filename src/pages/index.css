@@ -370,3 +370,31 @@ td.row-header {
 div.rec-carousel-wrapper {
   grid-area: carousel;
 }
+
+.overfig {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "corner consulting engineering steering"
+                       "itprog itprogc itproge itprogs"
+                       "digdev digdevc digdeve digdevs"
+                       "orgrob orgrobc orgrobe orgrobs";
+}
+
+@media(max-width:60rem) {
+  .overfig {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "corner consulting" 
+                         "corner engineering"
+                         "corner steering"
+                         "itprog itprogc"
+                         "itprog itproge"
+                         "itprog itprogs"
+                         "digdev digdevc"
+                         "digdev digdeve"
+                         "digdev digdevs"
+                         "orgrob orgrobc"
+                         "orgrob orgrobe"
+                         "orgrob orgrobs";
+  }
+}
