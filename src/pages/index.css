@@ -373,12 +373,15 @@ div.rec-carousel-wrapper {
 
 .overfig {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "corner consulting engineering steering"
-                       "itprog itprogc itproge itprogs"
-                       "digdev digdevc digdeve digdevs"
-                       "orgrob orgrobc orgrobe orgrobs";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "itprog itprog itprog"
+                       "itprogc itproge itprogs"
+                       "digdev digdev digdev"
+                       "digdevc digdeve digdevs"
+                       "orgrob orgrob orgrob"
+                       "orgrobc orgrobe orgrobs";
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .overfig h3 {
@@ -390,9 +393,7 @@ div.rec-carousel-wrapper {
   .overfig {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "consulting" "engineering" "steering"
-                         "corner"
-                         "itprog" 
+    grid-template-areas: "itprog" 
                          "itprogc"
                          "itproge"
                          "itprogs"

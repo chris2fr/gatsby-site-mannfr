@@ -89,34 +89,38 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       </div>
 <div className="overfig">
 
-    <h3 style={{gridArea:"consulting"}}>{t("consulting")}</h3>
-    <h3 style={{gridArea:"engineering"}}>{t("engineering")}</h3>
-    <h3 style={{gridArea:"steering"}}>{t("steering")}</h3>
+    
+    
+    
 
-    <h3 style={{gridArea:"itprog"}}>{t("itprog")}</h3>
-      <div style={{gridArea:"itprogc"}}>
+    <h2 style={{gridArea:"itprog"}} className={"grey-back"}>{t("itprog")}</h2>
+      <div style={{gridArea:"itprogc"}} className={"grey-back"}>
+      <h3>{t("consulting")}</h3>
         <ul>
         <li>{t("ceremonyfacilitation")}</li>
         <li>{t("backandchangelogmanagement")}</li>
         <li>{t("workshopmanagement")}</li>
         </ul>
       </div>
-    <div style={{gridArea:"itproge"}}>
+    <div style={{gridArea:"itproge"}} className={"grey-back"}>
+    <h3>{t("engineering")}</h3>
       <ul>
         <li>{t("timeaccountingandforecasting")}</li>
         <li>{t("realhybridmeetings")}</li>
         <li>{t("processandworkflowmanagement")}</li>
         </ul>
     </div>
-<div style={{gridArea:"itprogs"}}>
-<ul>
+    <div style={{gridArea:"itprogs"}} className={"grey-back"}>
+    <h3 >{t("steering")}</h3>
+    <ul>
         <li>{t("programandprojectmanagementoffice")}</li>
         <li>{t("makingprojectsandteamswork")}</li>
         <li>{t("methodandqualityplans")}</li>
       </ul>
-    <h3  style={{gridArea:"digdev"}}>{t("digdev")}</h3>
     </div>
+    <h2  style={{gridArea:"digdev"}}>{t("digdev")}</h2>
 <div style={{gridArea:"digdevc"}}>
+<h3>{t("consulting")}</h3>
 <ul>
         <li>{t("configurationmanagement")}</li>
         <li>{t("webmastering")}</li>
@@ -124,6 +128,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       </ul>
     </div>
 <div style={{gridArea:"digdeve"}}>
+<h3>{t("engineering")}</h3>
 <ul>
         <li>{t("scriptprogramming")}</li>
         <li>{t("serveradmin")}</li>
@@ -131,14 +136,16 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       </ul>
     </div>
 <div style={{gridArea:"digdevs"}}>
+<h3>{t("steering")}</h3>
 <ul>
         <li>{t("productownershipassist")}</li>
         <li>{t("researchanddevelopment")}</li>
         <li>{t("rightsourcing")}</li>
       </ul>
-    <h3  style={{gridArea:"orgrob"}}>{t("orgrob")}</h3>
     </div>
-<div style={{gridArea:"orgrobc"}}>
+<h2 style={{gridArea:"orgrob"}}>{t("orgrob")}</h2>
+<div>
+<h3>{t("consulting")}</h3>
 <ul>
         <li>{t("individualcoaching")}</li>
         <li>{t("systemicinternalcommunication")}</li>
@@ -146,6 +153,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       </ul>
     </div>
 <div style={{gridArea:"orgrobe"}}>
+<h3>{t("engineering")}</h3>
 <ul>
         <li>{t("docmanagement")}</li>
         <li>{t("gdprimplement")}</li>
@@ -153,6 +161,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       </ul>
     </div>
 <div style={{gridArea:"orgrobs"}}>
+<h3>{t("steering")}</h3>
 <ul>
         <li>{t("listeningforaadvocacy")}</li>
         <li>{t("wordsanddeedsalignment")}</li>
