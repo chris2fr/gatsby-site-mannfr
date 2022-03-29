@@ -224,7 +224,7 @@ html, body {
   padding: 2rem;
   column-rule: 1px solid #ccc;
   column-gap: 2rem;
-  grid-template-areas: "title video" "left right";
+  grid-template-areas: "title video" "table table" "left right";
 }
 
 .home-blabla a {
@@ -254,7 +254,7 @@ html, body {
 @media(max-width:60rem) {
   .home-blabla {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "title" "video" "left" "right";
+    grid-template-areas: "title" "video" "table" "left" "right";
   }
 }
 
@@ -329,6 +329,10 @@ html, body {
 .tag-description {
   margin-bottom: 2.5rem;
   min-height: 18rem;
+}
+
+.metier {
+  grid-area: table;
 }
 
 .metier td {
