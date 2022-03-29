@@ -388,6 +388,7 @@ div.rec-carousel-wrapper {
 .overfig * h2 {
   align-self: center;
   justify-self: center;
+  margin: 1rem;
 }
 
 @media(max-width:60rem) {
