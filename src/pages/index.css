@@ -224,7 +224,7 @@ html, body {
   padding: 2rem;
   column-rule: 1px solid #ccc;
   column-gap: 2rem;
-  grid-template-areas: "title video" "table table" "left right";
+  grid-template-areas: "title video" "table table" "carousel carousel" "left right";
 }
 
 .home-blabla a {
@@ -242,7 +242,6 @@ html, body {
 
 .right {
   grid-area: right;
-
 }
 
 .grey-back {
@@ -254,7 +253,7 @@ html, body {
 @media(max-width:60rem) {
   .home-blabla {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "title" "video" "table" "left" "right";
+    grid-template-areas: "title" "video" "table" "carousel" "left" "right";
   }
 }
 
@@ -312,6 +311,7 @@ html, body {
   position: absolute;
   bottom: 20vh;
   z-index: 999;
+  grid-area: carousel;
   /* background-color: white; */
 }
 
