@@ -137,6 +137,7 @@ html, body {
 .main-mann-carousel {
   height: 80vh;
   display: flex;
+
 }
 
 .mann-carousel-item {
@@ -312,7 +313,6 @@ html, body {
   position: absolute;
   bottom: 20vh;
   z-index: 999;
-  grid-area: carousel;
   /* background-color: white; */
 }
 
@@ -354,4 +354,8 @@ td.row-header {
 
 h.with-sub {
   margin-bottom: 0px;
+}
+
+div.rec-carousel-wrapper {
+  grid-area: carousel;
 }
