@@ -220,13 +220,22 @@ html, body {
   visibility: hidden;
 }
 
-.home-blabla {
+.home-top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 2rem;
   column-rule: 1px solid #ccc;
   column-gap: 2rem;
-  grid-template-areas: "title video" "table table" "carousel carousel" "left right";
+  grid-template-areas: "title video";
+}
+
+.home-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+  column-rule: 1px solid #ccc;
+  column-gap: 2rem;
+  grid-template-areas: "left right";
 }
 
 .home-blabla a {

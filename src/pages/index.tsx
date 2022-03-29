@@ -71,6 +71,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     <>
       <Header pageContext={pageContext} />
       <div className={"home-blabla"}>
+        <div className={"home-top"}>
 <div className={"title"}>
         <h2 className={"h2 with-sub"}>Chris Mann</h2>
         <p className={"sub-h2"}>Digital Executive</p>
@@ -85,7 +86,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             <div className={"video"}>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ryCZwyp9Xas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-
+      </div>
 <table className="metier">
   <tr>
     <th></th>
@@ -166,40 +167,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     </td>
   </tr>
 </table>
-<div className={"left"}>
-            {/*/}
-            <p>{t("ihelp")}</p>
-            {/*/}
-              <h3 className={"h3 with-sub"}>{t("itprog")}</h3> 
-              <p className={"sub-h3"}>({t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)</p>
-              <p>{t("itprogdesc")}</p>
-              <h3 className={"h3 with-sub"}>{t("digdev")}</h3> 
-              <p className={"sub-h3"}>({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</p>
-              <p>{t("digdevdesc")}</p>
-              <h3 className={"h3 with-sub"}>{t("orgrob")}</h3>
-              <p className={"sub-h3"}>({t("see")} <a href="https://www.assholeasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a></p>
-              <p>{t("orgrobdesc")}</p>
-              <p className={"grey-back"}>{t("statutdesc")}</p>
-            </div>
-            <div className={"right grey-back"}>
-            <h3 className={"h3 with-sub"}>Les Grands Voisins</h3>
-            <p className={"sub-h3"}>{t("lesgrandsvoisisntagline")}<br/>
-            ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>)</p>
-            <p>{t("lgvexemple")} .</p>
-            <p>Tour Montparnasse<br/>
-            33 rue du Maine<br/>
-            75015 PARIS<br/>
-            52e étage - sur rendez-vous</p>
-            <dl>
-              <dt>{t("Voisins")}</dt>
-              <dd>{t("VoisinsDesc")}</dd>
-              <dt>{t("Bienscommuns")}</dt>
-              <dd>{t("BienscommunsDesc")}</dd>
-              <dt>{t("Cooperations")}</dt>
-              <dd>{t("CooperationsDesc")}</dd>
-            </dl>
-            </div>
-      </div>
+
       <Carousel
         breakPoints={breakPoints}
         pagination={false}
@@ -251,6 +219,42 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           </div>
         ))}
       </Carousel>
+      <div className={"home-bottom"}>
+<div className={"left"}>
+            {/*/}
+            <p>{t("ihelp")}</p>
+            {/*/}
+              <h3 className={"h3 with-sub"}>{t("itprog")}</h3> 
+              <p className={"sub-h3"}>({t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)</p>
+              <p>{t("itprogdesc")}</p>
+              <h3 className={"h3 with-sub"}>{t("digdev")}</h3> 
+              <p className={"sub-h3"}>({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</p>
+              <p>{t("digdevdesc")}</p>
+              <h3 className={"h3 with-sub"}>{t("orgrob")}</h3>
+              <p className={"sub-h3"}>({t("see")} <a href="https://www.assholeasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a></p>
+              <p>{t("orgrobdesc")}</p>
+              <p className={"grey-back"}>{t("statutdesc")}</p>
+            </div>
+            <div className={"right grey-back"}>
+            <h3 className={"h3 with-sub"}>Les Grands Voisins</h3>
+            <p className={"sub-h3"}>{t("lesgrandsvoisisntagline")}<br/>
+            ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>)</p>
+            <p>{t("lgvexemple")} .</p>
+            <p>Tour Montparnasse<br/>
+            33 rue du Maine<br/>
+            75015 PARIS<br/>
+            52e étage - sur rendez-vous</p>
+            <dl>
+              <dt>{t("Voisins")}</dt>
+              <dd>{t("VoisinsDesc")}</dd>
+              <dt>{t("Bienscommuns")}</dt>
+              <dd>{t("BienscommunsDesc")}</dd>
+              <dt>{t("Cooperations")}</dt>
+              <dd>{t("CooperationsDesc")}</dd>
+            </dl>
+            </div>
+      </div>
+      </div>
     </>
   );
 }
