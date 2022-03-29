@@ -384,7 +384,8 @@ div.rec-carousel-wrapper {
   padding: 1rem;
 }
 
-.overfig h3 {
+.overfig * h3,
+.overfig * h2 {
   align-self: center;
   justify-self: center;
 }
