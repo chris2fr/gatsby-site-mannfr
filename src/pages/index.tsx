@@ -70,57 +70,6 @@ export default function IndexRoute({ pageContext, disabled, data }) {
   return (
     <>
       <Header pageContext={pageContext} />
-      <Carousel
-        breakPoints={breakPoints}
-        pagination={false}
-        className="mann-carousel"
-        enableMouseSwipe={true}
-        focusOnSelect={true}
-        disableArrowsOnEnd={true}
-        renderArrow={({ type, onClick, isEdge }) => (
-          <button
-            className={
-              "rec rec-arrow rec rec-arrow-" +
-              (type === "NEXT" ? "right" : "left")
-            }
-            onClick={onClick}
-            disabled={isEdge}
-          >
-            {t(type)}
-          </button>
-        )}
-      >
-        {data.allMdx.nodes.map((node, index) => (
-          <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
-            {/* {node.fields.uriPath + "/"} */}
-            <Link
-              to={"#"}
-              style={{ display: "block" }}
-              draggable={false}
-              language={pageContext.locale}
-            >
-              <div className={"tag"} draggable={false}>
-                <Img
-                  className={"tag-img mann-carousel-img"}
-                  fluid={
-                    node.frontmatter.feature_image &&
-                    node.frontmatter.feature_image.childImageSharp.fluid
-                  }
-                  alt={node.frontmatter.title}
-                  draggable={false}
-                  key={`tag-cover-image-${index}`}
-                />
-                <div className={"tag-content"}>
-                  <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
-                  <div className={"tag-description"}>
-                    {node.frontmatter.description || node.excerpt}
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </Carousel>
       <div className={"home-blabla"}>
 <div className={"title"}>
         <h2 className={"h2"}>Chris Mann</h2>
@@ -251,6 +200,57 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </dl>
             </div>
       </div>
+      <Carousel
+        breakPoints={breakPoints}
+        pagination={false}
+        className="mann-carousel"
+        enableMouseSwipe={true}
+        focusOnSelect={true}
+        disableArrowsOnEnd={true}
+        renderArrow={({ type, onClick, isEdge }) => (
+          <button
+            className={
+              "rec rec-arrow rec rec-arrow-" +
+              (type === "NEXT" ? "right" : "left")
+            }
+            onClick={onClick}
+            disabled={isEdge}
+          >
+            {t(type)}
+          </button>
+        )}
+      >
+        {data.allMdx.nodes.map((node, index) => (
+          <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
+            {/* {node.fields.uriPath + "/"} */}
+            <Link
+              to={"#"}
+              style={{ display: "block" }}
+              draggable={false}
+              language={pageContext.locale}
+            >
+              <div className={"tag"} draggable={false}>
+                <Img
+                  className={"tag-img mann-carousel-img"}
+                  fluid={
+                    node.frontmatter.feature_image &&
+                    node.frontmatter.feature_image.childImageSharp.fluid
+                  }
+                  alt={node.frontmatter.title}
+                  draggable={false}
+                  key={`tag-cover-image-${index}`}
+                />
+                <div className={"tag-content"}>
+                  <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
+                  <div className={"tag-description"}>
+                    {node.frontmatter.description || node.excerpt}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </Carousel>
     </>
   );
 }
