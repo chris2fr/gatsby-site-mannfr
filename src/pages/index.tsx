@@ -72,7 +72,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <Header pageContext={pageContext} />
       <div className={"home-blabla"}>
 <div className={"title"}>
-        <h2 className={"h2"}>Chris Mann</h2>
+        <h2 className={"h2 with-sub"}>Chris Mann</h2>
         <p className={"sub-h2"}>Digital Executive</p>
         <p className={"p"}>
               +33 7 68 40 38 38
@@ -170,19 +170,19 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             {/*/}
             <p>{t("ihelp")}</p>
             {/*/}
-              <h3>{t("itprog")}</h3> 
+              <h3 className={"h3 with-sub"}>{t("itprog")}</h3> 
               <p className={"sub-h3"}>({t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)</p>
               <p>{t("itprogdesc")}</p>
-              <h3>{t("digdev")}</h3> 
+              <h3 className={"h3 with-sub"}>{t("digdev")}</h3> 
               <p className={"sub-h3"}>({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</p>
               <p>{t("digdevdesc")}</p>
-              <h3>{t("orgrob")}</h3>
+              <h3 className={"h3 with-sub"}>{t("orgrob")}</h3>
               <p className={"sub-h3"}>({t("see")} <a href="https://www.assholeasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a></p>
               <p>{t("orgrobdesc")}</p>
               <p className={"grey-back"}>{t("statutdesc")}</p>
             </div>
             <div className={"right grey-back"}>
-            <h3 className={"h3"}>Les Grands Voisins</h3>
+            <h3 className={"h3 with-sub"}>Les Grands Voisins</h3>
             <p className={"sub-h3"}>{t("lesgrandsvoisisntagline")}<br/>
             ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>)</p>
             <p>{t("lgvexemple")} .</p>

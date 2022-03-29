@@ -335,8 +335,16 @@ html, body {
   vertical-align: top;
 }
 
-.row-header td {
+td.row-header {
   vertical-align: unset;
   transform: rotate(270deg);
   font-weight: bold;
+}
+
+div.title {
+  margin-top:5rem;
+}
+
+h.with-sub {
+  margin-bottom: 0px;
 }
