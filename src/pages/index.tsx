@@ -80,7 +80,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <br />
               chris@mann.fr
               <br/>
-              <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf">{t("downloadcvhere")}</a>
+              <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf" target="_new">{t("downloadcvhere")}</a>
             </p>
             </div>
             <div className={"video"}>
