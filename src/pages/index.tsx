@@ -89,54 +89,54 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       </div>
 <div className="overfig">
 
-    <h3 style={"grid-area:"}>{t("consulting")}</h3>
-    <h3 style={"grid-area:"}>{t("engineering")}</h3>
-    <h3 style={"grid-area:"}>{t("steering")}</h3>
+    <h3 style={{gridArea:"consulting"}}>{t("consulting")}</h3>
+    <h3 style={{gridArea:"engineering"}}>{t("engineering")}</h3>
+    <h3 style={{gridArea:"steering"}}>{t("steering")}</h3>
 
-    <h3 style={"grid-area:itprog"}>{t("itprog")}</h3>
-      <ul style={"grid-area:itprogc"}>
+    <h3 style={{gridArea:"itprog"}}>{t("itprog")}</h3>
+      <ul style={{gridArea:"itprogc"}}>
         <li>{t("ceremonyfacilitation")}</li>
         <li>{t("backandchangelogmanagement")}</li>
         <li>{t("workshopmanagement")}</li>
       </ul>
-    <ul style={"grid-area:itproge"}>
+    <ul style={{gridArea:"itproge"}}>
         <li>{t("timeaccountingandforecasting")}</li>
         <li>{t("realhybridmeetings")}</li>
         <li>{t("processandworkflowmanagement")}</li>
       </ul>
-    <ul style={"grid-area:itprogs"}>
+    <ul style={{gridArea:"itprogs"}}>
         <li>{t("programandprojectmanagementoffice")}</li>
         <li>{t("makingprojectsandteamswork")}</li>
         <li>{t("methodandqualityplans")}</li>
       </ul>
-    <h3  style={"grid-area:digdev"}>{t("digdev")}</h3>
-    <ul style={"grid-area:digdevc"}>
+    <h3  style={{gridArea:"digdev"}}>{t("digdev")}</h3>
+    <ul style={{gridArea:"digdevc"}}>
         <li>{t("configurationmanagement")}</li>
         <li>{t("webmastering")}</li>
         <li>{t("qualitycontrol")}</li>
       </ul>
-    <ul style={"grid-area:digdeve"}>
+    <ul style={{gridArea:"digdeve"}}>
         <li>{t("scriptprogramming")}</li>
         <li>{t("serveradmin")}</li>
         <li>{t("serviceandappintegration")}</li>
       </ul>
-    <ul style={"grid-area:digdevs"}>
+    <ul style={{gridArea:"digdevs"}}>
         <li>{t("productownershipassist")}</li>
         <li>{t("researchanddevelopment")}</li>
         <li>{t("rightsourcing")}</li>
       </ul>
-    <h3  style={"grid-area:orgrob"}>{t("orgrob")}</h3>
-    <ul style={"grid-area:orgrobc"}>
+    <h3  style={{gridArea:"orgrob"}}>{t("orgrob")}</h3>
+    <ul style={{gridArea:"orgrobc"}}>
         <li>{t("individualcoaching")}</li>
         <li>{t("systemicinternalcommunication")}</li>
         <li>{t("psysocriskaudits")}</li>
       </ul>
-    <ul style={"grid-area:orgrobe"}>
+    <ul style={{gridArea:"orgrobe"}}>
         <li>{t("docmanagement")}</li>
         <li>{t("gdprimplement")}</li>
         <li>{t("xborderroolouts")}</li>
       </ul>
-    <ul style={"grid-area:orgrobs"}>
+    <ul style={{gridArea:"orgrobs"}}>
         <li>{t("listeningforaadvocacy")}</li>
         <li>{t("wordsanddeedsalignment")}</li>
         <li>{t("betterment")}</li>
