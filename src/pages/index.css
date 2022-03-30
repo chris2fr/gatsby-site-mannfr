@@ -444,6 +444,7 @@ div.rec-carousel-wrapper {
 
 .cat ul {
   margin: 0.5rem 0 1rem;
+  padding-left: unset;
 }
 
 .domain-work h3 {
