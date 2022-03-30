@@ -88,13 +88,10 @@ export default function IndexRoute({ pageContext, disabled, data }) {
             </div>
       </div>
 <div className="overfig">
-
-    
-    
-    
-
-    <h2 style={{gridArea:"itprog"}}>{t("itprog")}</h2>
-      <div style={{gridArea:"itprogc"}}>
+  <div className={"cat itprog"}>
+    <h2>{t("itprog")}</h2>
+    <div class="domain">
+      <div className={"domain-work consult"}>
       <h3>{t("consulting")}</h3>
         <ul>
         <li>{t("ceremonyfacilitation")}</li>
@@ -102,7 +99,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("workshopmanagement")}</li>
         </ul>
       </div>
-    <div style={{gridArea:"itproge"}}>
+    <div  className={"domain-work engineer"}>
     <h3>{t("engineering")}</h3>
       <ul>
         <li>{t("timeaccountingandforecasting")}</li>
@@ -110,7 +107,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("processandworkflowmanagement")}</li>
         </ul>
     </div>
-    <div style={{gridArea:"itprogs"}}>
+    <div className={"domain-work steer"}>
     <h3 >{t("steering")}</h3>
     <ul>
         <li>{t("programandprojectmanagementoffice")}</li>
@@ -118,8 +115,12 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("methodandqualityplans")}</li>
       </ul>
     </div>
-    <h2  style={{gridArea:"digdev"}} className={"grey-back"}>{t("digdev")}</h2>
-<div style={{gridArea:"digdevc"}} className={"grey-back"}>
+    </div>
+    </div>
+    <div className={"cat digdev"}>
+    <h2>{t("digdev")}</h2>
+    <div class="domain">
+<div  className={"domain-work consult"}>
 <h3>{t("consulting")}</h3>
 <ul>
         <li>{t("configurationmanagement")}</li>
@@ -127,7 +128,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("qualitycontrol")}</li>
       </ul>
     </div>
-<div style={{gridArea:"digdeve"}} className={"grey-back"}>
+<div  className={"domain-work engineer"}>
 <h3>{t("engineering")}</h3>
 <ul>
         <li>{t("scriptprogramming")}</li>
@@ -135,7 +136,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("serviceandappintegration")}</li>
       </ul>
     </div>
-<div style={{gridArea:"digdevs"}} className={"grey-back"}>
+<div  className={"domain-work steer"}>
 <h3>{t("steering")}</h3>
 <ul>
         <li>{t("productownershipassist")}</li>
@@ -143,8 +144,12 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("rightsourcing")}</li>
       </ul>
     </div>
-<h2 style={{gridArea:"orgrob"}}>{t("orgrob")}</h2>
-<div>
+    </div>
+    </div>
+    <div className={"cat digdev"}>
+<h2>{t("orgrob")}</h2>
+<div class="domain">
+<div className={"domain-work consult"}>
 <h3>{t("consulting")}</h3>
 <ul>
         <li>{t("individualcoaching")}</li>
@@ -152,7 +157,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("psysocriskaudits")}</li>
       </ul>
     </div>
-<div style={{gridArea:"orgrobe"}}>
+<div className={"domain-work engineer"}>
 <h3>{t("engineering")}</h3>
 <ul>
         <li>{t("docmanagement")}</li>
@@ -160,13 +165,15 @@ export default function IndexRoute({ pageContext, disabled, data }) {
         <li>{t("xborderroolouts")}</li>
       </ul>
     </div>
-<div style={{gridArea:"orgrobs"}}>
+<div  className={"domain-work steer"}>
 <h3>{t("steering")}</h3>
 <ul>
         <li>{t("listeningforaadvocacy")}</li>
         <li>{t("wordsanddeedsalignment")}</li>
         <li>{t("betterment")}</li>
       </ul>
+</div>
+</div>
 </div>
 </div><a name="carousel"></a>
       <Carousel
@@ -193,7 +200,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
             {/* {node.fields.uriPath + "/"} */}
             <Link
-              to={"#"}
+              to={"#carousel"}
               style={{ display: "block" }}
               draggable={false}
               language={pageContext.locale}

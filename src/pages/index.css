@@ -374,7 +374,7 @@ td.row-header {
 div.rec-carousel-wrapper {
   grid-area: carousel;
 }
-
+/*
 .overfig {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -411,4 +411,96 @@ div.rec-carousel-wrapper {
                          "orgrobe"
                          "orgrobs";
   }
+}
+*/
+
+.overfig {
+  display: grid;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.overfig h2 {
+  align-self: center;
+  justify-self: center;
+  margin: 0;
+}
+
+
+
+.outline {
+  border-style: solid;
+  border-radius: 2rem;
+}
+
+.cat {
+  padding: 0;
+  border-style: solid;
+  border-radius: 2rem;
+}
+
+.cat h2 {
+  text-align: center;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.cat h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.cat ul {
+  margin: 0.5rem 0 1rem;
+}
+
+.domain-work h3 {
+  text-align: center;
+}
+
+.evenback {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.oddback {
+  background-color: rgba(255,255,255,0.8);
+}
+
+.domain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+
+@media(max-width:60rem) {
+  .domain {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.domain-work {
+  width: 100%;
+  height: 100%;
+}
+
+.digdev {
+  background-color: lightgreen;
+}
+
+.itprog {
+  background-color: lightblue;
+}
+
+.orgrob {
+  background-color: orange;
+}
+
+.consult {
+  background-color: rgba(255,255,255,0.9);
+}
+.engineer {
+  background-color: rgba(255,255,255,0.75);
+}
+
+.steer {
+  background-color: rgba(255,255,255,0.6);
 }
