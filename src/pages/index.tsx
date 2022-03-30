@@ -146,7 +146,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     </div>
     </div>
     </div>
-    <div className={"cat digdev"}>
+    <div className={"cat orgrob"}>
 <h2>{t("orgrob")}</h2>
 <div class="domain">
 <div className={"domain-work consult"}>
