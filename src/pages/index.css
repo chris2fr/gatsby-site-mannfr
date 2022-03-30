@@ -427,13 +427,6 @@ div.rec-carousel-wrapper {
   margin: 0;
 }
 
-
-
-.outline {
-  border-style: solid;
-  border-radius: 2rem;
-}
-
 .cat {
   padding: 0;
   border-style: solid;
@@ -468,14 +461,11 @@ div.rec-carousel-wrapper {
 .domain {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 0 0 0;
   
 }
 
-@media(max-width:60rem) {
-  .domain {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
+
 
 .domain-work {
   width: 100%;
@@ -491,11 +481,12 @@ div.rec-carousel-wrapper {
 }
 
 .orgrob {
-  background-color: orange;
+  background-color: gold;
 }
 
 .consult {
   background-color: rgba(255,255,255,0.9);
+  border-radius: 0 0 0 2rem;
 }
 .engineer {
   background-color: rgba(255,255,255,0.75);
@@ -503,4 +494,17 @@ div.rec-carousel-wrapper {
 
 .steer {
   background-color: rgba(255,255,255,0.6);
+  border-radius: 0 0 2rem 0;
+}
+
+@media(max-width:60rem) {
+  .domain {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .consult {
+    border-radius: 0;
+  }
+  .steer {
+    border-radius: 0 0 2rem 2rem;
+  }
 }
