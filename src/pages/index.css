@@ -416,7 +416,7 @@ div.rec-carousel-wrapper {
 
 .overfig {
   display: grid;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   padding: 1rem;
   gap: 1rem;
 }
