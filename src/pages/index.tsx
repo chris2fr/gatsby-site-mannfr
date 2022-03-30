@@ -70,188 +70,224 @@ export default function IndexRoute({ pageContext, disabled, data }) {
   return (
     <>
       <Header pageContext={pageContext} />
+
+      <div className="overfig">
+        <div className={"cat itprog"}>
+          <h2>{t("itprog")}</h2>
+          <div class="domain">
+            <div className={"domain-work consult"}>
+              <h3>{t("consulting")}</h3>
+              <ul>
+                <li>{t("ceremonyfacilitation")}</li>
+                <li>{t("backandchangelogmanagement")}</li>
+                <li>{t("workshopmanagement")}</li>
+              </ul>
+            </div>
+            <div className={"domain-work engineer"}>
+              <h3>{t("engineering")}</h3>
+              <ul>
+                <li>{t("timeaccountingandforecasting")}</li>
+                <li>{t("realhybridmeetings")}</li>
+                <li>{t("processandworkflowmanagement")}</li>
+              </ul>
+            </div>
+            <div className={"domain-work steer"}>
+              <h3>{t("steering")}</h3>
+              <ul>
+                <li>{t("programandprojectmanagementoffice")}</li>
+                <li>{t("makingprojectsandteamswork")}</li>
+                <li>{t("methodandqualityplans")}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={"cat digdev"}>
+          <h2>{t("digdev")}</h2>
+          <div class="domain">
+            <div className={"domain-work consult"}>
+              <h3>{t("consulting")}</h3>
+              <ul>
+                <li>{t("configurationmanagement")}</li>
+                <li>{t("webmastering")}</li>
+                <li>{t("qualitycontrol")}</li>
+              </ul>
+            </div>
+            <div className={"domain-work engineer"}>
+              <h3>{t("engineering")}</h3>
+              <ul>
+                <li>{t("scriptprogramming")}</li>
+                <li>{t("serveradmin")}</li>
+                <li>{t("serviceandappintegration")}</li>
+              </ul>
+            </div>
+            <div className={"domain-work steer"}>
+              <h3>{t("steering")}</h3>
+              <ul>
+                <li>{t("productownershipassist")}</li>
+                <li>{t("researchanddevelopment")}</li>
+                <li>{t("rightsourcing")}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={"cat orgrob"}>
+          <h2>{t("orgrob")}</h2>
+          <div class="domain">
+            <div className={"domain-work consult"}>
+              <h3>{t("consulting")}</h3>
+              <ul>
+                <li>{t("individualcoaching")}</li>
+                <li>{t("systemicinternalcommunication")}</li>
+                <li>{t("psysocriskaudits")}</li>
+              </ul>
+            </div>
+            <div className={"domain-work engineer"}>
+              <h3>{t("engineering")}</h3>
+              <ul>
+                <li>{t("docmanagement")}</li>
+                <li>{t("gdprimplement")}</li>
+                <li>{t("xborderroolouts")}</li>
+              </ul>
+            </div>
+            <div className={"domain-work steer"}>
+              <h3>{t("steering")}</h3>
+              <ul>
+                <li>{t("listeningforaadvocacy")}</li>
+                <li>{t("wordsanddeedsalignment")}</li>
+                <li>{t("betterment")}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className={"home-blabla"}>
         <div className={"home-top"}>
-<div className={"title"}>
-        <h2 className={"h2 with-sub"}>Chris Mann</h2>
-        <p className={"sub-h2"}>Digital Executive</p>
-        <p className={"p"}>
+          <div className={"title"}>
+            <h2 className={"h2 with-sub"}>Chris Mann</h2>
+            <p className={"sub-h2"}>Digital Executive</p>
+            <p className={"p"}>
               +33 7 68 40 38 38
               <br />
               chris@mann.fr
-              <br/>
-              <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf" target="_new">{t("downloadcvhere")}</a>
+              <br />
+              <a href="https://www.mann.fr/cv/cvcm-digital-2.pdf" target="_new">
+                {t("downloadcvhere")}
+              </a>
             </p>
-            </div>
-            <div className={"video"}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ryCZwyp9Xas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-      </div>
-<div className="overfig">
-  <div className={"cat itprog"}>
-    <h2>{t("itprog")}</h2>
-    <div class="domain">
-      <div className={"domain-work consult"}>
-      <h3>{t("consulting")}</h3>
-        <ul>
-        <li>{t("ceremonyfacilitation")}</li>
-        <li>{t("backandchangelogmanagement")}</li>
-        <li>{t("workshopmanagement")}</li>
-        </ul>
-      </div>
-    <div  className={"domain-work engineer"}>
-    <h3>{t("engineering")}</h3>
-      <ul>
-        <li>{t("timeaccountingandforecasting")}</li>
-        <li>{t("realhybridmeetings")}</li>
-        <li>{t("processandworkflowmanagement")}</li>
-        </ul>
-    </div>
-    <div className={"domain-work steer"}>
-    <h3 >{t("steering")}</h3>
-    <ul>
-        <li>{t("programandprojectmanagementoffice")}</li>
-        <li>{t("makingprojectsandteamswork")}</li>
-        <li>{t("methodandqualityplans")}</li>
-      </ul>
-    </div>
-    </div>
-    </div>
-    <div className={"cat digdev"}>
-    <h2>{t("digdev")}</h2>
-    <div class="domain">
-<div  className={"domain-work consult"}>
-<h3>{t("consulting")}</h3>
-<ul>
-        <li>{t("configurationmanagement")}</li>
-        <li>{t("webmastering")}</li>
-        <li>{t("qualitycontrol")}</li>
-      </ul>
-    </div>
-<div  className={"domain-work engineer"}>
-<h3>{t("engineering")}</h3>
-<ul>
-        <li>{t("scriptprogramming")}</li>
-        <li>{t("serveradmin")}</li>
-        <li>{t("serviceandappintegration")}</li>
-      </ul>
-    </div>
-<div  className={"domain-work steer"}>
-<h3>{t("steering")}</h3>
-<ul>
-        <li>{t("productownershipassist")}</li>
-        <li>{t("researchanddevelopment")}</li>
-        <li>{t("rightsourcing")}</li>
-      </ul>
-    </div>
-    </div>
-    </div>
-    <div className={"cat orgrob"}>
-<h2>{t("orgrob")}</h2>
-<div class="domain">
-<div className={"domain-work consult"}>
-<h3>{t("consulting")}</h3>
-<ul>
-        <li>{t("individualcoaching")}</li>
-        <li>{t("systemicinternalcommunication")}</li>
-        <li>{t("psysocriskaudits")}</li>
-      </ul>
-    </div>
-<div className={"domain-work engineer"}>
-<h3>{t("engineering")}</h3>
-<ul>
-        <li>{t("docmanagement")}</li>
-        <li>{t("gdprimplement")}</li>
-        <li>{t("xborderroolouts")}</li>
-      </ul>
-    </div>
-<div  className={"domain-work steer"}>
-<h3>{t("steering")}</h3>
-<ul>
-        <li>{t("listeningforaadvocacy")}</li>
-        <li>{t("wordsanddeedsalignment")}</li>
-        <li>{t("betterment")}</li>
-      </ul>
-</div>
-</div>
-</div>
-</div><a name="carousel"></a>
-      <Carousel
-        breakPoints={breakPoints}
-        pagination={false}
-        className="mann-carousel"
-        enableMouseSwipe={true}
-        focusOnSelect={true}
-        disableArrowsOnEnd={true}
-        renderArrow={({ type, onClick, isEdge }) => (
-          <button
-            className={
-              "rec rec-arrow rec rec-arrow-" +
-              (type === "NEXT" ? "right" : "left")
-            }
-            onClick={onClick}
-            disabled={isEdge}
-          >
-            {t(type)}
-          </button>
-        )}
-      >
-        {data.allMdx.nodes.map((node, index) => (
-          <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
-            {/* {node.fields.uriPath + "/"} */}
-            <Link
-              to={"#carousel"}
-              style={{ display: "block" }}
-              draggable={false}
-              language={pageContext.locale}
+          </div>
+          <div className={"video"}>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ryCZwyp9Xas"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <a name="carousel"></a>
+        <Carousel
+          breakPoints={breakPoints}
+          pagination={false}
+          className="mann-carousel"
+          enableMouseSwipe={true}
+          focusOnSelect={true}
+          disableArrowsOnEnd={true}
+          renderArrow={({ type, onClick, isEdge }) => (
+            <button
+              className={
+                "rec rec-arrow rec rec-arrow-" +
+                (type === "NEXT" ? "right" : "left")
+              }
+              onClick={onClick}
+              disabled={isEdge}
             >
-              <div className={"tag"} draggable={false}>
-                <Img
-                  className={"tag-img mann-carousel-img"}
-                  fluid={
-                    node.frontmatter.feature_image &&
-                    node.frontmatter.feature_image.childImageSharp.fluid
-                  }
-                  alt={node.frontmatter.title}
-                  draggable={false}
-                  key={`tag-cover-image-${index}`}
-                />
-                <div className={"tag-content"}>
-                  <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
-                  <div className={"tag-description"}>
-                    {node.frontmatter.description || node.excerpt}
+              {t(type)}
+            </button>
+          )}
+        >
+          {data.allMdx.nodes.map((node, index) => (
+            <div className={"mann-carousel-item"} key={`tag-cover-${index}`}>
+              {/* {node.fields.uriPath + "/"} */}
+              <Link
+                to={"#carousel"}
+                style={{ display: "block" }}
+                draggable={false}
+                language={pageContext.locale}
+              >
+                <div className={"tag"} draggable={false}>
+                  <Img
+                    className={"tag-img mann-carousel-img"}
+                    fluid={
+                      node.frontmatter.feature_image &&
+                      node.frontmatter.feature_image.childImageSharp.fluid
+                    }
+                    alt={node.frontmatter.title}
+                    draggable={false}
+                    key={`tag-cover-image-${index}`}
+                  />
+                  <div className={"tag-content"}>
+                    <h2 className={"tag-name"}>{node.frontmatter.title}</h2>
+                    <div className={"tag-description"}>
+                      {node.frontmatter.description || node.excerpt}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </Carousel>
-      <div className={"home-bottom"}>
-<div className={"left"}>
+              </Link>
+            </div>
+          ))}
+        </Carousel>
+        <div className={"home-bottom"}>
+          <div className={"left"}>
             {/*/}
             <p>{t("ihelp")}</p>
             {/*/}
-              <h3 className={"h3 with-sub"}>{t("itprog")}</h3> 
-              <p className={"sub-h3"}>({t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)</p>
-              <p>{t("itprogdesc")}</p>
-              <h3 className={"h3 with-sub"}>{t("digdev")}</h3> 
-              <p className={"sub-h3"}>({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> & <a href={t("url_configmagic")}>ConfigMagic.com</a>)</p>
-              <p>{t("digdevdesc")}</p>
-              <h3 className={"h3 with-sub"}>{t("orgrob")}</h3>
-              <p className={"sub-h3"}>({t("see")} <a href="https://www.assholeasaservice.com">AssholeAsAService.com</a> & <a href={t("url_distractives")}>Distractives.com</a></p>
-              <p>{t("orgrobdesc")}</p>
-              <p className={"grey-back"}>{t("statutdesc")}</p>
-            </div>
-            <div className={"right grey-back"}>
+            <h3 className={"h3 with-sub"}>{t("itprog")}</h3>
+            <p className={"sub-h3"}>
+              ({t("see")} <a href={t("url_caplancity")}>CaplanCity.com</a>)
+            </p>
+            <p>{t("itprogdesc")}</p>
+            <h3 className={"h3 with-sub"}>{t("digdev")}</h3>
+            <p className={"sub-h3"}>
+              ({t("see")} <a href={t("url_resdigita")}>ResDigita.com</a> &{" "}
+              <a href={t("url_configmagic")}>ConfigMagic.com</a>)
+            </p>
+            <p>{t("digdevdesc")}</p>
+            <h3 className={"h3 with-sub"}>{t("orgrob")}</h3>
+            <p className={"sub-h3"}>
+              ({t("see")}{" "}
+              <a href="https://www.assholeasaservice.com">
+                AssholeAsAService.com
+              </a>{" "}
+              & <a href={t("url_distractives")}>Distractives.com</a>
+            </p>
+            <p>{t("orgrobdesc")}</p>
+            <p className={"grey-back"}>{t("statutdesc")}</p>
+          </div>
+          <div className={"right grey-back"}>
             <h3 className={"h3 with-sub"}>Les Grands Voisins</h3>
-            <p className={"sub-h3"}>{t("lesgrandsvoisisntagline")}<br/>
-            ({t("see")} <a href="https://www.lesgrandsvoisins.com">lesgrandsvoisins.com</a>)</p>
+            <p className={"sub-h3"}>
+              {t("lesgrandsvoisisntagline")}
+              <br />({t("see")}{" "}
+              <a href="https://www.lesgrandsvoisins.com">
+                lesgrandsvoisins.com
+              </a>
+              )
+            </p>
             <p>{t("lgvexemple")} .</p>
-            <p>Tour Montparnasse<br/>
-            33 rue du Maine<br/>
-            75015 PARIS<br/>
-            52e étage - sur rendez-vous</p>
+            <p>
+              Tour Montparnasse
+              <br />
+              33 rue du Maine
+              <br />
+              75015 PARIS
+              <br />
+              52e étage - sur rendez-vous
+            </p>
             <dl>
               <dt>{t("Voisins")}</dt>
               <dd>{t("VoisinsDesc")}</dd>
@@ -260,8 +296,8 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <dt>{t("Cooperations")}</dt>
               <dd>{t("CooperationsDesc")}</dd>
             </dl>
-            </div>
-      </div>
+          </div>
+        </div>
       </div>
     </>
   );
