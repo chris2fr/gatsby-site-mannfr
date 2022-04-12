@@ -87,7 +87,12 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <h3>{t("engineering")}</h3>
               <ul>
                 <li>{t("timeaccountingandforecasting")}</li>
-                <li>{t("realhybridmeetings")}</li>
+                <li><Link
+                to={"/articles/2022/hybrid-meetings"}
+                style={{ display: "block" }}
+                draggable={false}
+                language={pageContext.locale}
+              >{t("realhybridmeetings")}</Link></li>
                 <li>{t("processandworkflowmanagement")}</li>
               </ul>
             </div>
@@ -138,7 +143,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               <ul>
                 <li>{t("individualcoaching")}</li>
                 <li>{t("systemicinternalcommunication")}</li>
-                <li>{t("psysocriskaudits")}</li>
+                <li>{t("psysocriskaudits")}*</li>
               </ul>
             </div>
             <div className={"domain-work engineer"}>
@@ -158,8 +163,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               </ul>
             </div>
           </div>
+          * en partenariat / in partnership
         </div>
       </div>
+
+      See also / Voir aussi <a href="https://www.lesgrandsvoisins.com">Les Grands Voisins  (.com)</a>.
 
       <div className={"home-blabla"}>
         <div className={"home-top"}>
