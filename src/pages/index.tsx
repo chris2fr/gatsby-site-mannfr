@@ -76,11 +76,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <h2>{t("itprog")}</h2>
           <div class="domain">
             <div className={"domain-work consult"}>
-              <h3>{t("consulting")}</h3>
+              <h3>{t("audit")}</h3>
               <ul>
-                <li>{t("ceremonyfacilitation")}</li>
-                <li>{t("backandchangelogmanagement")}</li>
-                <li>{t("workshopmanagement")}</li>
+                <li>{t("ppmo")}</li>
+                <li>{t("projects")}</li>
+                <li>{t("methodandquality")}</li>
               </ul>
             </div>
             <div className={"domain-work engineer"}>
@@ -97,11 +97,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               </ul>
             </div>
             <div className={"domain-work steer"}>
-              <h3>{t("steering")}</h3>
+              <h3>{t("accompagnement")}</h3>
               <ul>
-                <li>{t("programandprojectmanagementoffice")}</li>
-                <li>{t("makingprojectsandteamswork")}</li>
-                <li>{t("methodandqualityplans")}</li>
+                <li>{t("ceremonyfacilitation")}</li>
+                <li>{t("backandchangelogmanagement")}</li>
+                <li>{t("collaborativespecs")}</li>
               </ul>
             </div>
           </div>
@@ -110,11 +110,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <h2>{t("digdev")}</h2>
           <div class="domain">
             <div className={"domain-work consult"}>
-              <h3>{t("consulting")}</h3>
+              <h3>{t("audit")}</h3>
               <ul>
-                <li>{t("configurationmanagement")}</li>
-                <li>{t("webmastering")}</li>
-                <li>{t("qualitycontrol")}</li>
+                <li>{t("productownershipassist")}</li>
+                <li>{t("researchanddevelopment")}</li>
+                <li>{t("rightsourcing")}</li>
               </ul>
             </div>
             <div className={"domain-work engineer"}>
@@ -126,11 +126,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               </ul>
             </div>
             <div className={"domain-work steer"}>
-              <h3>{t("steering")}</h3>
+              <h3>{t("accompagnement")}</h3>
               <ul>
-                <li>{t("productownershipassist")}</li>
-                <li>{t("researchanddevelopment")}</li>
-                <li>{t("rightsourcing")}</li>
+                <li>{t("configurationmanagement")}</li>
+                <li>{t("webmastering")}</li>
+                <li>{t("qualitycontrol")}</li>
               </ul>
             </div>
           </div>
@@ -139,11 +139,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
           <h2>{t("orgrob")}</h2>
           <div class="domain">
             <div className={"domain-work consult"}>
-              <h3>{t("consulting")}</h3>
+              <h3>{t("audit")}</h3>
               <ul>
-                <li>{t("individualcoaching")}</li>
-                <li>{t("systemicinternalcommunication")}</li>
-                <li>{t("psysocriskaudits")}*</li>
+                <li>{t("listeningforaadvocacy")}</li>
+                <li>{t("wordsanddeedsalignment")}</li>
+                <li>{t("betterment")}</li>
               </ul>
             </div>
             <div className={"domain-work engineer"}>
@@ -155,11 +155,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
               </ul>
             </div>
             <div className={"domain-work steer"}>
-              <h3>{t("steering")}</h3>
+              <h3>{t("accompagnement")}</h3>
               <ul>
-                <li>{t("listeningforaadvocacy")}</li>
-                <li>{t("wordsanddeedsalignment")}</li>
-                <li>{t("betterment")}</li>
+                <li>{t("individualcoaching")}</li>
+                <li>{t("systemicinternalcommunication")}</li>
+                <li>{t("psysocriskaudits")}*</li>
               </ul>
             </div>
           </div>
