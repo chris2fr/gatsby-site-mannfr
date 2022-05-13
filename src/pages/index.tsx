@@ -79,10 +79,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <p>{t("sentence2")}</p>
       
       <p><a href={"https://www.libregood.org"} target={"_blank"} style={{textDecoration: "underline", fontWeight: "bold"}} 
-      >libregood.org</a> & <Link 
-      to={"https://www.chapril.org"}
-      style={{ textDecoration: "underline", fontWeight: "bold" }}
-      >chapril.org</Link></p>
+      >libregood.org</a></p>
       
       <p> {t("sentence3")}  </p>
       
