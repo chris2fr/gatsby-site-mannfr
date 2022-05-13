@@ -73,12 +73,12 @@ export default function IndexRoute({ pageContext, disabled, data }) {
 
       <center>
       <p>{t("sentence1")}</p><p>
-      <a href="https://www.mann.pro" target="_blank" style="text-decoration: underline; fontWeight: bold;"
+      <a href={"https://www.mann.pro"} target={"_blank"} style={{textDecoration: "underline", fontWeight: "bold"}} 
       >mann.pro</a>.</p>
 
       <p>{t("sentence2")}</p>
       
-      <p><a href="https://www.libregood.org" target="_blank" style="text-decoration: underline; fontWeight: bold;"
+      <p><a href={"https://www.libregood.org"} target={"_blank"} style={{textDecoration: "underline", fontWeight: "bold"}} 
       >libregood.org</a> & <Link 
       to={"https://www.chapril.org"}
       style={{ textDecoration: "underline", fontWeight: "bold" }}
@@ -87,8 +87,10 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <p> {t("sentence3")}  </p>
       
       <p>
-      <a href="https://www.lesgrandsvoisins.com" target="_blank" style="text-decoration: underline; fontWeight: bold;"
-      >LesGrandsVoisins.com</a> is <a href="https://www.agoodvillage.com" target="_blank" style="text-decoration: underline; fontWeight: bold;"
+      <a href={"https://www.lesgrandsvoisins.com"} target={"_blank"} style={{textDecoration: "underline", fontWeight: "bold"}} 
+
+      >LesGrandsVoisins.com</a> is <a href={"https://www.agoodvillage.com"} target={"_blank"} style={{textDecoration: "underline", fontWeight: "bold"}} 
+
       >AGoodVillage.com</a>.</p>
 
       <p>{t("sentence4")}</p>
