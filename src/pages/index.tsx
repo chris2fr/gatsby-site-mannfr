@@ -71,6 +71,24 @@ export default function IndexRoute({ pageContext, disabled, data }) {
     <>
       <Header pageContext={pageContext} />
 
+      <p><Link 
+      to={"https://www.mann.pro"}
+      >mann.pro</Link></p>
+
+      <p><Link 
+      to={"https://www.libregood.org"}
+      >libregood.org</Link></p>
+
+      <p><Link 
+      to={"https://www.lesgrandsvoisins.com"}
+      >LesGrandsVoisins.com</Link> is <Link 
+      to={"https://www.agoodvillage.com"}
+      >AGoodVillage.com</Link>.</p>
+
+      <p><Link 
+      to={"https://www.libregood.org"}
+      >libregood.org</Link></p>
+
       <div className="overfig">
         <div className={"cat itprog"}>
           <h2>{t("itprog")}</h2>
