@@ -87,9 +87,9 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <p> {t("sentence3")}  </p>
       
       <p>
-      <A href="https://www.lesgrandsvoisins.com" target="_blank" style="text-decoration: underline; fontWeight: bold;"
-      >LesGrandsVoisins.com</A> is <A href="https://www.agoodvillage.com" target="_blank" style="text-decoration: underline; fontWeight: bold;"
-      >AGoodVillage.com</A>.</p>
+      <a href="https://www.lesgrandsvoisins.com" target="_blank" style="text-decoration: underline; fontWeight: bold;"
+      >LesGrandsVoisins.com</a> is <a href="https://www.agoodvillage.com" target="_blank" style="text-decoration: underline; fontWeight: bold;"
+      >AGoodVillage.com</a>.</p>
 
       <p>{t("sentence4")}</p>
       </center>
