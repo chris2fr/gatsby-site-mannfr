@@ -83,7 +83,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <p><Link 
       to={"https://www.libregood.org"}
       style={{ textDecoration: "underline", fontWeight: "bold" }}
-      >libregood.org</Link> {t("sentence3")}  
+      >libregood.org</Link></p>
+      
+      <p> {t("sentence3")}  </p>
+      
+      <p>
       <Link 
       to={"https://www.lesgrandsvoisins.com"}
       style={{ textDecoration: "underline", fontWeight: "bold" }}
