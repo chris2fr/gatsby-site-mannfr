@@ -72,18 +72,27 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <Header pageContext={pageContext} />
 
       <center>
-      <p>{t("sentence1")} <Link 
+      <p>{t("sentence1")}</p><p>
+      <Link 
       to={"https://www.mann.pro"}
+      style={{ textDecoration: "underline", fontWeight: "bold" }}
       >mann.pro</Link>.</p>
 
-      <p>{t("sentence2")} <Link 
+      <p>{t("sentence2")}</p>
+      
+      <p><Link 
       to={"https://www.libregood.org"}
+      style={{ textDecoration: "underline", fontWeight: "bold" }}
       >libregood.org</Link> {t("sentence3")}  
       <Link 
       to={"https://www.lesgrandsvoisins.com"}
+      style={{ textDecoration: "underline", fontWeight: "bold" }}
       >LesGrandsVoisins.com</Link> is <Link 
       to={"https://www.agoodvillage.com"}
+      style={{ textDecoration: "underline", fontWeight: "bold" }}
       >AGoodVillage.com</Link>.</p>
+
+      <p>{t("sentence4")}</p>
       </center>
 
       <div className="overfig">
