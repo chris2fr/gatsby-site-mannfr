@@ -75,6 +75,7 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <p>{t("sentence1")}</p><p>
       <Link 
       to={"https://www.mann.pro"}
+      target="_blank"
       style={{ textDecoration: "underline", fontWeight: "bold" }}
       >mann.pro</Link>.</p>
 
@@ -83,7 +84,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <p><Link 
       to={"https://www.libregood.org"}
       style={{ textDecoration: "underline", fontWeight: "bold" }}
-      >libregood.org</Link></p>
+      target="_blank"
+      >libregood.org</Link> & <Link 
+      to={"https://www.chapril.org"}
+      style={{ textDecoration: "underline", fontWeight: "bold" }}
+      >chapril.org</Link></p>
       
       <p> {t("sentence3")}  </p>
       
@@ -91,9 +96,11 @@ export default function IndexRoute({ pageContext, disabled, data }) {
       <Link 
       to={"https://www.lesgrandsvoisins.com"}
       style={{ textDecoration: "underline", fontWeight: "bold" }}
+      target="_blank"
       >LesGrandsVoisins.com</Link> is <Link 
       to={"https://www.agoodvillage.com"}
       style={{ textDecoration: "underline", fontWeight: "bold" }}
+      target="_blank"
       >AGoodVillage.com</Link>.</p>
 
       <p>{t("sentence4")}</p>
